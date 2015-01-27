@@ -35,6 +35,7 @@
 			border: 0;
 			background: #fff;
 		}
+        
 		.pop form input.notify{
 			background: #000;
 			border-radius:3px;
@@ -171,12 +172,14 @@ concept to know about the changing world and earn.
 <script>
 
 $("#test").click(function() {
+    console.log("in click function");
     var email =  document.getElementById("email").value;
-    console.log("value of email "+email);
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
     if($.fancybox!=null && email != ''){
+        if(filter.test(email)){
             this.value="Please wait, sending confirmation...";
-            this.disabled='true';
+        }
     }
 });
 

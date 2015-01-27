@@ -140,7 +140,7 @@
    
         <div class="bottom">
             <div class="abt5">
-                <a href="https://www.youtube.com/channel/UCXVnCPBPGASVSE2-DLXnWyQ" target="_blank"><img src="img/yt.jpg"></a>
+                <a href="https://www.youtube.com/channel/UCXVnCPBPGASVSE2-DLXnWyQ/videos" target="_blank"><img src="img/yt.jpg"></a>
             </div>
             <ul>
                 <li style="margin-left:15px"><a href="https://twitter.com/KissmatIntpub" target="_blank"><img src="img/tw.jpg"></a></li>

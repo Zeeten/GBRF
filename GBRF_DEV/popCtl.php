@@ -21,7 +21,7 @@ if ($email != null) {
     }catch (Exception $e) {
         echo 'Caught exception: ',  $e->getMessage(), "\n";
     }
-   // save($email);
+    save($email);
     header('Location: index-wl.php');    
 }   
 ?>
