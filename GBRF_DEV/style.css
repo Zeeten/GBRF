@@ -1,5 +1,3 @@
-
-
 h3 {
   margin: 0;
 }
@@ -50,8 +48,8 @@ input[type="submit"] {
   position: fixed;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* ---------- LOGIN-FORM ---------- */
@@ -96,11 +94,11 @@ input[type="submit"] {
 
 #login-form input[type="email"],
 #login-form input[type="password"] {
-border: 1px solid #dcdcdc;
-padding: 12px 10px;
-width: 63%;
-margin-top: 4px;
-float: left;
+  border: 1px solid #dcdcdc;
+  padding: 12px 10px;
+  width: 63%;
+  margin-top: 4px;
+  float: left;
 }
 
 #login-form input[type="email"] {
@@ -113,15 +111,15 @@ float: left;
 }
 
 #login-form input[type="submit"] {
-background: #074DA3;
-border-radius: 3px;
-color: #fff;
-float: right;
-margin-right: -52px;
-font-size: 12px;
-font-weight: bold;
-margin-top: -41px;
-padding: 13px 11px;
+  background: #074DA3;
+  border-radius: 3px;
+  color: #fff;
+  float: right;
+  margin-right: -52px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: -41px;
+  padding: 13px 11px;
 }
 
 #login-form input[type="submit"]:hover {
@@ -145,8 +143,4 @@ padding: 13px 11px;
 }
 .submit{
 	margin-top:25px;	
-	
-	
-	
-	
 }

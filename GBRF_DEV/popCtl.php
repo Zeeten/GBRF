@@ -25,4 +25,3 @@ if ($email != null) {
     header('Location: index-wl.php');    
 }   
 ?>
-
