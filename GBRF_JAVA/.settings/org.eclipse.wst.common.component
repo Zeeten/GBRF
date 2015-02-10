@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="GBRF_JAVA">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <dependent-module archiveName="mail.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/mail.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="activation.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/activation.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mchange-commons-java-0.2.7.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/mchange-commons-java-0.2.7.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mailapi.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/mailapi.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="c3p0-0.9.5-pre8.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/c3p0-0.9.5-pre8.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="smtp.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/smtp.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="dsn.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/dsn.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="imap.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/imap.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pop3.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/pop3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="mysql-connector-java-5.0.8-bin.jar" deploy-path="/WEB-INF/lib" handle="module:/classpath/lib/C:/Users/Zeeten Cybernetics/workspace/GBRF_JAVA/WebContent/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/GBRF_JAVA/build/classes"/>
+        <property name="context-root" value="GBRF_JAVA"/>
+    </wb-module>
+</project-modules>

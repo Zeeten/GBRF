@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>GBRF_JAVA</display-name>
+  <servlet>
+    <servlet-name>EmailCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.EmailCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EmailCtl</servlet-name>
+    <url-pattern>/EmailCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LikesCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.LikesCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LikesCtl</servlet-name>
+    <url-pattern>/LikesCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LikesListCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.LikesListCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LikesListCtl</servlet-name>
+    <url-pattern>/LikesListCtl</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

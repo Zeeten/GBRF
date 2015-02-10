@@ -1,0 +1,75 @@
+
+prel {
+    color: #00ccff;
+    float: left;
+    font: 76px "Roboto",Arial,sans-serif;
+    margin-left: -81px;
+    margin-top: 43px;
+}
+pbas {
+    color: #00ccff;
+    float: left;
+    font: 42px "Roboto",Arial,sans-serif;
+    margin-left: -467px;
+    margin-top: 117px;
+}
+pday {
+    color: #00ccff;
+    float: left;
+    font: 90px "Roboto",Arial,sans-serif;
+    margin-left: -82px;
+    margin-top: 50px;
+}
+phour {
+    color: #00ccff;
+    float: left;
+    font: 90px "Roboto",Arial,sans-serif;
+    margin-left: 22px;
+    margin-top: 50px;
+}
+pminute {
+    color: #00ccff;
+    float: left;
+    font: 90px "Roboto",Arial,sans-serif;
+    margin-left: 17px;
+    margin-top: 50px;
+}
+psecond {
+    color: #00ccff;
+    float: left;
+    font: 90px "Roboto",Arial,sans-serif;
+    margin-left: 21px;
+    margin-top: 50px;
+}
+pstrday {
+    color: #00ccff;
+    float: left;
+    font: 19px "Roboto",Arial,sans-serif;
+    margin-left: 33px;
+    margin-top: -14px;
+    padding: 0;
+}
+pstrhour {
+    color: #00ccff;
+    float: left;
+    font: 19px "Roboto",Arial,sans-serif;
+    margin-left: 23px;
+    margin-top: -14px;
+    padding: 0;
+}
+pstrminute {
+    color: #00ccff;
+    float: left;
+    font: 19px "Roboto",Arial,sans-serif;
+    margin-left: 14px;
+    margin-top: -14px;
+    padding: 0;
+}
+pstrsecond {
+    color: #00ccff;
+    float: left;
+    font: 19px "Roboto",Arial,sans-serif;
+    margin-left: 15px;
+    margin-top: -14px;
+    padding: 0;
+}
