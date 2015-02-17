@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Like Page for Creative Book</title>
 </head>
-<body>
+<body background="img/bg/bg.jpg">
 	<center>
 		<H1>Read and WIN</H1>
 		<H1></H1>
