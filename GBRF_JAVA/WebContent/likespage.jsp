@@ -7,7 +7,10 @@
 <title>Like Page for Creative Book</title>
 </head>
 <body background="img/bg/bg.jpg">
+<<<<<<< HEAD
 <body>
+=======
+>>>>>>> origin/master
 	<center>
 		<H1>Read and WIN</H1>
 		<H1></H1>
