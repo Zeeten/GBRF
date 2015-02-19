@@ -4,6 +4,8 @@ public class LikesBean {
 
 	private long id;
 	private String email;
+	private String password;
+	private String bookNo;
 	private String like1;
 	private String like2;
 	private String like3;
@@ -22,6 +24,22 @@ public class LikesBean {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getBookNo() {
+		return bookNo;
+	}
+
+	public void setBookNo(String bookNo) {
+		this.bookNo = bookNo;
 	}
 
 	public String getLike1() {

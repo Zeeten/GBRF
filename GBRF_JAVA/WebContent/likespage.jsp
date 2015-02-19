@@ -6,12 +6,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Like Page for Creative Book</title>
 </head>
+<body background="img/bg/bg.jpg">
 <body>
 	<center>
 		<H1>Read and WIN</H1>
 		<H1></H1>
 		<FORM ACTION="LikesCtl" METHOD="post">
-
+			<div style="color: red">
+				<%
+					if (request.getAttribute("message") != null)
+						out.println(request.getAttribute("message"));
+					else
+						out.println("");
+				%>
+			</div>
 			<table width="600" align="center" border="1">
 				<tr>
 					<th bgcolor="silver">Chapter</th>
@@ -78,7 +86,9 @@
 						VALUE="Save" name="operation">&nbsp;&nbsp;<a
 						href="LikesListCtl">List</a></td>
 				</tr>
+
 			</table>
+			<br> <a href="login.jsp">Back to Login Page</a>
 		</form>
 	</center>
 </html>

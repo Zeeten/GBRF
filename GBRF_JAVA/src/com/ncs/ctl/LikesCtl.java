@@ -22,24 +22,44 @@ public class LikesCtl extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		String bookNo = request.getParameter("bookNo");
 		String like1 = request.getParameter("like1");
 		String like2 = request.getParameter("like2");
 		String like3 = request.getParameter("like3");
 		String operation = request.getParameter("operation");
 
+		System.out.println(bookNo + " " + like1 + " " + like2 + " " + like3);
+
 		// get model
 		LikesModel model = new LikesModel();
+
 		if ("Save".equalsIgnoreCase(operation)) {
+			String message = null;
+
 			LikesBean bean = new LikesBean();
+
+			bean.setBookNo(bookNo);
 			bean.setLike1(like1);
 			bean.setLike2(like2);
 			bean.setLike3(like3);
 			try {
-				model.add(bean);
+				 if (like1 == null || like2 == null || like3 == null) {
+					message = "Please Select Chapters Like1, Like2 & Like3 ...!!!";
+
+					request.setAttribute("message", message);
+
+					RequestDispatcher rd = request
+							.getRequestDispatcher("likespage.jsp");
+					rd.forward(request, response);
+
+				} else {
+					model.add(bean);
+					
+					response.sendRedirect("LikesListCtl");
+				}
 			} catch (Exception e) {
-				e.printStackTrace();
+				 e.printStackTrace();
 			}
-			response.sendRedirect("LikesListCtl");
 		}
 	}
 }

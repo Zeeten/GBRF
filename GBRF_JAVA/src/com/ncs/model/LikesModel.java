@@ -38,12 +38,14 @@ public class LikesModel {
 			// Get auto-generated next primary key
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn
-					.prepareStatement("INSERT INTO LIKES VALUES(?,?,?,?,?)");
+					.prepareStatement("INSERT INTO LIKES VALUES(?,?,?,?,?,?,?)");
 			pstmt.setLong(1, pk);
 			pstmt.setString(2, bean.getEmail());
-			pstmt.setString(3, bean.getLike1());
-			pstmt.setString(4, bean.getLike2());
-			pstmt.setString(5, bean.getLike3());
+			pstmt.setString(3, bean.getPassword());
+			pstmt.setString(4, bean.getBookNo());
+			pstmt.setString(5, bean.getLike1());
+			pstmt.setString(6, bean.getLike2());
+			pstmt.setString(7, bean.getLike3());
 			pstmt.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt.close();
@@ -70,9 +72,10 @@ public class LikesModel {
 				LikesBean bean = new LikesBean();
 				bean.setId(rs.getInt(1));
 				bean.setEmail(rs.getString(2));
-				bean.setLike1(rs.getString(3));
-				bean.setLike2(rs.getString(4));
-				bean.setLike3(rs.getString(5));
+				bean.setBookNo(rs.getString(4));
+				bean.setLike1(rs.getString(5));
+				bean.setLike2(rs.getString(6));
+				bean.setLike3(rs.getString(7));
 				list.add(bean);
 			}
 			rs.close();
@@ -82,4 +85,26 @@ public class LikesModel {
 		return list;
 	}
 
+	public LikesBean authenticate(LikesBean bean) {
+		Connection conn = null;
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn
+					.prepareStatement("SELECT * FROM LIKES WHERE EMAIL=? AND PASSWORD=?");
+			pstmt.setString(1, bean.getEmail());
+			pstmt.setString(2, bean.getPassword());
+
+			ResultSet rs = pstmt.executeQuery();
+			bean = new LikesBean();
+			while (rs.next()) {
+
+				bean.setEmail(rs.getString(2));
+				bean.setPassword(rs.getString(3));
+			}
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return bean;
+	}
 }
