@@ -7,36 +7,29 @@
 <title>Like Page for Creative Book</title>
 </head>
 <body background="img/bg/bg.jpg">
-<body>
 	<center>
 		<H1>Login</H1>
+
 		<FORM ACTION="LoginCtl" METHOD="post">
 			<table>
-				<div style="color: red">
-					<%
-						if (request.getAttribute("message") != null)
-							out.println(request.getAttribute("message"));
-						else
-							out.println("");
-					%>
-				</div>
 				<tr>
-					<td>User ID</td>
+					<td>KIB User ID</td>
 					<td><input name="login" type="text"></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input name="password" type="password"></td>
+					<td><input name="password" type="text"></td>
 				</tr>
 				<tr>
 					<td>Book ID</td>
 					<td><input name="bookId" type="text"></td>
 				</tr>
 				<tr>
-				<td align="center" colspan="2"><input name="operation" value="SignIn"
+					<td colspan="2"><input name="operation" value="SignIn"
 						type="submit"></td>
 				</tr>
+
 			</table>
-		</Form>
+		</form>
 	</center>
 </html>
