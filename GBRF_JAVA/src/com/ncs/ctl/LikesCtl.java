@@ -10,7 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.ncs.bean.LikesBean;
+import com.ncs.bean.UserBean;
 import com.ncs.model.LikesModel;
+import com.ncs.util.DataValidator;
+import com.ncs.util.PropertyReader;
+import com.ncs.util.ServletUtility;
 
 public class LikesCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,48 +25,58 @@ public class LikesCtl extends HttpServlet {
 		rd.forward(request, response);
 	}
 
+	protected boolean validate(HttpServletRequest request) {
+
+		boolean pass = true;
+
+		if (DataValidator.isNull(request.getParameter("like1"))) {
+			request.setAttribute("like1",
+					PropertyReader.getValue("error.require", "Like 1"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("like2"))) {
+			request.setAttribute("like2",
+					PropertyReader.getValue("error.require", "Like 2"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("like3"))) {
+			request.setAttribute("like3",
+					PropertyReader.getValue("error.require", "Like 3"));
+			pass = false;
+		}
+
+		return pass;
+	}
+
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
-		String like1 = request.getParameter("like1");
-		String like2 = request.getParameter("like2");
-		String like3 = request.getParameter("like3");
+		HttpSession session = request.getSession(true);
 		String operation = request.getParameter("operation");
-
-		System.out.println(like1 + " " + like2 + " " + like3);
-
 		// get model
 		LikesModel model = new LikesModel();
 
 		if ("Save".equalsIgnoreCase(operation)) {
-			String message = null;
+			if (validate(request)) {
+				String like1 = request.getParameter("like1");
+				String like2 = request.getParameter("like2");
+				String like3 = request.getParameter("like3");
 
-			LikesBean bean = new LikesBean();
-
-			bean.setLike1(like1);
-			bean.setLike2(like2);
-			bean.setLike3(like3);
-			try {
-				if (like1 == null || like2 == null || like3 == null) {
-					message = "Please Select Chapters Like1, Like2 & Like3 ...!!!";
-
-					request.setAttribute("message", message);
-
-					RequestDispatcher rd = request
-							.getRequestDispatcher("likespage.jsp");
-					rd.forward(request, response);
-
-				} else {
-
-					HttpSession session = request.getSession();
-					bean.setEmail((String) session.getAttribute("email"));
-					bean.setBookNo((String) session.getAttribute("bookId"));
+				LikesBean bean = new LikesBean();
+				bean.setEmail(((UserBean) session.getAttribute("user"))
+						.getEmail());
+				bean.setBookName((String) session.getAttribute("bookName"));
+				bean.setBookNo((String) session.getAttribute("bookNo"));
+				bean.setLike1(like1);
+				bean.setLike2(like2);
+				bean.setLike3(like3);
+				try {
 					model.add(bean);
-
-					response.sendRedirect("LikesListCtl");
+					ServletUtility.redirect("LikesListCtl", request, response);
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
+			} else {
+				doGet(request, response);
 			}
 		}
 	}

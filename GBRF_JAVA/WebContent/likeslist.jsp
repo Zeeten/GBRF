@@ -12,12 +12,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Your Likes</title>
 <style type="text/css">
-th {
-	background-color: silver;
+body {
+	color: white;
 }
 
-tr,th,td {
+td {
+	font-size: 15px;
 	text-align: center;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+H2 {
+	font-size: 20px;
 }
 </style>
 </head>
@@ -25,14 +34,16 @@ tr,th,td {
 <body>
 	<center>
 		<h1>User Likes List</h1>
-		<table border="1" width="50%">
+		<table border="1" width="100%">
 			<tr>
-				<th>ID</th>
-				<th>EMAIL_ID</th>
+				<th>Id</th>
+				<th>Email Id</th>
+				<th>Book Name</th>
 				<th>Book No</th>
 				<th>Like 1</th>
 				<th>Like 2</th>
 				<th>Like 3</th>
+				<th>Date</th>
 			</tr>
 			<%
 				List list = (List) request.getAttribute("dtoList");
@@ -43,10 +54,12 @@ tr,th,td {
 			<tr>
 				<td><%=bean.getId()%></td>
 				<td><%=bean.getEmail()%></td>
+				<td><%=bean.getBookName()%></td>
 				<td><%=bean.getBookNo()%></td>
 				<td><%=bean.getLike1()%></td>
 				<td><%=bean.getLike2()%></td>
 				<td><%=bean.getLike3()%></td>
+				<td><%=bean.getDate()%></td>
 			</tr>
 			<%
 				}

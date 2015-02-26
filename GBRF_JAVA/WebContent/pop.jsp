@@ -132,7 +132,7 @@ a:active {
 			<!----------------slide box end---------------------------->
 			<div class="e-mail">
 				<div id="login-form">
-					<form action="EmailCtl" method="post" target="_top">
+					<form action="InviteCtl" method="post" target="_top">
 						<input id="email" name="email" type="email" class="submit"
 							required placeholder="Kindly enter email for updates..."
 							onBlur="if(this.value=='')this.value=''"

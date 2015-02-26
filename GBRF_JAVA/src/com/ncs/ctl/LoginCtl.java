@@ -9,8 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.ncs.bean.LikesBean;
-import com.ncs.model.LikesModel;
+import com.ncs.bean.UserBean;
+import com.ncs.model.UserModel;
+import com.ncs.util.DataValidator;
+import com.ncs.util.PropertyReader;
+import com.ncs.util.ServletUtility;
 
 public class LoginCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -21,49 +24,57 @@ public class LoginCtl extends HttpServlet {
 		rd.forward(request, response);
 	}
 
+	protected boolean validate(HttpServletRequest request) {
+
+		boolean pass = true;
+
+		if (DataValidator.isNull(request.getParameter("email"))) {
+			request.setAttribute("email",
+					PropertyReader.getValue("error.require", "Email"));
+			pass = false;
+		} else if (!DataValidator.isEmail(request.getParameter("email"))) {
+			request.setAttribute("email",
+					PropertyReader.getValue("error.email", "Email"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("password"))) {
+			request.setAttribute("password",
+					PropertyReader.getValue("error.require", "Password"));
+			pass = false;
+		}
+
+		return pass;
+	}
+
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
-		String login = request.getParameter("login");
-		String password = request.getParameter("password");
-		String bookId = request.getParameter("bookId");
-
+		HttpSession session = request.getSession(true);
 		String operation = request.getParameter("operation");
-
 		// get model
-		LikesModel model = new LikesModel();
+		UserModel model = new UserModel();
 
 		if ("SignIn".equalsIgnoreCase(operation)) {
-			String message = null;
+			if (validate(request)) {
+				try {
+					String email = request.getParameter("email");
+					String password = request.getParameter("password");
 
-			LikesBean bean = new LikesBean();
+					UserBean bean = model.authenticate(email, password);
 
-			bean.setEmail(login);
-			bean.setPassword(password);
-			bean.setBookNo(bookId);
-
-			bean = model.authenticate(bean);
-
-			System.out.println(bean.getEmail() + " " + bean.getPassword());
-
-			try {
-				if (bean.getEmail() == null || bean.getPassword() == null) {
-					message = "Please Enter valid Login Id/Password...!!!";
-
-					request.setAttribute("message", message);
-
-					RequestDispatcher rd = request
-							.getRequestDispatcher("login.jsp");
-					rd.forward(request, response);
-
-				} else {
-					HttpSession session = request.getSession();
-					session.setAttribute("email", bean.getEmail());
-					session.setAttribute("bookId", bookId);
-					response.sendRedirect("LikesCtl");
+					if (bean != null) {
+						session.setAttribute("user", bean);
+						ServletUtility
+								.redirect("WelcomeCtl", request, response);
+					} else {
+						ServletUtility.setErrorMessage(
+								"Invalid Email / Password", request);
+						ServletUtility.forward("login.jsp", request, response);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
 				}
-			} catch (Exception e) {
-				e.printStackTrace();
+			} else {
+				ServletUtility.forward("login.jsp", request, response);
 			}
 		}
 	}

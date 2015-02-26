@@ -1,22 +1,17 @@
 package com.ncs.bean;
 
-public class LikesBean {
+import java.sql.Timestamp;
+import java.util.Date;
 
-	private long id;
+public class LikesBean extends BaseBean {
+
 	private String email;
-	private String password;
+	private String bookName;
 	private String bookNo;
 	private String like1;
 	private String like2;
 	private String like3;
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
-	}
+	private Timestamp date = new Timestamp(new Date().getTime());
 
 	public String getEmail() {
 		return email;
@@ -26,12 +21,12 @@ public class LikesBean {
 		this.email = email;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getBookName() {
+		return bookName;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
 	}
 
 	public String getBookNo() {
@@ -64,6 +59,14 @@ public class LikesBean {
 
 	public void setLike3(String like3) {
 		this.like3 = like3;
+	}
+
+	public Timestamp getDate() {
+		return date;
+	}
+
+	public void setDate(Timestamp date) {
+		this.date = date;
 	}
 
 }
