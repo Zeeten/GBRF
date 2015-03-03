@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 
 import com.ncs.bean.UserBean;
 import com.ncs.util.JDBCDataSource;
+import com.ncs.util.JDBCDataSource2;
 
 public class UserModel {
 
@@ -90,9 +91,9 @@ public class UserModel {
 		Connection conn = null;
 		UserBean bean = null;
 		try {
-			conn = JDBCDataSource.getConnection();
+			conn = JDBCDataSource2.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM user WHERE EMAIL=? AND PASSWORD=?");
+					.prepareStatement("SELECT customer_id,firstname,lastname,email,password FROM oc_customer WHERE email=? AND password=?");
 			pstmt.setString(1, email);
 			pstmt.setString(2, password);
 
@@ -100,17 +101,18 @@ public class UserModel {
 			while (rs.next()) {
 				bean = new UserBean();
 				bean.setId(rs.getInt(1));
+				
 				bean.setName(rs.getString(2));
 				bean.setSurname(rs.getString(3));
 				bean.setEmail(rs.getString(4));
 				bean.setPassword(rs.getString(5));
-				bean.setDate(rs.getTimestamp(6));
+			
 			}
 			rs.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			JDBCDataSource.closeConnection(conn);
+			JDBCDataSource2.closeConnection(conn);
 		}
 		return bean;
 	}

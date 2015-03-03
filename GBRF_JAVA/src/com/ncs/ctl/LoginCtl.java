@@ -1,6 +1,7 @@
 package com.ncs.ctl;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.google.gson.Gson;
 import com.ncs.bean.UserBean;
 import com.ncs.model.UserModel;
 import com.ncs.util.DataValidator;
@@ -60,16 +62,22 @@ public class LoginCtl extends HttpServlet {
 					String password = request.getParameter("password");
 
 					UserBean bean = model.authenticate(email, password);
-
+					PrintWriter out = response.getWriter();
 					if (bean != null) {
 						session.setAttribute("user", bean);
-						ServletUtility
-								.redirect("WelcomeCtl", request, response);
+					//	ServletUtility
+							//	.redirect("WelcomeCtl", request, response);
+						 String json = new Gson().toJson(bean);
+						 response.setContentType("application/json");
+						    response.setCharacterEncoding("UTF-8");
+						    //response.getWriter().write(json);
+						    out.println("{\"Messages\":"+json+"}");
 					} else {
 						ServletUtility.setErrorMessage(
 								"Invalid Email / Password", request);
 						ServletUtility.forward("login.jsp", request, response);
 					}
+				
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
