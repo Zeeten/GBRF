@@ -1,3 +1,4 @@
+<%@page import="com.ncs.bean.UserBean"%>
 <%@page import="com.ncs.bean.BooksBean"%>
 <%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="java.util.List"%>
@@ -26,9 +27,11 @@ h1 {
 
 <body background="img/bg/bg.jpg">
 	<center>
-		<h1>Welcome :</h1>
+		<h1>
+			Welcome :
+			<%=((UserBean) session.getAttribute("user")).getFullName()%></h1>
 
-		<FORM ACTION="WelcomeCtl" METHOD="post">
+		<FORM ACTION="WelcomeCtl.do" METHOD="post">
 			<table>
 				<tr>
 					<td>Book Name :</td>

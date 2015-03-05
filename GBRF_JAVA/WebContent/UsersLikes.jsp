@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Like Page for Creative Book</title>
+<title>Users Likes Page</title>
 <style type="text/css">
 body {
 	color: white;
@@ -13,6 +13,14 @@ body {
 
 td {
 	font-size: 15px;
+}
+
+th {
+	background-color: #E95810;
+}
+
+table {
+	background-color: #F58750;
 }
 
 h1 {
@@ -28,16 +36,17 @@ H2 {
 <body>
 	<center>
 		<H1>Read and WIN</H1>
+		<H2>Part - I</H2>
 		<font color="red"><%=ServletUtility.getErrorMessage("like1", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like2", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like3", request)%></font>
-		<FORM ACTION="LikesCtl" METHOD="post">
+		<FORM ACTION="UsersLikesCtl.do" METHOD="post">
 			<table width="100%" align="center" border="1">
 				<tr>
-					<th bgcolor="silver">Chapter</th>
-					<th bgcolor="silver">Like1</th>
-					<th bgcolor="silver">Like2</th>
-					<th bgcolor="silver">Like3</th>
+					<th>Chapter</th>
+					<th>Like1</th>
+					<th>Like2</th>
+					<th>Like3</th>
 				</tr>
 				<tr>
 					<td>Chapter 1: A Skit with my Friend Jaspal Bhatti</td>
@@ -121,8 +130,7 @@ H2 {
 						value="Chapter 9"></td>
 				</tr>
 			</table>
-			<INPUT TYPE="submit" VALUE="Save" name="operation">&nbsp;&nbsp;<a
-				href="LikesListCtl">List</a>
+			<INPUT TYPE="submit" VALUE="Save" name="operation">
 		</form>
 	</center>
 </html>

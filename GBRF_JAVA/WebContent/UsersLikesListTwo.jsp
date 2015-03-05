@@ -10,15 +10,23 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Award One</title>
+<title>Read & Win Part-II Awards</title>
 <style type="text/css">
 body {
-	color: black;
+	color: white;
 }
 
 td {
 	font-size: 15px;
 	text-align: center;
+}
+
+th {
+	background-color: #E95810;
+}
+
+table {
+	background-color: #F58750;
 }
 
 h1 {
@@ -33,13 +41,18 @@ H2 {
 <body background="img/bg/bg.jpg">
 <body>
 	<center>
-		<h1>Award One Winner List</h1>
-		<table border="1" width="50%">
+		<h1>Read & Win</h1>
+		<h2>Part-II Awards</h2>
+		<table border="1" width="100%">
 			<tr>
 				<th>Id</th>
-				<th>User Name</th>
-				<th>Date & Time</th>
-				
+				<th>Date</th>
+				<th>Email Id</th>
+				<th>Book Name</th>
+				<th>Book No</th>
+				<th>Like 1</th>
+				<th>Like 2</th>
+				<th>Like 3</th>
 			</tr>
 			<%
 				List list = (List) request.getAttribute("dtoList");
@@ -49,14 +62,19 @@ H2 {
 			%>
 			<tr>
 				<td><%=bean.getId()%></td>
-				<td><%=bean.getEmail()%></td>
 				<td><%=bean.getDate()%></td>
+				<td><%=bean.getEmail()%></td>
+				<td><%=bean.getBookName()%></td>
+				<td><%=bean.getBookNo()%></td>
+				<td><%=bean.getLike1()%></td>
+				<td><%=bean.getLike2()%></td>
+				<td><%=bean.getLike3()%></td>
 			</tr>
 			<%
 				}
 			%>
 		</table>
-		<br> <a href="LikesCtl">Back to Likes Page</a>
+		<br> <a href="WelcomeCtl.do">Home</a>
 	</center>
 </body>
 </html>

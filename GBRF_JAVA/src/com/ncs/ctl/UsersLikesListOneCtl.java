@@ -8,15 +8,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.ncs.model.AwardOneModel;
+import com.ncs.model.LikesModel;
 import com.ncs.util.ServletUtility;
 
-public class AwardOneListCtl extends HttpServlet {
+public class UsersLikesListOneCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		AwardOneModel model = new AwardOneModel();
+		// get model
+		LikesModel model = new LikesModel();
 		List dtoList = null;
 		try {
 			dtoList = model.list();
@@ -24,7 +25,6 @@ public class AwardOneListCtl extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("dtoList", dtoList);
-		ServletUtility.forward("AwardOneList.jsp", request, response);
+		ServletUtility.forward("UsersLikesListOne.jsp", request, response);
 	}
-
 }

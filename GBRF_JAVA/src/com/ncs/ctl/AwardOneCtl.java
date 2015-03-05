@@ -3,13 +3,13 @@ package com.ncs.ctl;
 import java.io.IOException;
 import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ncs.model.LikesModel;
+import com.ncs.util.ServletUtility;
 
 public class AwardOneCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -25,7 +25,6 @@ public class AwardOneCtl extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("dtoList", dtoList);
-		RequestDispatcher rd = request.getRequestDispatcher("AwardOne.jsp");
-		rd.forward(request, response);
+		ServletUtility.forward("AwardOne.jsp", request, response);
 	}
 }

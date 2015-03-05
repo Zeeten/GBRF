@@ -91,9 +91,11 @@ public class UserModel {
 		Connection conn = null;
 		UserBean bean = null;
 		try {
-			conn = JDBCDataSource2.getConnection();
+			// SELECT customer_id,firstname,lastname,email,password FROM
+			// oc_customer WHERE email=? AND password=?
+			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT customer_id,firstname,lastname,email,password FROM oc_customer WHERE email=? AND password=?");
+					.prepareStatement("SELECT * FROM user WHERE email=? AND password=?");
 			pstmt.setString(1, email);
 			pstmt.setString(2, password);
 
@@ -101,12 +103,11 @@ public class UserModel {
 			while (rs.next()) {
 				bean = new UserBean();
 				bean.setId(rs.getInt(1));
-				
 				bean.setName(rs.getString(2));
 				bean.setSurname(rs.getString(3));
 				bean.setEmail(rs.getString(4));
 				bean.setPassword(rs.getString(5));
-			
+				bean.setDate(rs.getTimestamp(6));
 			}
 			rs.close();
 		} catch (Exception e) {

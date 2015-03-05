@@ -8,9 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ncs.bean.InviteBean;
-import com.ncs.bean.UserBean;
 import com.ncs.model.InviteModel;
-import com.ncs.model.UserModel;
 import com.ncs.util.DataValidator;
 import com.ncs.util.EmailMessage;
 import com.ncs.util.EmailUtility;

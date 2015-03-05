@@ -31,6 +31,7 @@ H2 {
 
 		<H2>
 			<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
+			</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>
 			</font>
 		</H2>
 		<FORM ACTION="LoginCtl" METHOD="post">

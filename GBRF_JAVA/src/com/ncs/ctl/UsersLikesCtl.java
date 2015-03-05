@@ -2,7 +2,6 @@ package com.ncs.ctl;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,13 +15,12 @@ import com.ncs.util.DataValidator;
 import com.ncs.util.PropertyReader;
 import com.ncs.util.ServletUtility;
 
-public class LikesCtl extends HttpServlet {
+public class UsersLikesCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rd = request.getRequestDispatcher("likespage.jsp");
-		rd.forward(request, response);
+		ServletUtility.forward("UsersLikes.jsp", request, response);
 	}
 
 	protected boolean validate(HttpServletRequest request) {
@@ -71,7 +69,8 @@ public class LikesCtl extends HttpServlet {
 				bean.setLike3(like3);
 				try {
 					model.add(bean);
-					ServletUtility.redirect("LikesListCtl", request, response);
+					ServletUtility.redirect("UsersLikesListOneCtl", request,
+							response);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
