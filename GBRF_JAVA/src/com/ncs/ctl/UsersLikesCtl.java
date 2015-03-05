@@ -2,6 +2,7 @@ package com.ncs.ctl;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +21,8 @@ public class UsersLikesCtl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		ServletUtility.forward("UsersLikes.jsp", request, response);
+		RequestDispatcher rd = request.getRequestDispatcher("UsersLikes.jsp");
+		rd.forward(request, response);
 	}
 
 	protected boolean validate(HttpServletRequest request) {
@@ -69,8 +71,7 @@ public class UsersLikesCtl extends HttpServlet {
 				bean.setLike3(like3);
 				try {
 					model.add(bean);
-					ServletUtility.redirect("UsersLikesListOneCtl", request,
-							response);
+					ServletUtility.redirect("UsersLikesThank.jsp", request, response);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ncs.bean.AwardOneBean;
+import com.ncs.bean.LikesBean;
 import com.ncs.util.JDBCDataSource;
 import com.ncs.util.JDBCDataSource2;
 

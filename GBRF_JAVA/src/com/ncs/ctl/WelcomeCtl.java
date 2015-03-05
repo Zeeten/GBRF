@@ -61,7 +61,7 @@ public class WelcomeCtl extends HttpServlet {
 
 				session.setAttribute("bookName", bookName);
 				session.setAttribute("bookNo", bookNo);
-				ServletUtility.redirect("UsersLikesCtl.do", request, response);
+				ServletUtility.redirect("UsersLikesCtl", request, response);
 			} else {
 				doGet(request, response);
 			}

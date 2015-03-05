@@ -1,3 +1,4 @@
+<%@page import="com.ncs.bean.InitialAwardCorpusBean"%>
 <%@page import="com.ncs.bean.AwardOneBean"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
@@ -26,8 +27,6 @@ td {
 	text-align: center;
 }
 
-
-
 h1 {
 	font-size: 35px;
 }
@@ -38,51 +37,34 @@ H2 {
 </style>
 </head>
 <body background="img/bg/bg.jpg">
-<div class="container">
+	<div class="container">
 <div class="row">
 <center>
-		<h1 class="center">Award List</h1>
-		</center>
+		<h1>Initial Award Corpus List</h1>
+			</center>
 		<div class="table-responsive">
 		<table class="table table-bordered">
 			<tr>
-				<th>#</th>
-				<th>Order Id</th>
-				<th>Date Added</th>
-				<th>Customer Id</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
-				<th>Telephone</th>
-				<th>Payment Name</th>
-				<th>Payment Method</th>
-				<th>Payment Code</th>
-				<th>Total</th>
-				<th>Currency</th>
+				<th>Id</th>
+				<th>Amount</th>
+				<th>No Of Award</th>
+				<th>Total Amount</th>
+				<th>Part</th>
+
 			</tr>
 			<%
 				List list = (List) request.getAttribute("dtoList");
 				Iterator it = list.iterator();
-				int index = 0;
 				while (it.hasNext()) {
-					index++;
-					AwardOneBean bean = (AwardOneBean) it.next();
+					InitialAwardCorpusBean bean = (InitialAwardCorpusBean) it
+							.next();
 			%>
 			<tr>
-				<td><%=index%></td>
 				<td><%=bean.getId()%></td>
-				<td><%=bean.getDateAdded()%></td>
-				<td><%=bean.getCustomerId()%></td>
-				<td><%=bean.getFirstName()%></td>
-				<td><%=bean.getLastName()%></td>
-				<td><%=bean.getEmail()%></td>
-				<td><%=bean.getTelephone()%></td>
-				<td><%=bean.getPaymentFirstName() + " "
-						+ bean.getPaymentLastName()%></td>
-				<td><%=bean.getPaymentMethod()%></td>
-				<td><%=bean.getPaymentCode()%></td>
-				<td><%=bean.getTotal()%></td>
-				<td><%=bean.getCurrencyCode()%></td>
+				<td><%=bean.getAmount()%></td>
+				<td><%=bean.getNoOfAward()%></td>
+				<td><%=bean.getTotalAmount()%></td>
+				<td><%=bean.getPart()%></td>
 			</tr>
 			<%
 				}
@@ -90,6 +72,7 @@ H2 {
 		</table>
 		</div>
 		</div>
-</div>
+		</div>
+
 </body>
 </html>

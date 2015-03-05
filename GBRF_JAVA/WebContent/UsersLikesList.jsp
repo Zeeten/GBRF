@@ -10,7 +10,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Read & Win Part-II Awards</title>
+<title>Your Likes</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -29,7 +29,6 @@ td {
 	text-align: center;
 }
 
-
 h1 {
 	font-size: 35px;
 }
@@ -44,19 +43,19 @@ H2 {
 	<div class="container">
 <div class="row">
 	<center>
-		<h1>Read & Win</h1>
-		<h2>Part-II Awards</h2>
+		<h1>User Likes List</h1>
+		
 		<div class="table-responsive">
 		<table class="table table-bordered" >
 			<tr>
 				<th>Id</th>
-				<th>Date</th>
 				<th>Email Id</th>
 				<th>Book Name</th>
 				<th>Book No</th>
 				<th>Like 1</th>
 				<th>Like 2</th>
 				<th>Like 3</th>
+				<th>Date</th>
 			</tr>
 			<%
 				List list = (List) request.getAttribute("dtoList");
@@ -66,22 +65,22 @@ H2 {
 			%>
 			<tr>
 				<td><%=bean.getId()%></td>
-				<td><%=bean.getDate()%></td>
 				<td><%=bean.getEmail()%></td>
 				<td><%=bean.getBookName()%></td>
 				<td><%=bean.getBookNo()%></td>
 				<td><%=bean.getLike1()%></td>
 				<td><%=bean.getLike2()%></td>
 				<td><%=bean.getLike3()%></td>
+				<td><%=bean.getDate()%></td>
 			</tr>
 			<%
 				}
 			%>
 		</table>
-			</div>
-		<br> <a href="WelcomeCtl.do">Home</a>
-	</center>
-	</div>
+		</div>
+		<br> <a href="UsersLikesCtl">Back to Likes Page</a>
+			</center>
+		</div>
 		</div>
 </body>
 </html>

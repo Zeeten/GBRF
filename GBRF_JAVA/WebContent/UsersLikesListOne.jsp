@@ -11,6 +11,14 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Read & Win Part-I Awards</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <style type="text/css">
 body {
 	color: white;
@@ -25,13 +33,7 @@ h1 {
 	font-size: 35px;
 }
 
-th {
-	background-color: #E95810;
-}
 
-table {
-	background-color: #F58750;
-}
 
 H2 {
 	font-size: 20px;
@@ -40,10 +42,13 @@ H2 {
 </head>
 <body background="img/bg/bg.jpg">
 <body>
+	<div class="container">
+<div class="row">
 	<center>
 		<h1>Read & Win</h1>
 		<h2>Part-I Awards</h2>
-		<table border="1" width="100%">
+	<div class="table-responsive">
+		<table class="table table-bordered" >
 			<tr>
 				<th>Id</th>
 				<th>Date</th>
@@ -74,7 +79,10 @@ H2 {
 				}
 			%>
 		</table>
+		</div>
 		<br> <a href="WelcomeCtl.do">Home</a>
 	</center>
+	</div>
+		</div>
 </body>
 </html>

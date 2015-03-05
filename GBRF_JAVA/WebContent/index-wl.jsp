@@ -112,18 +112,17 @@
 						<div class="container">
 							<div id="da-slider" class="da-slider">
 								<div class="da-slide" style="background: #bf0a30">
-									<p1>“Mothers may still want their favorite sons to grow
+									<p1>Mothers may still want their favorite sons to grow
 									up to be<br>
 									president, but they donot want them to<br>
-									become politicians in the process”</p1>
+									become politicians in the process</p1>
 									<h3>-John F. Kennedy</h3>
 								</div>
 								<div class="da-slide" style="background: #002868">
 									<p
 										style="color: #fff; text-align: left; margin-left: -19px; margin-top: 0px; font-family: Times New Roman; height: 140px; overflow: hidden;">Changing
 										mothers' mind ...</p>
-									<p>
-										“Future mothers will surely want their favorite sons and
+									<p>Future mothers will surely want their favorite sons and
 										daughters <br> to grow up to be Presidents, Prime
 										Ministers, Chief Ministers, Ministers,<br>and People
 										Representatives etc., across the Globe only if die hard <br>professionals
