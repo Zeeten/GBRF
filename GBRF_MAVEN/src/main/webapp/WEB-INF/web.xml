@@ -1,20 +1,109 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
-<web-app>
-	<display-name>Archetype Created Web Application</display-name>
-
-
-	<servlet>
-		<servlet-name>HelloServlet</servlet-name>
-		<servlet-class>in.co.sunrays.servlet.HelloServlet</servlet-class>
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:web="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+  <display-name>GBRF_MAVEN</display-name>
+  <servlet>
+    <servlet-name>AdminCtl</servlet-name>
+		<servlet-class>com.ncs.ctl.AdminCtl</servlet-class>
 	</servlet>
-
 	<servlet-mapping>
-		<servlet-name>HelloServlet</servlet-name>
-		<url-pattern>/hello</url-pattern>
+		<servlet-name>AdminCtl</servlet-name>
+		<url-pattern>/AdminCtl.do</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>LoginCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.LoginCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginCtl</servlet-name>
+    <url-pattern>/LoginCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>LogoutCtl</servlet-name>
+		<servlet-class>com.ncs.ctl.LogoutCtl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogoutCtl</servlet-name>
+		<url-pattern>/LogoutCtl</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>WelcomeCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.WelcomeCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WelcomeCtl</servlet-name>
+    <url-pattern>/WelcomeCtl.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>InviteCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.InviteCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InviteCtl</servlet-name>
+    <url-pattern>/InviteCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UsersLikesCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UsersLikesCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersLikesCtl</servlet-name>
+    <url-pattern>/UsersLikesCtl</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>UsersLikesListCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UsersLikesListCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersLikesListCtl</servlet-name>
+    <url-pattern>/UsersLikesListCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>UsersLikesListOneCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UsersLikesListOneCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersLikesListOneCtl</servlet-name>
+    <url-pattern>/UsersLikesListOneCtl</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>UsersLikesListTwoCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UsersLikesListTwoCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersLikesListTwoCtl</servlet-name>
+    <url-pattern>/UsersLikesListTwoCtl</url-pattern>
+  </servlet-mapping>
 
+<servlet>
+  <servlet-name>AwardOneListCtl</servlet-name>
+		<servlet-class>com.ncs.ctl.AwardOneListCtl</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AwardOneListCtl</servlet-name>
+		<url-pattern>/AwardOneListCtl</url-pattern>
+	</servlet-mapping> <servlet>
+    <servlet-name>InitialAwardCorpusListCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.InitialAwardCorpusListCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitialAwardCorpusListCtl</servlet-name>
+    <url-pattern>/InitialAwardCorpusListCtl</url-pattern>
+  </servlet-mapping>
 
+	<filter>
+		<filter-name>FrontCtl</filter-name>
+		<filter-class>com.ncs.ctl.FrontCtl</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>FrontCtl</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
 </web-app>

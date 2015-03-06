@@ -1,0 +1,117 @@
+
+
+@charset "utf-8";
+body {
+    background-color: black;
+    margin: 0;
+}
+.pop {
+    margin: 0 auto;
+    width: auto;
+}
+h2 {
+    color: #074da3;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.pop p1 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: -11px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop p2 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop p3 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop p4 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop p5 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop ul {
+    color: #074da3;
+    float: left;
+    font-size: 13.4px !important;
+    line-height: 12px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 59px;
+    text-align: left;
+}
+.pop ul li {
+    color: #074da3;
+    float: left;
+    font-size: 13.4px !important;
+    line-height: 15px;
+    margin-right: 0;
+    margin-top: 7px;
+    padding-left: 0;
+    text-align: left;
+}
+.pop #contact1 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 15px;
+    text-align: left;
+}
+.pop #contact2 {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 0;
+    text-align: left;
+}
+.pop #tele {
+    color: #074da3;
+    float: left;
+    font-size: 14.4px !important;
+    line-height: 16px;
+    margin-right: 40px;
+    margin-top: 8px;
+    padding-left: 40px;
+    text-align: left;
+}
