@@ -37,7 +37,8 @@ body {
 				</H2>
 				<FORM ACTION="LoginCtl" METHOD="post" class="form-horizontal">
 					<div class="form-group">
-					<label for="inputEmail" class="control-label col-xs-offset-3 col-xs-2"
+						<label for="inputEmail"
+							class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Email :</label>
 						<div class=" col-xs-3">
 							<input type="email" class="form-control" id="email" name="email"
@@ -47,7 +48,8 @@ body {
 						</div>
 					</div>
 					<div class="form-group">
-					<label for="inputPassword" class="control-label col-xs-offset-3 col-xs-2"
+						<label for="inputPassword"
+							class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Password :</label>
 						<div class=" col-xs-3">
 							<input type="password" class="form-control" name="password"
@@ -58,7 +60,15 @@ body {
 					</div>
 					<div class="form-group">
 						<div class="col-xs-offset-1 col-xs-10">
-							<input name="operation" value="SignIn" type="submit" style="background: transparent; color: #fff; width: 130px;height: 30px">
+							<input name="operation" value="SignIn" type="submit"
+								style="background: transparent; color: #fff; width: 130px; height: 30px">
+
+
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-offset-2 col-xs-10">
+							<a href="RegisterPrintedBookCtl">Register Book and create Login</a>
 						</div>
 					</div>
 				</form>

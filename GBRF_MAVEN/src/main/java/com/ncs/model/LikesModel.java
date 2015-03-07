@@ -33,6 +33,7 @@ public class LikesModel {
 
 	public long add(LikesBean bean) throws Exception {
 		Connection conn = null;
+		System.out.println(bean.getBookName());
 		long pk = 0;
 		try {
 			conn = JDBCDataSource.getConnection();

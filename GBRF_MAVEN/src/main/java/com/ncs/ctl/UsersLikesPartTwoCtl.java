@@ -19,7 +19,7 @@ import com.ncs.util.DataValidator;
 import com.ncs.util.PropertyReader;
 import com.ncs.util.ServletUtility;
 
-public class UsersLikesCtl extends HttpServlet {
+public class UsersLikesPartTwoCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request,
@@ -35,7 +35,7 @@ public class UsersLikesCtl extends HttpServlet {
 			e.printStackTrace();
 		}
 		request.setAttribute("list", dtoList);
-		RequestDispatcher rd = request.getRequestDispatcher("UsersLikes.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("UsersLikesPartTwo.jsp");
 		rd.forward(request, response);
 	}
 

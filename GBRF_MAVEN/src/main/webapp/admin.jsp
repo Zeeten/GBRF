@@ -31,14 +31,14 @@
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Register Printed Book<b class="caret"></b></a>
               <ul class="dropdown-menu">
-							<li><a href="#">Register Printed Book</a></li>
-							<li><a href="#">Registered Books</a></li>
+							<li><a href="RegisterPrintedBookCtl">Register Printed Book</a></li>
+							<li><a href="RegisteredBooksCtl">Registered Books</a></li>
 						</ul></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Read and Like<b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="UsersLikesCtl">Part -I</a></li>
-							<li><a href="UsersLikesCtl">Part -II</a></li>
+							<li><a href="UsersLikesPartTwoCtl">Part -II</a></li>
 						</ul></li>
 
 					<li class="dropdown"><a href="#" class="dropdown-toggle"

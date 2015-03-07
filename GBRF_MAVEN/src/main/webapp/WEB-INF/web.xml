@@ -53,6 +53,14 @@
     <url-pattern>/UsersLikesCtl</url-pattern>
   </servlet-mapping>
     <servlet>
+    <servlet-name>UsersLikesPartTwoCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UsersLikesPartTwoCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersLikesPartTwoCtl</servlet-name>
+    <url-pattern>/UsersLikesPartTwoCtl</url-pattern>
+  </servlet-mapping>
+    <servlet>
     <servlet-name>UsersLikesListCtl</servlet-name>
     <servlet-class>com.ncs.ctl.UsersLikesListCtl</servlet-class>
   </servlet>
@@ -92,7 +100,22 @@
     <servlet-name>InitialAwardCorpusListCtl</servlet-name>
     <url-pattern>/InitialAwardCorpusListCtl</url-pattern>
   </servlet-mapping>
-
+<servlet>
+    <servlet-name>RegisterPrintedBookCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.RegisterPrintedBookCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterPrintedBookCtl</servlet-name>
+    <url-pattern>/RegisterPrintedBookCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>RegisteredBooksCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.RegisteredBooksCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisteredBooksCtl</servlet-name>
+    <url-pattern>/RegisteredBooksCtl</url-pattern>
+  </servlet-mapping>
 	<filter>
 		<filter-name>FrontCtl</filter-name>
 		<filter-class>com.ncs.ctl.FrontCtl</filter-class>
