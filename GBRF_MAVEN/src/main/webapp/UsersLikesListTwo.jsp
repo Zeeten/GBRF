@@ -10,7 +10,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Read & Win Part-II Awards</title>
+<title>Read & Like Part-II Awards</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(function() {
@@ -32,7 +32,7 @@ body {
 	<div class="container">
 <div class="row">
 	<center>
-		<h1 style="color: #fff">Read & Win Part-II Awards</h1>
+		<h1 style="color: #fff">Read & Like Part-II Awards</h1>
 		<div class="table-responsive">
 		<table class="table table-bordered" style="color: #fff" >
 			<tr>

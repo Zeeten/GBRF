@@ -30,8 +30,9 @@ body {
 		<center>
 
 			<FORM ACTION="WelcomeCtl.do" METHOD="post" class="form-horizontal">
+			<h1 style="color: #fff">Welcome to GBRF</h1>
 
-				<div class="form-group">
+	<%-- 			<div class="form-group">
 					<label for="inputBook" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Book Name :</label>
 					<div class="col-xs-3">
@@ -66,7 +67,7 @@ body {
 						<input name="operation" value="Go" type="submit"
 							style="background: transparent; color: #fff; width: 130px; height: 30px">
 					</div>
-				</div>
+				</div> --%>
 			</form>
 		</center>
 	</div>

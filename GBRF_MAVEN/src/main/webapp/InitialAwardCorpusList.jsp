@@ -36,7 +36,7 @@ body {
 			<tr>
 				<th>Id</th>
 				<th>Amount</th>
-				<th>No Of Award</th>
+				<th>No Of Awards</th>
 				<th>Total Amount</th>
 				<th>Part</th>
 

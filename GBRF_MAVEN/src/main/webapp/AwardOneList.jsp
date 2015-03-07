@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Award List</title>
+<title>Release and Buy Award</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(function() {
@@ -29,7 +29,7 @@ body {
 <div class="container">
 <div class="row">
 <center>
-		<h1 class="center" style="color: #fff">Award List</h1>
+		<h1 class="center" style="color: #fff">Release and Buy Award</h1>
 		</center>
 		<div class="table-responsive">
 		<table class="table table-bordered" style="color: #fff">

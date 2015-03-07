@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Like Page for Creative Book</title>
+<title>Read and Like</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(function() {
@@ -42,19 +42,31 @@ $(document).ready(function() {
 	<div id="includedContent"></div>
 	<div style="margin-top: 50px">
 
-		<form name="matrixForm" ACTION="UsersLikesCtl"  METHOD="post"  class="matrix">
+		<form name="matrixForm" ACTION="UsersLikesCtl"  METHOD="post"  class="matrix" class="form-horizontal">
 			<div class="container">
 <div class="row">
 	<center>
-		<H1 style="color: #fff">Read and WIN-Part I</H1>
+		<H1 style="color: #fff">Read and Like-Part I</H1>
 		<H2 style="color: #fff">Select best three chapters from 1 to 9 for part I Award</H2>
+
 		<font color="red"><%=ServletUtility.getErrorMessage("like1", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like2", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like3", request)%></font>
-
 				<div class="table-responsive">
-		<table class="table table-bordered">
-				<tr style="color: #fff">
+				<div class="form-group">
+					<label for="inputBook" class="control-label col-xs-offset-3 col-xs-2"
+						style="color: #fff">Book Name :</label>
+
+	<div class="col-xs-3">
+						<select class="form-control" id="bookName" name="bookName"
+							style="background: transparent;">
+							<option value="" style="background: transparent;">--Select--</option>
+							</select>
+							</div>
+							</div>
+							<br>
+		<table class="table table-bordered" style=" width: 70%">
+				<tr style="color: #fff;">
 					<th >Chapter</th>
 					<th >Like1</th>
 					<th>Like2</th>
@@ -240,7 +252,6 @@ $(document).ready(function() {
 							style="background: transparent; color: #fff; width: 130px; height: 30px">
 					</div>
 				</div>
-	
 		</div>
 		</div>
 		</form>
