@@ -79,37 +79,7 @@ public class RegisterPrintedBookModel {
 		}
 		return pk;
 	}
-	
-	public List list(String email) throws Exception {
-		System.out.println("iii"+email);
-		List list = new ArrayList();
-		Connection conn = null;
-		try {
-			conn = JDBCDataSource.getConnection();
-			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=?");
-			pstmt.setString(1, email);
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				RegisterPrintedBookBean bean = new RegisterPrintedBookBean();
-				bean.setId(rs.getInt(1));
-				bean.setBookName(rs.getString(2));
-				bean.setBookId(rs.getString(3));
-				bean.setDate(rs.getDate(4));
-				bean.setMobileno(rs.getString(5));
-				bean.setEmail(rs.getString(6));
-	
-				bean.setPassword(rs.getString(7));
-				list.add(bean);
-			}
-			rs.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			JDBCDataSource.closeConnection(conn);
-		}
-		return list;
-	}
+
 	
 	public List search(RegisterPrintedBookBean bean) throws ApplicationException {
 		return search(bean, 0, 0);
@@ -166,6 +136,8 @@ System.out.println(sql);
 				bean.setEmail(rs.getString(6));
 	
 				bean.setPassword(rs.getString(7));
+				bean.setRlPartI(rs.getBoolean(8));
+				bean.setRlPartII(rs.getBoolean(9));
 				list.add(bean);
 			}
 			rs.close();

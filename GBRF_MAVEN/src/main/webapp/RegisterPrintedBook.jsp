@@ -103,7 +103,24 @@ $(function() {
 		
 				if(session.getAttribute("session")==null){
 					%>
-							
+						<div class="form-group">
+					<label for="inputfirstName" class="control-label col-xs-offset-3 col-xs-2"
+						style="color: #fff">First Name :</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control" name="firstName" id="firstName"
+							style="background: transparent; color: #fff;"
+							placeholder="First Name"> <font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font>
+					</div>
+				</div>	
+						<div class="form-group">
+					<label for="inputlastName" class="control-label col-xs-offset-3 col-xs-2"
+						style="color: #fff">Last Name :</label>
+					<div class="col-xs-3">
+						<input type="text" class="form-control" name="lastName" id="lastName"
+							style="background: transparent; color: #fff;"
+							placeholder="Last Name"> <font color="red"> <%=ServletUtility.getErrorMessage("lastName", request)%></font>
+					</div>
+				</div>
 					<div class="form-group">
 					<label for="inputMobileNo" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Mobile No :</label>

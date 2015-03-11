@@ -9,11 +9,9 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
 <!-- Optional theme -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
 <!-- Latest compiled and minified JavaScript -->
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -23,13 +21,11 @@ body {
 }
 </style>
 </head>
-
 <body background="img/bg/bgbooks.jpg">
 	<div class="container">
 		<div class="row">
 			<center>
 				<h1>Login</h1>
-
 				<H2>
 					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
 					</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>
@@ -60,10 +56,8 @@ body {
 					</div>
 					<div class="form-group">
 						<div class="col-xs-offset-1 col-xs-10">
-							<input name="operation" value="SignIn" type="submit"
+							<input name="operation" value="Sign In" type="submit"
 								style="background: transparent; color: #fff; width: 130px; height: 30px">
-
-
 						</div>
 					</div>
 					<div class="form-group">
@@ -82,4 +76,3 @@ body {
 			</center>
 		</div>
 	</div>
-</html>

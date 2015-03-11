@@ -59,7 +59,7 @@ public class LoginCtl extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(true);
 		String operation = request.getParameter("operation");
-		if ("SignIn".equalsIgnoreCase(operation)) {
+		if ("Sign In".equalsIgnoreCase(operation)) {
 			if (validate(request)) {
 				try {
 					String email = request.getParameter("email");

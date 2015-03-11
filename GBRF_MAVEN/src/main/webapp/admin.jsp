@@ -59,7 +59,7 @@ if(session.getAttribute("session")!=null){
 						<ul class="dropdown-menu">
 							<li><a href="InitialAwardCorpusListCtl">Initial Award
 									Corpus</a></li>
-									<li><a href="#">Release and Buy</a></li>
+									<li><a href="ReleaseAndBuyCtl">Release and Buy</a></li>
 						</ul></li>
 						
 						<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -71,7 +71,7 @@ if(session.getAttribute("session")!=null){
 							<li><a href="UsersLikesListTwoCtl">Read and Like
 									Part -II</a></li>
 									<li><a href="RegisteredBooksCtl">Registered Books</a></li>
-						
+						<li><a href="UserListCtl">User List</a></li>
 						</ul></li>
 							
 					<li><a href="LogoutCtl">Logout</a></li>

@@ -49,23 +49,25 @@ public class LikesModel {
 			// Get auto-generated next primary key
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn
-					.prepareStatement("INSERT INTO likes VALUES(?,?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO likes VALUES(?,?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setLong(1, pk);
 			pstmt.setString(2, bean.getEmail());
 			pstmt.setString(3, bean.getBookName());
 			pstmt.setString(4, bean.getBookNo());
-			pstmt.setString(5, bean.getLike1());
-			pstmt.setString(6, bean.getLike2());
-			pstmt.setString(7, bean.getLike3());
+			pstmt.setInt(5, bean.getLike1());
+			pstmt.setInt(6, bean.getLike2());
+			pstmt.setInt(7, bean.getLike3());
 			pstmt.setTimestamp(8, bean.getDate());
+			pstmt.setInt(9, bean.getLike4());
+			pstmt.setInt(10, bean.getLike5());
+			pstmt.setInt(11, bean.getLike6());
 			pstmt.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt.close();
 			PreparedStatement pstmt1 = conn
-					.prepareStatement("UPDATE registerprintedbook SET RL_PART_I=?,RL_PART_II=? WHERE BOOK_ID=?");
+					.prepareStatement("UPDATE registerprintedbook SET RL_PART_I=? WHERE BOOK_ID=?");
 			pstmt1.setBoolean(1, true);
-			pstmt1.setBoolean(2,false);
-			pstmt1.setString(3, bean.getBookNo());
+			pstmt1.setString(2, bean.getBookNo());
 			pstmt1.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt1.close();
@@ -96,23 +98,25 @@ public class LikesModel {
 			// Get auto-generated next primary key
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn
-					.prepareStatement("INSERT INTO likes VALUES(?,?,?,?,?,?,?,?)");
+					.prepareStatement("INSERT INTO likes VALUES(?,?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setLong(1, pk);
 			pstmt.setString(2, bean.getEmail());
 			pstmt.setString(3, bean.getBookName());
 			pstmt.setString(4, bean.getBookNo());
-			pstmt.setString(5, bean.getLike1());
-			pstmt.setString(6, bean.getLike2());
-			pstmt.setString(7, bean.getLike3());
+			pstmt.setInt(5, bean.getLike1());
+			pstmt.setInt(6, bean.getLike2());
+			pstmt.setInt(7, bean.getLike3());
 			pstmt.setTimestamp(8, bean.getDate());
+			pstmt.setInt(9, bean.getLike4());
+			pstmt.setInt(10, bean.getLike5());
+			pstmt.setInt(11, bean.getLike6());
 			pstmt.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt.close();
 			PreparedStatement pstmt1 = conn
-					.prepareStatement("UPDATE registerprintedbook SET RL_PART_I=?,RL_PART_II=? WHERE BOOK_ID=?");
-			pstmt1.setBoolean(1, false);
-			pstmt1.setBoolean(2,true);
-			pstmt1.setString(3, bean.getBookNo());
+					.prepareStatement("UPDATE registerprintedbook SET RL_PART_II=? WHERE BOOK_ID=?");
+			pstmt1.setBoolean(1,true);
+			pstmt1.setString(2, bean.getBookNo());
 			pstmt1.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt1.close();
@@ -143,10 +147,13 @@ public class LikesModel {
 				bean.setEmail(rs.getString(2));
 				bean.setBookName(rs.getString(3));
 				bean.setBookNo(rs.getString(4));
-				bean.setLike1(rs.getString(5));
-				bean.setLike2(rs.getString(6));
-				bean.setLike3(rs.getString(7));
+				bean.setLike1(rs.getInt(5));
+				bean.setLike2(rs.getInt(6));
+				bean.setLike3(rs.getInt(7));
 				bean.setDate(rs.getTimestamp(8));
+				bean.setLike4(rs.getInt(9));
+				bean.setLike5(rs.getInt(10));
+				bean.setLike6(rs.getInt(11));
 				list.add(bean);
 			}
 			rs.close();
@@ -158,35 +165,7 @@ public class LikesModel {
 		return list;
 	}
 	
-	public List list(String email) throws Exception {
-		List list = new ArrayList();
-		Connection conn = null;
-		try {
-			conn = JDBCDataSource.getConnection();
-			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM likes where EMAIL=?");
-			pstmt.setString(1, email);
-			ResultSet rs = pstmt.executeQuery();
-			while (rs.next()) {
-				LikesBean bean = new LikesBean();
-				bean.setId(rs.getInt(1));
-				bean.setEmail(rs.getString(2));
-				bean.setBookName(rs.getString(3));
-				bean.setBookNo(rs.getString(4));
-				bean.setLike1(rs.getString(5));
-				bean.setLike2(rs.getString(6));
-				bean.setLike3(rs.getString(7));
-				bean.setDate(rs.getTimestamp(8));
-				list.add(bean);
-			}
-			rs.close();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			JDBCDataSource.closeConnection(conn);
-		}
-		return list;
-	}
+
 	
 	public List search(LikesBean bean) throws ApplicationException {
 		return search(bean, 0, 0);
@@ -237,10 +216,13 @@ public class LikesModel {
 				bean.setEmail(rs.getString(2));
 				bean.setBookName(rs.getString(3));
 				bean.setBookNo(rs.getString(4));
-				bean.setLike1(rs.getString(5));
-				bean.setLike2(rs.getString(6));
-				bean.setLike3(rs.getString(7));
+				bean.setLike1(rs.getInt(5));
+				bean.setLike2(rs.getInt(6));
+				bean.setLike3(rs.getInt(7));
 				bean.setDate(rs.getTimestamp(8));
+				bean.setLike4(rs.getInt(9));
+				bean.setLike5(rs.getInt(10));
+				bean.setLike6(rs.getInt(11));
 				list.add(bean);
 			}
 			rs.close();

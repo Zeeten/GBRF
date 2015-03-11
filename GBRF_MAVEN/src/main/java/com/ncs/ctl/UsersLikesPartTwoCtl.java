@@ -76,16 +76,14 @@ public class UsersLikesPartTwoCtl extends HttpServlet {
 
 		if ("Save".equalsIgnoreCase(operation)) {
 			if (validate(request)) {
-				String like1 = request.getParameter("like1");
-				String like2 = request.getParameter("like2");
-				String like3 = request.getParameter("like3");
 				LikesBean bean = new LikesBean();
 				bean.setEmail(session.getAttribute("email").toString());
 				bean.setBookNo(DataUtility.getString(request
 						.getParameter("bookNo")));
-				bean.setLike1(like1);
-				bean.setLike2(like2);
-				bean.setLike3(like3);
+	
+				bean.setLike4(DataUtility.getInt(request.getParameter("like1")));
+				bean.setLike5(DataUtility.getInt(request.getParameter("like2")));
+				bean.setLike6(DataUtility.getInt(request.getParameter("like3")));
 				try {
 					model.addPartTwo(bean);
 					ServletUtility.redirect("UsersLikesThank.jsp", request, response);

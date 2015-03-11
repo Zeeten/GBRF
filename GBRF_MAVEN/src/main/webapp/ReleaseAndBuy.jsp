@@ -1,3 +1,4 @@
+<%@page import="com.ncs.bean.ReleaseAndBuyBean"%>
 <%@page import="com.ncs.bean.InitialAwardCorpusBean"%>
 <%@page import="com.ncs.bean.AwardOneBean"%>
 <%@page import="java.util.Iterator"%>
@@ -29,39 +30,34 @@ body {
 	<div class="container">
 <div class="row">
 <center>
-		<h1 style="color: #fff">Initial Award Corpus List</h1>
-			</center>
+		<h1 style="color: #fff">Release And Buy List</h1>
+			
 		<div class="table-responsive">
-		<table class="table table-bordered" style="color: #fff">
+		<table class="table table-bordered" style="color: #fff;width: 70%">
 			<tr>
-				<th>#</th>
+				<th>Top 10</th>
 				<th>Amount</th>
-				<th>No Of Awards</th>
-				<th>Total Amount</th>
-				<th>Part</th>
-
 			</tr>
 			<%
 				List list = (List) request.getAttribute("dtoList");
 				Iterator it = list.iterator();
 				while (it.hasNext()) {
-					InitialAwardCorpusBean bean = (InitialAwardCorpusBean) it
+					ReleaseAndBuyBean bean = (ReleaseAndBuyBean) it
 							.next();
 			%>
 			<tr>
-				<td><%=bean.getId()%></td>
+			   <td><%=bean.getTop10()%></td>
 				<td><%=bean.getAmount()%></td>
-				<td><%=bean.getNoOfAward()%></td>
-				<td><%=bean.getTotalAmount()%></td>
-				<td><%=bean.getPart()%></td>
 			</tr>
 			<%
 				}
 			%>
 		</table>
 		</div>
+				</center>
 		</div>
 		</div>
+
 </div>
 </body>
 </html>

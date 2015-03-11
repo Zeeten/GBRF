@@ -68,13 +68,16 @@ body {
 		<div class="table-responsive">
 		<table class="table table-bordered" style="color: #fff" >
 			<tr>
-				<th>Id</th>
+				<th>#</th>
 				<th>Email Id</th>
 				<th>Book Name</th>
 				<th>Book No</th>
-				<th>Like 1</th>
-				<th>Like 2</th>
-				<th>Like 3</th>
+				<th>Part I Like 1</th>
+				<th>Part I Like 2</th>
+				<th>Part I Like 3</th>
+				<th>Part II Like 1</th>
+				<th>Part II Like 2</th>
+				<th>Part II Like 3</th>
 				<th>Date</th>
 			</tr>
 			<%
@@ -91,6 +94,9 @@ body {
 				<td><%=bean.getLike1()%></td>
 				<td><%=bean.getLike2()%></td>
 				<td><%=bean.getLike3()%></td>
+				<td><%=bean.getLike4()%></td>
+				<td><%=bean.getLike5()%></td>
+				<td><%=bean.getLike6()%></td>
 				<td><%=bean.getDate()%></td>
 			</tr>
 			<%

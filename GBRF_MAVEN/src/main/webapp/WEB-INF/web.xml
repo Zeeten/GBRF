@@ -132,6 +132,22 @@
     <servlet-name>ForgetPasswordCtl</servlet-name>
     <url-pattern>/ForgetPasswordCtl</url-pattern>
   </servlet-mapping>
+	<servlet>
+    <servlet-name>ReleaseAndBuyCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.ReleaseAndBuyCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReleaseAndBuyCtl</servlet-name>
+    <url-pattern>/ReleaseAndBuyCtl</url-pattern>
+  </servlet-mapping>
+      <servlet>
+    <servlet-name>UserListCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.UserListCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserListCtl</servlet-name>
+    <url-pattern>/UserListCtl</url-pattern>
+  </servlet-mapping>
 	<filter>
 		<filter-name>FrontCtl</filter-name>
 		<filter-class>com.ncs.ctl.FrontCtl</filter-class>
