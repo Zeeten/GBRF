@@ -26,7 +26,7 @@ public class FrontCtl implements Filter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpSession session = request.getSession(true);
 
-		if (session.getAttribute("user") == null) {
+		if (session.getAttribute("session") == null) {
 			ServletUtility
 					.setErrorMessage(
 							"Oops! Your session has been expired. Please Login to access application.",

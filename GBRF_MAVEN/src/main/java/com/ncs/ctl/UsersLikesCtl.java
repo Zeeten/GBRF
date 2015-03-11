@@ -28,13 +28,12 @@ public class UsersLikesCtl extends HttpServlet {
 		RegisterPrintedBookModel model = new RegisterPrintedBookModel();
 		List dtoList = null;
 		try {
-			String user=((UserBean) session.getAttribute("user"))
-			.getEmail();
-			dtoList = model.printedbooklist(user);
+			String email=(session.getAttribute("email")).toString();
+			dtoList = model.printedbooklist(email);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		request.setAttribute("list", dtoList);
+		request.setAttribute("likelist", dtoList);
 		RequestDispatcher rd = request.getRequestDispatcher("UsersLikes.jsp");
 		rd.forward(request, response);
 	}
@@ -59,8 +58,8 @@ public class UsersLikesCtl extends HttpServlet {
 					PropertyReader.getValue("error.require", "Like 3"));
 			pass = false;
 		}
-		if (DataValidator.isNull(request.getParameter("bookName"))) {
-			request.setAttribute("bookName",
+		if (DataValidator.isNull(request.getParameter("bookNo"))) {
+			request.setAttribute("bookNo",
 					PropertyReader.getValue("error.require", "Book Name"));
 			pass = false;
 		}
@@ -80,16 +79,14 @@ public class UsersLikesCtl extends HttpServlet {
 				String like1 = request.getParameter("like1");
 				String like2 = request.getParameter("like2");
 				String like3 = request.getParameter("like3");
-				String bookName = request.getParameter("bookName");
+				//String bookName = request.getParameter("bookName");
 				LikesBean bean = new LikesBean();
-				bean.setEmail(((UserBean) session.getAttribute("user"))
-						.getEmail());
-				bean.setBookName(bookName);
-				bean.setBookNo(DataUtility.getString(request
-						.getParameter("bookNo")));
+				bean.setEmail((session.getAttribute("email")).toString());
+				
 				bean.setLike1(like1);
 				bean.setLike2(like2);
 				bean.setLike3(like3);
+				bean.setBookNo(DataUtility.getString(request.getParameter("bookNo")));
 				try {
 					model.add(bean);
 					ServletUtility.redirect("UsersLikesThank.jsp", request, response);

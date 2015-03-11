@@ -69,4 +69,16 @@ public class LikesBean extends BaseBean {
 		this.date = date;
 	}
 
+	@Override
+	public String getKey() {
+
+		return id + "";
+	}
+
+	@Override
+	public String getValue() {
+
+		return bookNo +""+ bookName;
+	}
+
 }

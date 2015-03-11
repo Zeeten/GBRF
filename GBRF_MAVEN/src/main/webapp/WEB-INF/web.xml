@@ -68,6 +68,10 @@
     <servlet-name>UsersLikesListCtl</servlet-name>
     <url-pattern>/UsersLikesListCtl</url-pattern>
   </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UsersLikesListCtl</servlet-name>
+    <url-pattern>/MyUsersLikesListCtl</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>UsersLikesListOneCtl</servlet-name>
     <servlet-class>com.ncs.ctl.UsersLikesListOneCtl</servlet-class>
@@ -115,6 +119,18 @@
   <servlet-mapping>
     <servlet-name>RegisteredBooksCtl</servlet-name>
     <url-pattern>/RegisteredBooksCtl</url-pattern>
+  </servlet-mapping>
+	<servlet-mapping>
+    <servlet-name>RegisteredBooksCtl</servlet-name>
+    <url-pattern>/MyRegisteredBooksCtl</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ForgetPasswordCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.ForgetPasswordCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForgetPasswordCtl</servlet-name>
+    <url-pattern>/ForgetPasswordCtl</url-pattern>
   </servlet-mapping>
 	<filter>
 		<filter-name>FrontCtl</filter-name>

@@ -1,15 +1,24 @@
 package com.ncs.bean;
 
-public class BaseBean {
+import java.io.Serializable;
 
-	private long id;
+public abstract class BaseBean implements Serializable, Comparable<BaseBean>, DropdownListBean { 
+
+	protected  long id;
+
 
 	public long getId() {
 		return id;
 	}
 
+
 	public void setId(long id) {
 		this.id = id;
+	}
+
+
+	public int compareTo(BaseBean next) {
+		return (int) (id - next.getId());
 	}
 
 }

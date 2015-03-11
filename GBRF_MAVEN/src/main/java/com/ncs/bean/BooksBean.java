@@ -11,4 +11,14 @@ public class BooksBean extends BaseBean {
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
+
+	@Override
+	public String getKey() {
+		return id +"";
+	}
+
+	@Override
+	public String getValue() {
+		return bookName;
+	}
 }

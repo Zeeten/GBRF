@@ -9,7 +9,15 @@ public class UserBean extends BaseBean {
 	private String surname;
 	private String email;
 	private String password;
+	private String mobileNo;
 	private Timestamp date = new Timestamp(new Date().getTime());
+	public String getMobileNo() {
+		return mobileNo;
+	}
+
+	public void setMobileNo(String mobileNo) {
+		this.mobileNo = mobileNo;
+	}
 
 	public String getName() {
 		return name;
@@ -53,6 +61,18 @@ public class UserBean extends BaseBean {
 
 	public void setDate(Timestamp date) {
 		this.date = date;
+	}
+
+	@Override
+	public String getKey() {
+
+		return id + "";
+	}
+
+	@Override
+	public String getValue() {
+
+		return name;
 	}
 
 }

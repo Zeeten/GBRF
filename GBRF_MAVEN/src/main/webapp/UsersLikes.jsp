@@ -1,3 +1,5 @@
+<%@page import="com.ncs.util.HTMLUtility"%>
+<%@page import="com.ncs.bean.LikesBean"%>
 <%@page import="com.ncs.bean.RegisterPrintedBookBean"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
@@ -46,6 +48,11 @@ $(document).ready(function() {
 	<div style="margin-top: 50px">
 
 		<form name="matrixForm" ACTION="UsersLikesCtl"  METHOD="post"  class="matrix" class="form-horizontal">
+					<jsp:useBean id="bean" class="com.ncs.bean.RegisterPrintedBookBean" scope="request"/>
+			
+       <%
+			List likelist = (List) request.getAttribute("likelist");
+		%>
 			<div class="container">
 <div class="row">
 	<center>
@@ -60,21 +67,8 @@ $(document).ready(function() {
 					<label for="inputBook" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Book</label>
 	<div class="col-xs-3">
-						<select class="form-control" id="bookName" name="bookName"
-							style="background: transparent;">
-							<option value="" style="background: transparent;">--Select--</option>
-							<%
-								List list = ServletUtility.getList(request);
-								Iterator it = list.iterator();
-								while (it.hasNext()) {
-									RegisterPrintedBookBean bean = (RegisterPrintedBookBean) it.next();
-							%>
-							<option value="<%=bean.getBookName()%>"
-								style="background: transparent;"><%=bean.getBookName()%></option>
-							<%
-								}
-							%>
-						</select> <font color="red"> <%=ServletUtility.getErrorMessage("bookName", request)%></font>
+					<%=HTMLUtility.getList("bookNo", bean.getBookName(), likelist)%> 
+						<font color="red"> <%=ServletUtility.getErrorMessage("bookNo", request)%></font>
 							</div>
 							</div>
 							<br>

@@ -31,40 +31,8 @@ body {
 	<div class="container">
 <div class="row">
 	<center>
-		<h1 style="color: #fff">User Likes List</h1>
-								<FORM  METHOD="post" class="form-horizontal">
-						<div class="row">
-					<label for="inputBookId" class="control-label  col-xs-1"
-						style="color: #fff">Book ID :</label>
-					<div class="col-xs-2">
-						<input type="text" class="form-control" name="bookId" id="bookId"
-							style="background: transparent; color: #fff;"
-							placeholder="Book ID">
-					</div>
-					
-				<label for="inputemailId" class="control-label col-xs-1"
-						style="color: #fff">Email ID :</label>
-					<div class="col-xs-2">
-						<input type="text" class="form-control" name="emailId" id="emailId"
-							style="background: transparent; color: #fff;"
-							placeholder="Email ID">
-					</div>
+		<h1 style="color: #fff">My Read And Likes List</h1>
 		
-				<label for="inputbookName" class="control-label col-xs-2"
-						style="color: #fff">Book Name:</label>
-					<div class="col-xs-2">
-						<input type="text" class="form-control" name="bookName" id="bookName"
-							style="background: transparent; color: #fff;"
-							placeholder="Book Name">
-				</div>
-					<div class="col-xs-2" >
-						<input name="operation" value="Search" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
-							</div>
-							</div>
-		
-		</FORM>
-		<br>
 		<div class="table-responsive">
 		<table class="table table-bordered" style="color: #fff" >
 			<tr>

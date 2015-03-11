@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Login Page</title>
+<title>Forget Password</title>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -28,56 +28,30 @@ body {
 	<div class="container">
 		<div class="row">
 			<center>
-				<h1>Login</h1>
+				<h1>Forget Password</h1>
 
 				<H2>
 					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
 					</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>
 					</font>
 				</H2>
-				<FORM ACTION="LoginCtl" METHOD="post" class="form-horizontal">
-					<div class="form-group">
+				<FORM ACTION="ForgetPasswordCtl" METHOD="post" class="form-horizontal">
+				<div class="row">
 						<label for="inputEmail"
-							class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Email :</label>
+							class="control-label col-xs-offset-2 col-xs-2"
+							style="color: #fff">Email :</label>
 						<div class=" col-xs-3">
 							<input type="email" class="form-control" id="email" name="email"
 								placeholder="Enter Email"
 								style="background: transparent; color: #fff;"> <font
 								color="red"> <%=ServletUtility.getErrorMessage("email", request)%></font>
 						</div>
-					</div>
-					<div class="form-group">
-						<label for="inputPassword"
-							class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Password :</label>
-						<div class=" col-xs-3">
-							<input type="password" class="form-control" name="password"
-								id="password" style="background: transparent; color: #fff;"
-								placeholder="Enter Password"> <font color="red">
-								<%=ServletUtility.getErrorMessage("password", request)%></font>
+				
+						<div class="col-xs-1">
+						<input name="operation" value="Send" type="submit"
+							style="background: transparent; color: #fff; width: 130px; height: 30px">
 						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-xs-offset-1 col-xs-10">
-							<input name="operation" value="SignIn" type="submit"
-								style="background: transparent; color: #fff; width: 130px; height: 30px">
-
-
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-xs-offset-2 col-xs-10">
-							<a href="RegisterPrintedBookCtl">Register Book and create
-								Login</a>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-xs-offset-1 col-xs-10"
-							style="margin-left: 155px; margin-top: -10px">
-							<a href="ForgetPasswordCtl">Forget Password</a>
-						</div>
-					</div>
+							</div>
 				</form>
 			</center>
 		</div>

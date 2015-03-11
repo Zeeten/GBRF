@@ -38,4 +38,14 @@ public class InitialAwardCorpusBean extends BaseBean {
 	public void setPart(int part) {
 		this.part = part;
 	}
+
+	@Override
+	public String getKey() {
+		return id + "";
+	}
+
+	@Override
+	public String getValue() {
+		return null;
+	}
 }

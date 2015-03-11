@@ -1,3 +1,4 @@
+<%@page import="com.ncs.util.HTMLUtility"%>
 <%@page import="com.ncs.bean.UserBean"%>
 <%@page import="com.ncs.bean.BooksBean"%>
 <%@page import="java.util.Iterator"%>
@@ -19,10 +20,10 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="./js/calendar.js"></script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script>
 	$(function() {
 		$("#includedContent").load("admin.jsp");
@@ -34,13 +35,27 @@ body {
 	color: white;
 }
 </style>
+	<script>
+$(function() {
+    $('.date-picker').datepicker( {
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: 'dd/mm/yy',
+      
+    });
+});
+</script>
 </head>
 <body  background="img/bg/bgbooks.jpg">
 	<div id="includedContent"></div>
 	<div style="margin-top: 100px">
 		<center>
+<h2>
 
+<font color="red"> <%=ServletUtility.getErrorMessage(request)%></font></h2>
 			<FORM ACTION="RegisterPrintedBookCtl" METHOD="post" class="form-horizontal">
+
 			<div class="form-group">
 					<label for="inputBook" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Book</label>
@@ -59,7 +74,9 @@ body {
 							<%
 								}
 							%>
-						</select> <font color="red"> <%=ServletUtility.getErrorMessage("bookName", request)%></font>
+							
+						</select> 
+						<font color="red"> <%=ServletUtility.getErrorMessage("bookName", request)%></font>
 					</div>
 				</div>
 				<div class="form-group">
@@ -76,16 +93,17 @@ body {
 					<label for="inputDateOfPurchase" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Date of Purchase :</label>
 					<div class="col-xs-3">
-						<input type="text" class="form-control" name="dateofpurchase" id="dateofpurchase"
-							style="background: transparent; color: #fff;" readonly="readonly"
-							placeholder="Date of Purchase"><a
-						href="javascript:getCalendar(document.forms[0].dateofpurchase);"> <img
-							src="./img/cal.jpg" width="30px" height="30px" border="0"
-							alt="Calender" style="margin-left: 320px;margin-top: -40px">
-					</a> <font color="red"> <%=ServletUtility.getErrorMessage("dateofpurchase", request)%></font>
+						<input type="text"  name="dateofpurchase" id="dateofpurchase"
+							style="background: transparent; color: #fff;" class="form-control date-picker"
+							placeholder="Date of Purchase"><font color="red"> <%=ServletUtility.getErrorMessage("dateofpurchase", request)%></font>
 					</div>
 				</div>
 				
+				<%
+		
+				if(session.getAttribute("session")==null){
+					%>
+							
 					<div class="form-group">
 					<label for="inputMobileNo" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Mobile No :</label>
@@ -95,10 +113,6 @@ body {
 							placeholder="Mobile No"> <font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font>
 					</div>
 				</div>
-				<%
-				UserBean bean=((UserBean) session.getAttribute("user"));
-				if(bean==null){
-					%>
 						<div class="form-group">
 					<label for="inputemail" class="control-label col-xs-offset-3 col-xs-2"
 						style="color: #fff">Login ID :</label>
@@ -121,11 +135,21 @@ body {
 				}
 				%>
 				<div class="form-group">
-					<div class="col-xs-offset-1 col-xs-10">
+					<div class="col-xs-offset-1 col-xs-10" style="margin-left: 160px">
 						<input name="operation" value="Save" type="submit"
 							style="background: transparent; color: #fff; width: 130px; height: 30px">
+					<%
+		
+				if(session.getAttribute("session")!=null){
+					%>
+					<input name="operation" value="My Registered Books" type="submit"
+							style="background: transparent; color: #fff; width: 180px; height: 30px">
+											<%
+				}
+				%>
 					</div>
 				</div>
+
 				
 			</FORM>
 			</center>
