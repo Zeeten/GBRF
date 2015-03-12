@@ -1,3 +1,4 @@
+<%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="com.ncs.bean.LikesBean"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="com.ncs.model.LikesModel"%>
@@ -31,8 +32,8 @@ body {
 	<div class="container">
 <div class="row">
 	<center>
-		<h1 style="color: #fff">User Likes List</h1>
-								<FORM  METHOD="post" class="form-horizontal">
+		<h1 style="color: #fff">My Reads and Likes List</h1>
+								<FORM  METHOD="post" action="UsersLikesListCtl" class="form-horizontal">
 						<div class="row">
 					<label for="inputBookId" class="control-label  col-xs-1"
 						style="color: #fff">Book ID :</label>
@@ -63,7 +64,6 @@ body {
 							</div>
 							</div>
 		
-		</FORM>
 		<br>
 		<div class="table-responsive">
 		<table class="table table-bordered" style="color: #fff" >
@@ -81,13 +81,25 @@ body {
 				<th>Date</th>
 			</tr>
 			<%
+							List userList = (List) request.getAttribute("dtoList");
+							if(userList.size()==0 ||userList == null){
+								%>	
+						<tr>
+					<td colspan="11"><font color="red"><%=ServletUtility.getErrorMessage(request)%></font></td>
+				</tr>	
+							<% }
+							%>
+			<%
+			int pageNo = ServletUtility.getPageNo(request);
+			int pageSize = ServletUtility.getPageSize(request);
+			int index = ((pageNo - 1) * pageSize)+1 ;
 				List list = (List) request.getAttribute("dtoList");
 				Iterator it = list.iterator();
 				while (it.hasNext()) {
 					LikesBean bean = (LikesBean) it.next();
 			%>
 			<tr>
-				<td><%=bean.getId()%></td>
+				<td><%=index++%></td>
 				<td><%=bean.getEmail()%></td>
 				<td><%=bean.getBookName()%></td>
 				<td><%=bean.getBookNo()%></td>
@@ -103,7 +115,18 @@ body {
 				}
 			%>
 		</table>
+									<table width="100%">
+				<tr>
+					<td><input type="submit" name="operation"
+						value="Previous" style="background: transparent; color: #fff;"></td>
+					<td align="right"><input type="submit" name="operation"
+						value="Next"  style="background: transparent; color: #fff;"></td>
+				</tr>
+			</table>
+				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
+				type="hidden" name="pageSize" value="<%=pageSize%>">
 		</div>
+				</FORM>
 			</center>
 		</div>
 		</div>

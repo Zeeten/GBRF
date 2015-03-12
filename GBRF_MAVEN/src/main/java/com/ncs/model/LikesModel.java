@@ -1,13 +1,11 @@
 package com.ncs.model;
 
-import java.awt.print.Book;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ncs.bean.BooksBean;
 import com.ncs.bean.LikesBean;
 import com.ncs.bean.RegisterPrintedBookBean;
 import com.ncs.exception.ApplicationException;

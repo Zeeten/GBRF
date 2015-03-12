@@ -159,7 +159,7 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_I=?");
+					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_I=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_ADD(DATE_FORMAT(DATE_OF_PURCHASE,'%y-%d-%m'), INTERVAL 10 DAY))>15");
 			pstmt.setString(1, email);
 			pstmt.setBoolean(2, false);
 			ResultSet rs = pstmt.executeQuery();
@@ -190,7 +190,7 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_II=?");
+					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_II=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_ADD(DATE_FORMAT(DATE_OF_PURCHASE,'%y-%d-%m'), INTERVAL 10 DAY))>15");
 			pstmt.setString(1, email);
 			pstmt.setBoolean(2, false);
 			ResultSet rs = pstmt.executeQuery();

@@ -1,3 +1,4 @@
+<%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="com.ncs.bean.UserBean"%>
 <%@page import="com.ncs.bean.RegisterPrintedBookBean"%>
 <%@page import="java.util.Iterator"%>
@@ -32,7 +33,7 @@ body {
 		
 				<center>
 					<h1 style="color: #fff">User List</h1>
-						<FORM  METHOD="post" class="form-horizontal">
+						<FORM  METHOD="post" action="UserListCtl"class="form-horizontal">
 						<div class="row">
 			
 				<label for="inputname" class="control-label col-xs-2"
@@ -56,8 +57,7 @@ body {
 							style="background: transparent; color: #fff; width: 130px; height: 30px">
 							</div>
 							</div>
-				
-		</FORM>
+
 		<br>
 					<div class="table-responsive">
 						<table class="table table-bordered" style="color: #fff">
@@ -68,18 +68,30 @@ body {
 								<th>Email ID</th>
 								<th>Date</th>
 							</tr>
+							<%
+							List userList = (List) request.getAttribute("dtoList");
+							if(userList.size()==0 ||userList == null){
+								%>	
+												<tr>
+					<td colspan="5"><font color="red"><%=ServletUtility.getErrorMessage(request)%></font></td>
+				</tr>	
+							<% }
+							%>
+					
 							<% 
+							int pageNo = ServletUtility.getPageNo(request);
+							int pageSize = ServletUtility.getPageSize(request);
+							int index = ((pageNo - 1) * pageSize)+1 ;
 								List list = (List) request.getAttribute("dtoList");
 								Iterator it = list.iterator();
-								int index = 0;
 								while (it.hasNext()) {
-									index++;
+								
 									UserBean bean = (UserBean) it
 											
 											.next();
 							%>
 							<tr>
-								<td><%=index%></td>
+								<td><%=index++%></td>
 								<td><%=bean.getName()%></td>
 								<td><%=bean.getSurname()%></td>
 								<td><%=bean.getEmail()%></td>
@@ -89,8 +101,21 @@ body {
 								}
 							%>
 						</table>
+									<table width="100%">
+				<tr>
+					<td><input type="submit" name="operation"
+						value="Previous" style="background: transparent; color: #fff;"></td>
+					<td align="right"><input type="submit" name="operation"
+						value="Next"  style="background: transparent; color: #fff;"></td>
+				</tr>
+			</table>
+				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
+				type="hidden" name="pageSize" value="<%=pageSize%>">
 					</div>
+												
+		</FORM>
 				</center>
+	
 			</div>
 		</div>
 	</div>
