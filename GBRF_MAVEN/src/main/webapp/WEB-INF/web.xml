@@ -148,6 +148,30 @@
     <servlet-name>UserListCtl</servlet-name>
     <url-pattern>/UserListCtl</url-pattern>
   </servlet-mapping>
+	<servlet>
+    <servlet-name>BookListCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.BookListCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookListCtl</servlet-name>
+    <url-pattern>/BookListCtl</url-pattern>
+  </servlet-mapping>
+         <servlet>
+    <servlet-name>ReadLikeAwardPartOneCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.ReadLikeAwardPartOneCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadLikeAwardPartOneCtl</servlet-name>
+    <url-pattern>/ReadLikeAwardPartOneCtl</url-pattern>
+  </servlet-mapping>
+          <servlet>
+    <servlet-name>ReadLikeAwardPartTwoCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.ReadLikeAwardPartTwoCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReadLikeAwardPartTwoCtl</servlet-name>
+    <url-pattern>/ReadLikeAwardPartTwoCtl</url-pattern>
+  </servlet-mapping>
 	<filter>
 		<filter-name>FrontCtl</filter-name>
 		<filter-class>com.ncs.ctl.FrontCtl</filter-class>

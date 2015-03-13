@@ -20,6 +20,7 @@ import javax.servlet.http.HttpSession;
 import org.json.JSONObject;
 
 import com.google.gson.Gson;
+import com.ncs.bean.UserBean;
 import com.ncs.model.UserModel;
 import com.ncs.util.DataValidator;
 import com.ncs.util.PropertyReader;
@@ -64,6 +65,27 @@ public class LoginCtl extends HttpServlet {
 				try {
 					String email = request.getParameter("email");
 					String password = request.getParameter("password");
+					UserModel model=new UserModel();
+					UserBean bean=new UserBean();
+					if(email.equals("admin@nenosystems.com")){
+						bean = model.authenticate(email, password);
+
+						if (bean != null) {
+							session.setAttribute("firstname", bean.getName());
+				        	session.setAttribute("lastname", bean.getSurname());
+				        	session.setAttribute("email", bean.getEmail());
+				        	session.setAttribute("password", bean.getPassword());
+				        	session.setAttribute("session", bean);
+				        	session.setAttribute("telephone", bean.getMobileNo());
+				        	ServletUtility.redirect("AdminCtl.do", request,
+									response);
+						} else {
+							ServletUtility.setErrorMessage(
+									"Invalid Email / Password", request);
+							ServletUtility.forward("login.jsp", request, response);
+						}
+					}else{
+					
 					  URL url = new URL("http://kissmatinternational.com/KIP_TEST/api/rest/login");
 				        Map<String,Object> params = new LinkedHashMap<>();
 				        params.put("email", email);
@@ -101,8 +123,9 @@ public class LoginCtl extends HttpServlet {
 	
 				        if(jsonObj.getString("success").equals("true")){
 					        JSONObject jsonObj1 = new JSONObject(jsonObj.getString("data"));
-					        System.out.println(jsonObj1.getString("firstname"));
+					       // System.out.println(jsonObj1.getString("firstname"));
 				        	session.setAttribute("firstname", jsonObj1.getString("firstname"));
+				        	session.setAttribute("lastname", jsonObj1.getString("lastname"));
 				        	session.setAttribute("email", jsonObj1.getString("email"));
 				        	session.setAttribute("password", jsonObj1.getString("salt"));
 				        	session.setAttribute("session", jsonObj1.getString("session"));
@@ -115,6 +138,7 @@ public class LoginCtl extends HttpServlet {
 								"Invalid Email / Password", request);
 						ServletUtility.forward("login.jsp", request, response);
 					}
+				}
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

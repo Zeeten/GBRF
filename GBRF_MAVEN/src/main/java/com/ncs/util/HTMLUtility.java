@@ -51,7 +51,7 @@ public class HTMLUtility {
 
 		List<DropdownListBean> dd = (List<DropdownListBean>) list;
 
-		StringBuffer sb = new StringBuffer("<select class='form-control' name='" + name + "'>");
+		StringBuffer sb = new StringBuffer("<select class='form-control' style='background: transparent;' name='" + name + "'>");
 
 		String key = null;
 		String val = null;

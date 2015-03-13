@@ -3,6 +3,15 @@ package com.ncs.bean;
 public class BooksBean extends BaseBean {
 
 	private String bookName;
+	private int noOfChapters;
+
+	public int getNoOfChapters() {
+		return noOfChapters;
+	}
+
+	public void setNoOfChapters(int noOfChapters) {
+		this.noOfChapters = noOfChapters;
+	}
 
 	public String getBookName() {
 		return bookName;
@@ -14,7 +23,7 @@ public class BooksBean extends BaseBean {
 
 	@Override
 	public String getKey() {
-		return id +"";
+		return bookName +"";
 	}
 
 	@Override
