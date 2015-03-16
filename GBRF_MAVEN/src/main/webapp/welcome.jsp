@@ -18,21 +18,18 @@
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
-body {
-	color: white;
-}
 </style>
 </head>
 
-<body background="img/bg/bgbooks.jpg">
+<body>
 	<div id="includedContent"></div>
 	<div style="margin-top: 100px">
-		<center>
+		<img alt="" src="img/logo.png" class="col-xs-offset-1"
+			style="height: 100px; width: 250px">
+		<div class="col-xs-offset-4">
+			<hr>
+		</div>
+		<h1 class="col-xs-offset-4">Welcome to GBRF</h1>
 
-			<FORM ACTION="WelcomeCtl.do" METHOD="post" class="form-horizontal">
-			<h1 style="color: #fff">Welcome to GBRF</h1>
-
-			</form>
-		</center>
 	</div>
 </html>

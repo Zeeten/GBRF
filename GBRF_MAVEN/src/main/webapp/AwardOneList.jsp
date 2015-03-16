@@ -15,24 +15,17 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
 
-
-</style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body>
 	<div id="includedContent"></div>
-	<div style="margin-top: 50px">
 <div class="container">
-<div class="row">
-<center>
-		<h1 class="center" style="color: #fff">Release and Buy Award</h1>
-		</center>
+<div class="row" style="margin-top: 90px">
+
+		<h1 class="col-xs-offset-4">Release and Buy Award</h1>
+
 		<div class="table-responsive">
-		<table class="table table-bordered" style="color: #fff">
+		<table class="table table-bordered table-hover" >
 			<tr>
 				<th>#</th>
 				<th>Order Id</th>
@@ -79,6 +72,5 @@ body {
 		</div>
 		</div>
 		</div>
-</div>
 </body>
 </html>

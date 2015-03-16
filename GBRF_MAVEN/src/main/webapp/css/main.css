@@ -683,7 +683,7 @@ ul.digits li p {
     color: #fff;
     float: left;
     font-family: RobotoBoldCondensed;
-    font-size: 170px !important;
+    font-size: 160px !important;
     margin-left: 0;
     margin-top: -20px;
 }
@@ -715,9 +715,9 @@ ul.digits li p {
     color: #fff;
     float: left;
     font-family: RobotoBoldCondensed;
-    font-size: 41px !important;
-    margin-top: -8px;
-    padding: 0 29px;
+    font-size: 48px !important;
+    margin-top: -25px;
+    padding: 0 35px;
 }
 .text p4 {
     color: #fff;

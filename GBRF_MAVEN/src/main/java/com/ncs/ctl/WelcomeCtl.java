@@ -19,14 +19,7 @@ public class WelcomeCtl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		try {
-			BooksModel model = new BooksModel();
-			List list = model.list();
-			ServletUtility.setList(list, request);
 			ServletUtility.forward("welcome.jsp", request, response);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 	protected boolean validate(HttpServletRequest request) {

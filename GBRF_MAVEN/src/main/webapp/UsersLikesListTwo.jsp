@@ -26,7 +26,7 @@ body {
 
 </style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body background="img/bg/gbrfbgimg.png">
 	<div id="includedContent"></div>
 	<div style="margin-top: 50px">
 	<div class="container">

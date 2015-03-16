@@ -18,23 +18,17 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
 
-</style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body >
 	<div id="includedContent"></div>
-	<div style="margin-top: 50px">
 	<div class="container">
-<div class="row">
+<div class="row" style="margin-top: 90px">
 	<center>
-		<h1 style="color: #fff">My Read And Likes List</h1>
+		<h1 >My Read And Likes List</h1>
 		
 		<div class="table-responsive">
-		<table class="table table-bordered" style="color: #fff" >
+		<table class="table table-bordered" >
 			<tr>
 				<th>Id</th>
 				<th>Email Id</th>
@@ -67,7 +61,6 @@ body {
 		</table>
 		</div>
 			</center>
-		</div>
 		</div>
 		</div>
 </body>

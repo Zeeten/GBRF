@@ -17,22 +17,15 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
-</style>
+
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body >
 	<div id="includedContent"></div>
-		
-	<div style="margin-top: 80px">
-	
+
 		<div class="container">
-			<div class="row">
-		
-				<center>
-					<h1 style="color: #fff">Read Like Award Part II List</h1>
+			<div class="row"  style="margin-top: 90px">
+
+					<h2 >Read Like Award Part II List</h2>
 						<FORM  METHOD="post" action="ReadLikeAwardPartTwoCtl"class="form-horizontal">
 							<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
 			scope="request"></jsp:useBean>
@@ -42,23 +35,23 @@ body {
 		%>
 						<div class="row">
 			
-				<label for="inputname" class="control-label col-xs-2"
-						style="color: #fff">Book Name:</label>
+				<label for="inputname" class="control-label col-xs-2">Book Name:</label>
 					<div class="col-xs-2">
 					<%=HTMLUtility.getList("bookName",
 					bean.getBookName(), bookList)%>
 				</div>
 
-		
-					<div class="col-xs-2" >
-						<input name="operation" value="Search" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
-							</div>
+			<button name="operation" value="Search" type="submit" class="btn btn-info" >
+							<span class="btn-save-label">
+						<i class="glyphicon glyphicon-search"></i>
+						</span>
+						Search
+						</button>
 							</div>
 
 		<br>
 					<div class="table-responsive">
-						<table class="table table-bordered" style="color: #fff">
+						<table class="table table-bordered table-hover">
 							<tr>
 							<th>#</th>
 								<th>First Name</th>
@@ -110,9 +103,9 @@ body {
 									<table width="100%">
 				<tr>
 					<td><input type="submit" name="operation"
-						value="Previous" style="background: transparent; color: #fff;"></td>
+						value="Previous"class="btn btn-info"></td>
 					<td align="right"><input type="submit" name="operation"
-						value="Next"  style="background: transparent; color: #fff;"></td>
+						value="Next"class="btn btn-info"></td>
 				</tr>
 			</table>
 				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
@@ -120,11 +113,9 @@ body {
 					</div>
 												
 		</FORM>
-				</center>
 	
 			</div>
 		</div>
-	</div>
 
 </body>
 </html>

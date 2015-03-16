@@ -89,7 +89,7 @@
 		<url-pattern>/UsersLikesListTwoCtl</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
+<servlet>
 		<servlet-name>AwardOneListCtl</servlet-name>
 		<servlet-class>com.ncs.ctl.AwardOneListCtl</servlet-class>
 	</servlet>
@@ -105,7 +105,7 @@
 		<servlet-name>InitialAwardCorpusListCtl</servlet-name>
 		<url-pattern>/InitialAwardCorpusListCtl</url-pattern>
 	</servlet-mapping>
-	<servlet>
+<servlet>
 		<servlet-name>RegisterPrintedBookCtl</servlet-name>
 		<servlet-class>com.ncs.ctl.RegisterPrintedBookCtl</servlet-class>
 	</servlet>
@@ -149,7 +149,6 @@
 		<servlet-name>ReleaseAndBuyCtl</servlet-name>
 		<url-pattern>/ReleaseAndBuyCtl</url-pattern>
 	</servlet-mapping>
-
 	<servlet>
 		<servlet-name>UserListCtl</servlet-name>
 		<servlet-class>com.ncs.ctl.UserListCtl</servlet-class>
@@ -182,6 +181,14 @@
 		<servlet-name>ReadLikeAwardPartTwoCtl</servlet-name>
 		<url-pattern>/ReadLikeAwardPartTwoCtl</url-pattern>
 	</servlet-mapping>
+	<servlet>
+    <servlet-name>BookChaptersCtl</servlet-name>
+    <servlet-class>com.ncs.ctl.BookChaptersCtl</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookChaptersCtl</servlet-name>
+    <url-pattern>/BookChaptersCtl</url-pattern>
+  </servlet-mapping>
 	<filter>
 		<filter-name>FrontCtl</filter-name>
 		<filter-class>com.ncs.ctl.FrontCtl</filter-class>

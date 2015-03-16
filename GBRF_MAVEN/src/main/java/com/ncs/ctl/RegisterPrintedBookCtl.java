@@ -93,7 +93,7 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 		RegisterPrintedBookModel model = new RegisterPrintedBookModel();
          UserModel userModel=new UserModel();
          
-		if ("Save".equalsIgnoreCase(operation)) {
+		if ("Register".equalsIgnoreCase(operation)) {
 			if (validate(request)) {
 				try {
 				RegisterPrintedBookBean bean = new RegisterPrintedBookBean();

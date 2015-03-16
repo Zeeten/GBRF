@@ -1,6 +1,9 @@
 package com.ncs.ctl;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -54,7 +57,19 @@ public class InviteCtl extends HttpServlet {
 				msg.setMessage("<html><body><b>Dear Guest of Honour,</b><br>Thank you for showing your interest and accepting the Invite.<br>We will stay in touch with you for the updates.<br><br><b>Administrator,</b><br>Global Book Release Forum<br><img src=http://globalbookreleaseforum.com/GBRF/img/logo.png height=67 width=184><br><a href=http://globalbookreleaseforum.com/GBRF/ target=_blank>www.globalbookreleaseforum.com</a></body></html>.");
 				msg.setMessageType(EmailMessage.HTML_MSG);
 				EmailUtility.sendMail(msg);
+				SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+				Date date = new Date();
+				String date1=sdf.format(date);
+				Date currentDate = sdf.parse(date1);
+				Date targetDate = sdf.parse("16-03-2015 05:10");
+				System.out.println("currentDate"+currentDate);
+				System.out.println("targetDate"+targetDate);
+				System.out.println(currentDate.compareTo(targetDate)>=0);
+			if(currentDate.compareTo(targetDate)>=0){
+				ServletUtility.forward("index.html", request, response);	
+				}else{
 				ServletUtility.forward("index-wl.jsp", request, response);
+				}
 			} catch (Exception e) {
 				e.printStackTrace();
 				ServletUtility.forward("index-wl.jsp", request, response);

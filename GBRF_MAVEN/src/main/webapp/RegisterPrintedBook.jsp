@@ -24,17 +24,16 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
 <script>
 	$(function() {
 		$("#includedContent").load("admin.jsp");
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
-</style>
+
 	<script>
 $(function() {
     $('.date-picker').datepicker( {
@@ -47,30 +46,54 @@ $(function() {
 });
 </script>
 </head>
-<body  background="img/bg/bgbooks.jpg">
+<body >
 	<div id="includedContent"></div>
-	<div style="margin-top: 100px">
-		<center>
-<h2>
+		<div class="container">
+		<div class="row" style="margin-top: 90px">
 
-<font color="red"> <%=ServletUtility.getErrorMessage(request)%></font></h2>
+<%
+		
+				if(session.getAttribute("session")==null){
+					%>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	</nav>
+
+			<img alt="" src="img/logo.png" class="col-xs-offset-1" style="height: 100px;width: 250px">
+		<a class="btn btn-info  col-xs-offset-4"  href="LoginCtl">
+<i class="glyphicon glyphicon-home"></i>
+ Home
+</a>
+	<a class="btn btn-info" href="ForgetPasswordCtl">
+<i class="glyphicon glyphicon-edit"></i>
+Forget Password
+</a>
+<div class="col-xs-offset-4" >
+<hr>
+</div>
+
+<% }else{ %>
+
+		<img alt="" src="img/logo.png" class="col-xs-offset-1" style="height: 100px;width: 250px">
+		<div class="col-xs-offset-4" >
+<hr>
+</div>
+<%} %>
+		<h2 class="col-xs-offset-2">Register Printed Book</h2>
+<h3 class="col-xs-offset-3"><font color="red" > <%=ServletUtility.getErrorMessage(request)%></font></h3>
 			<FORM ACTION="RegisterPrintedBookCtl" METHOD="post" class="form-horizontal">
 
 			<div class="form-group">
-					<label for="inputBook" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Book</label>
+					<label for="inputBook" class="control-label col-xs-offset-2 col-xs-2">Book</label>
 					<div class="col-xs-3">
-						<select class="form-control" id="bookName" name="bookName"
-							style="background: transparent;">
-							<option value="" style="background: transparent;">--Select--</option>
+						<select class="form-control" id="bookName" name="bookName">
+							<option value="">--Select--</option>
 							<%
 								List list = ServletUtility.getList(request);
 								Iterator it = list.iterator();
 								while (it.hasNext()) {
 									BooksBean bean = (BooksBean) it.next();
 							%>
-							<option value="<%=bean.getBookName()%>"
-								style="background: transparent;"><%=bean.getBookName()%></option>
+							<option value="<%=bean.getBookName()%>"><%=bean.getBookName()%></option>
 							<%
 								}
 							%>
@@ -80,21 +103,18 @@ $(function() {
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputBookId" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Book ID :</label>
+					<label for="inputBookId" class="control-label col-xs-offset-2 col-xs-2">Book ID :</label>
 					<div class="col-xs-3">
 						<input type="text" class="form-control" name="bookId" id="bookId"
-							style="background: transparent; color: #fff;"
 							placeholder="Book ID"> <font color="red"> <%=ServletUtility.getErrorMessage("bookId", request)%></font>
 					</div>
 				</div>
 				
 					<div class="form-group">
-					<label for="inputDateOfPurchase" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Date of Purchase :</label>
+					<label for="inputDateOfPurchase" class="control-label col-xs-offset-2 col-xs-2">Date of Purchase :</label>
 					<div class="col-xs-3">
 						<input type="text"  name="dateofpurchase" id="dateofpurchase"
-							style="background: transparent; color: #fff;" class="form-control date-picker"
+							 class="form-control date-picker"
 							placeholder="Date of Purchase"><font color="red"> <%=ServletUtility.getErrorMessage("dateofpurchase", request)%></font>
 					</div>
 				</div>
@@ -104,47 +124,38 @@ $(function() {
 				if(session.getAttribute("session")==null){
 					%>
 						<div class="form-group">
-					<label for="inputfirstName" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">First Name :</label>
+					<label for="inputfirstName" class="control-label col-xs-offset-2 col-xs-2"
+					>First Name :</label>
 					<div class="col-xs-3">
 						<input type="text" class="form-control" name="firstName" id="firstName"
-							style="background: transparent; color: #fff;"
 							placeholder="First Name"> <font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font>
 					</div>
 				</div>	
 						<div class="form-group">
-					<label for="inputlastName" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Last Name :</label>
+					<label for="inputlastName" class="control-label col-xs-offset-2 col-xs-2">Last Name :</label>
 					<div class="col-xs-3">
 						<input type="text" class="form-control" name="lastName" id="lastName"
-							style="background: transparent; color: #fff;"
 							placeholder="Last Name"> <font color="red"> <%=ServletUtility.getErrorMessage("lastName", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputMobileNo" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Mobile No :</label>
+					<label for="inputMobileNo" class="control-label col-xs-offset-2 col-xs-2">Mobile No :</label>
 					<div class="col-xs-3">
 						<input type="text" class="form-control" name="mobileNo" id="mobileNo"
-							style="background: transparent; color: #fff;"
 							placeholder="Mobile No"> <font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font>
 					</div>
 				</div>
 						<div class="form-group">
-					<label for="inputemail" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Login ID :</label>
+					<label for="inputemail" class="control-label col-xs-offset-2 col-xs-2">Login ID :</label>
 					<div class="col-xs-3">
 						<input type="email" class="form-control" name="email" id="email"
-							style="background: transparent; color: #fff;"
 							placeholder="Login ID"> <font color="red"> <%=ServletUtility.getErrorMessage("email", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputpassword" class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Password :</label>
+					<label for="inputpassword" class="control-label col-xs-offset-2 col-xs-2">Password :</label>
 					<div class="col-xs-3">
 						<input type="password" class="form-control" name="password" id="password"
-							style="background: transparent; color: #fff;"
 							placeholder="Password"> <font color="red"> <%=ServletUtility.getErrorMessage("password", request)%></font>
 					</div>
 				</div>
@@ -152,15 +163,17 @@ $(function() {
 				}
 				%>
 				<div class="form-group">
-					<div class="col-xs-offset-1 col-xs-10" style="margin-left: 160px">
-						<input name="operation" value="Save" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
+					<div class="col-xs-offset-5 ">
+						<button name="operation" class="btn icon-btn-save btn-success" value="Register" type="submit">
+						<span class="btn-save-label">
+						<i class="glyphicon glyphicon-floppy-disk"></i>
+						</span>
+						save</button>
 					<%
 		
 				if(session.getAttribute("session")!=null){
 					%>
-					<input name="operation" value="My Registered Books" type="submit"
-							style="background: transparent; color: #fff; width: 180px; height: 30px">
+					<input name="operation" class="btn btn-info" value="My Registered Books" type="submit">
 											<%
 				}
 				%>
@@ -169,9 +182,8 @@ $(function() {
 
 				
 			</FORM>
-			</center>
 			</div>
-			
+					</div>
 
 </body>
 </html>

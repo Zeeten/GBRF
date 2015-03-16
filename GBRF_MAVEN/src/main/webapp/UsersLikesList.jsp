@@ -19,54 +19,44 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
 
-</style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body>
 	<div id="includedContent"></div>
-	<div style="margin-top: 50px">
 	<div class="container">
-<div class="row">
-	<center>
-		<h1 style="color: #fff">My Reads and Likes List</h1>
+<div class="row" style="margin-top: 90px">
+		<h2>My Reads and Likes List</h2>
 								<FORM  METHOD="post" action="UsersLikesListCtl" class="form-horizontal">
 						<div class="row">
-					<label for="inputBookId" class="control-label  col-xs-1"
-						style="color: #fff">Book ID :</label>
+					<label for="inputBookId" class="control-label  col-xs-1">Book ID :</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="bookId" id="bookId"
-							style="background: transparent; color: #fff;"
 							placeholder="Book ID">
 					</div>
 					
 				<label for="inputemailId" class="control-label col-xs-1"
-						style="color: #fff">Email ID :</label>
+						>Email ID :</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="emailId" id="emailId"
-							style="background: transparent; color: #fff;"
 							placeholder="Email ID">
 					</div>
 		
-				<label for="inputbookName" class="control-label col-xs-2"
-						style="color: #fff">Book Name:</label>
+				<label for="inputbookName" class="control-label col-xs-2" style="margin-left: -80px" >Book Name:</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="bookName" id="bookName"
-							style="background: transparent; color: #fff;"
 							placeholder="Book Name">
 				</div>
-					<div class="col-xs-2" >
-						<input name="operation" value="Search" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
-							</div>
+					<button name="operation" value="Search" type="submit" class="btn btn-info">
+							<span class="btn-save-label">
+						<i class="glyphicon glyphicon-search"></i>
+						</span>
+						Search
+						</button>
 							</div>
 		
 		<br>
 		<div class="table-responsive">
-		<table class="table table-bordered" style="color: #fff" >
+		<table class="table table-bordered table-hover" >
 			<tr>
 				<th>#</th>
 				<th>Email Id</th>
@@ -118,17 +108,15 @@ body {
 									<table width="100%">
 				<tr>
 					<td><input type="submit" name="operation"
-						value="Previous" style="background: transparent; color: #fff;"></td>
+						value="Previous" class="btn btn-info"></td>
 					<td align="right"><input type="submit" name="operation"
-						value="Next"  style="background: transparent; color: #fff;"></td>
+						value="Next" class="btn btn-info"></td>
 				</tr>
 			</table>
 				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
 		</div>
 				</FORM>
-			</center>
-		</div>
 		</div>
 		</div>
 </body>

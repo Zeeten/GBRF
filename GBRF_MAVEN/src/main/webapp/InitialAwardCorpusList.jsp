@@ -16,23 +16,20 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
-
-</style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body>
 	<div id="includedContent"></div>
-	<div style="margin-top: 50px">
 	<div class="container">
-<div class="row">
+<div class="row" style="margin-top: 90px">
+			<img alt="" src="img/logo.png" class="col-xs-offset-1"
+				style="height: 100px; width: 250px"> 
+			<div class="col-xs-offset-4">
+				<hr>
+			</div>
 <center>
-		<h1 style="color: #fff">Initial Award Corpus List</h1>
-			</center>
+		<h2 >Initial Award Corpus List</h2>
 		<div class="table-responsive">
-		<table class="table table-bordered" style="color: #fff">
+		<table class="table table-bordered table-hover" style="width: 70%" >
 			<tr>
 				<th>#</th>
 				<th>Amount</th>
@@ -60,8 +57,8 @@ body {
 			%>
 		</table>
 		</div>
+				</center>
 		</div>
 		</div>
-</div>
 </body>
 </html>

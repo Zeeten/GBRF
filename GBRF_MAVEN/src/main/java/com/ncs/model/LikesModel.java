@@ -9,6 +9,7 @@ import java.util.List;
 import com.ncs.bean.LikesBean;
 import com.ncs.bean.RegisterPrintedBookBean;
 import com.ncs.exception.ApplicationException;
+import com.ncs.exception.DuplicateRecordException;
 import com.ncs.util.JDBCDataSource;
 
 public class LikesModel {
@@ -41,8 +42,31 @@ public class LikesModel {
 	        bean.setBookNo(bookBean.getBookId());
 		System.out.println(bean.getBookName());
 		long pk = 0;
+	
 		try {
 			conn = JDBCDataSource.getConnection();
+			System.out.println(findByBookNo(bean.getBookNo()));
+			if (findByBookNo(bean.getBookNo())) {
+				System.out.println("innnn");
+				conn.setAutoCommit(false); 
+				PreparedStatement pstmt = conn
+						.prepareStatement("UPDATE likes SET LIKE1=?,LIKE2=?,LIKE3 where BOOK_NO=?");
+				pstmt.setInt(1, bean.getLike1());
+				pstmt.setInt(2, bean.getLike2());
+				pstmt.setInt(3, bean.getLike3());
+				pstmt.setString(4, bean.getBookNo());
+				pstmt.executeUpdate();
+				conn.commit(); // End transaction
+				pstmt.close();
+				
+				PreparedStatement pstmt1 = conn
+						.prepareStatement("UPDATE registerprintedbook SET RL_PART_I=? WHERE BOOK_ID=?");
+				pstmt1.setBoolean(1, true);
+				pstmt1.setString(2, bean.getBookNo());
+				pstmt1.executeUpdate();
+				conn.commit(); // End transaction
+				pstmt1.close();
+			}else{
 			pk = nextPK();
 			// Get auto-generated next primary key
 			conn.setAutoCommit(false); // Begin transaction
@@ -69,6 +93,7 @@ public class LikesModel {
 			pstmt1.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt1.close();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
@@ -92,6 +117,27 @@ public class LikesModel {
 		long pk = 0;
 		try {
 			conn = JDBCDataSource.getConnection();
+			System.out.println(findByBookNo(bean.getBookNo()));
+			if (findByBookNo(bean.getBookNo())) {
+				conn.setAutoCommit(false); 
+				PreparedStatement pstmt = conn
+						.prepareStatement("UPDATE likes SET LIKE4=?,LIKE5=?,LIKE6 where BOOK_NO=?");
+				pstmt.setInt(1, bean.getLike4());
+				pstmt.setInt(2, bean.getLike5());
+				pstmt.setInt(3, bean.getLike6());
+				pstmt.setString(4, bean.getBookNo());
+				pstmt.executeUpdate();
+				conn.commit(); // End transaction
+				pstmt.close();
+				
+				PreparedStatement pstmt1 = conn
+						.prepareStatement("UPDATE registerprintedbook SET RL_PART_II=? WHERE BOOK_ID=?");
+				pstmt1.setBoolean(1, true);
+				pstmt1.setString(2, bean.getBookNo());
+				pstmt1.executeUpdate();
+				conn.commit(); // End transaction
+				pstmt1.close();
+			}else{
 			pk = nextPK();
 			// Get auto-generated next primary key
 			conn.setAutoCommit(false); // Begin transaction
@@ -118,6 +164,7 @@ public class LikesModel {
 			pstmt1.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt1.close();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 			try {
@@ -234,6 +281,29 @@ public class LikesModel {
 
 	
 		return list;
+	}
+	
+	public boolean findByBookNo(String bookNo) throws ApplicationException {
+		Connection conn = null;
+		boolean flag = false;
+		System.out.println("bookNo"+bookNo);
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn
+					.prepareStatement("SELECT * FROM likes WHERE BOOK_NO=?");
+			pstmt.setString(1, bookNo);
+			ResultSet rs = pstmt.executeQuery();
+			if (rs.next()) {
+				flag = true;
+			}
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
+		return flag;
 	}
 
 }

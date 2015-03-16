@@ -77,7 +77,7 @@ public class LoginCtl extends HttpServlet {
 				        	session.setAttribute("password", bean.getPassword());
 				        	session.setAttribute("session", bean);
 				        	session.setAttribute("telephone", bean.getMobileNo());
-				        	ServletUtility.redirect("AdminCtl.do", request,
+				        	ServletUtility.redirect("WelcomeCtl.do", request,
 									response);
 						} else {
 							ServletUtility.setErrorMessage(
@@ -130,7 +130,7 @@ public class LoginCtl extends HttpServlet {
 				        	session.setAttribute("password", jsonObj1.getString("salt"));
 				        	session.setAttribute("session", jsonObj1.getString("session"));
 				        	session.setAttribute("telephone", jsonObj1.getString("telephone"));
-						ServletUtility.redirect("AdminCtl.do", request,
+				        	ServletUtility.redirect("WelcomeCtl.do", request,
 								response);
 				        }
 			        else {

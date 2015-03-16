@@ -16,42 +16,35 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
-</style>
+
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body>
 	<div id="includedContent"></div>
-		
-	<div style="margin-top: 80px">
+
 	
 		<div class="container">
-			<div class="row">
-		
-				<center>
-					<h1 style="color: #fff">Book List</h1>
+			<div class="row" style="margin-top: 90px">
+
+					<h1 class="col-xs-offset-4">Book List</h1>
 						<FORM  METHOD="post" action="BookListCtl"class="form-horizontal">
 						<div class="row">
 			
-				<label for="inputname" class="control-label col-xs-offset-2 col-xs-2"
-						style="color: #fff">Book Name:</label>
+				<label for="inputname" class="control-label col-xs-2">Book Name:</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="bookName" id="bookName"
-							style="background: transparent; color: #fff;"
 							placeholder="Book Name">
 				</div>
-		
-					<div class="col-xs-2" >
-						<input name="operation" value="Search" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
-							</div>
+		 <button name="operation" value="Search" type="submit" class="btn btn-info">
+							<span class="btn-save-label">
+						<i class="glyphicon glyphicon-search"></i>
+						</span>
+						Search
+						</button>
 							</div>
 
 		<br>
 					<div class="table-responsive">
-						<table class="table table-bordered" style="color: #fff; width: 70%">
+						<table class="table table-bordered table-hover" style="width: 70%">
 							<tr>
 								<th>#</th>
 								<th>Book Name</th>
@@ -90,9 +83,9 @@ body {
 									<table width="70%">
 				<tr>
 					<td><input type="submit" name="operation"
-						value="Previous" style="background: transparent; color: #fff;"></td>
+						value="Previous" class="btn btn-info"></td>
 					<td align="right"><input type="submit" name="operation"
-						value="Next"  style="background: transparent; color: #fff;"></td>
+						value="Next" class="btn btn-info"></td>
 				</tr>
 			</table>
 				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
@@ -100,11 +93,9 @@ body {
 					</div>
 												
 		</FORM>
-				</center>
 	
 			</div>
 		</div>
-	</div>
 
 </body>
 </html>

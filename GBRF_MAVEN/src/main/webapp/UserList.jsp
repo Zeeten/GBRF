@@ -17,50 +17,39 @@
 	});
 </script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<style type="text/css">
-body {
-	color: white;
-}
-</style>
+
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body >
 	<div id="includedContent"></div>
-		
-	<div style="margin-top: 80px">
-	
+
 		<div class="container">
-			<div class="row">
+			<div class="row" style="margin-top: 90px">
+					<h2 class="col-xs-offset-4">User List</h2>
 		
-				<center>
-					<h1 style="color: #fff">User List</h1>
 						<FORM  METHOD="post" action="UserListCtl"class="form-horizontal">
 						<div class="row">
-			
-				<label for="inputname" class="control-label col-xs-2"
-						style="color: #fff">Book Name:</label>
+				<label for="inputname" class="control-label col-xs-2">Book Name:</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="name" id="name"
-							style="background: transparent; color: #fff;"
 							placeholder="Name">
 				</div>
 			
-				<label for="inputemailId" class="control-label col-xs-1"
-						style="color: #fff">Email ID :</label>
+				<label for="inputemailId" class="control-label col-xs-1">Email ID :</label>
 					<div class="col-xs-2">
 						<input type="text" class="form-control" name="emailId" id="emailId"
-							style="background: transparent; color: #fff;"
 							placeholder="Email ID">
 					</div>
-		
-					<div class="col-xs-2" >
-						<input name="operation" value="Search" type="submit"
-							style="background: transparent; color: #fff; width: 130px; height: 30px">
-							</div>
+		          <button name="operation" value="Search" type="submit" class="btn btn-info">
+							<span class="btn-save-label">
+						<i class="glyphicon glyphicon-search"></i>
+						</span>
+						Search
+						</button>
 							</div>
 
 		<br>
-					<div class="table-responsive">
-						<table class="table table-bordered" style="color: #fff">
+					<div class="table-responsive"  style="width: 70%">
+						<table class="table table-bordered table-hover">
 							<tr>
 								<th>#</th>
 								<th>First Name</th>
@@ -104,9 +93,9 @@ body {
 									<table width="100%">
 				<tr>
 					<td><input type="submit" name="operation"
-						value="Previous" style="background: transparent; color: #fff;"></td>
+						value="Previous" class="btn btn-info"></td>
 					<td align="right"><input type="submit" name="operation"
-						value="Next"  style="background: transparent; color: #fff;"></td>
+						value="Next" class="btn btn-info"></td>
 				</tr>
 			</table>
 				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
@@ -114,9 +103,6 @@ body {
 					</div>
 												
 		</FORM>
-				</center>
-	
-			</div>
 		</div>
 	</div>
 

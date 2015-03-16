@@ -30,8 +30,8 @@ H2 {
 }
 </style>
 </head>
+<body >
 <body background="img/bg/bg.jpg">
-<body>
 	<center>
 		<h1>Award One Winner List</h1>
 		<table border="1" width="50%">

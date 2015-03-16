@@ -17,20 +17,20 @@
 		$("#includedContent").load("admin.jsp");
 	});
 </script>
-<style type="text/css">
-body {
-	color: white;
-}
 
-</style>
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body >
 <div id="includedContent"></div>
+		<div class="row" style="margin-top: 90px">
+			<img alt="" src="img/logo.png" class="col-xs-offset-1"
+				style="height: 100px; width: 250px"> 
+			<div class="col-xs-offset-4">
+				<hr>
+			</div>
 	<center>
-	<div style="margin-top: 80px">
 	<font color="green"><p><b>Thank you to select best 3 chapters.</b></p>
 	<p><b>After April, 30 you will be able to see winner list.</b></p></font>
+	</center> 
 	</div>
-	</center>
 </body>
 </html>

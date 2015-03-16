@@ -7,72 +7,79 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login Page</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+
 <!-- Optional theme -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
 <!-- Latest compiled and minified JavaScript -->
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<style type="text/css">
-body {
-	color: white;
-}
-</style>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+
 </head>
-<body background="img/bg/bgbooks.jpg">
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	</nav>
+
 	<div class="container">
-		<div class="row">
-			<center>
-				<h1>Login</h1>
-				<H2>
-					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
-					</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>
+		<div class="row" style="margin-top: 90px">
+		<img alt="" src="img/logo.png" class="col-xs-offset-1" style="height: 100px;width: 250px">
+		<a class="btn btn-info  col-xs-offset-4"  href="#">
+<i class="glyphicon glyphicon-home"></i>
+ Home
+</a>
+	<a class="btn btn-info" href="RegisterPrintedBookCtl">
+<i class="glyphicon glyphicon-user"></i>
+ Register Printed Book
+</a>
+<div class="col-xs-offset-4" >
+<hr>
+</div>
+				<h2 class="col-xs-offset-2">Login</h2>
+				<H3 class="col-xs-offset-2">
+					<font color="red" > <%=ServletUtility.getErrorMessage(request)%>
+					</font> <font color="green" > <%=ServletUtility.getSuccessMessage(request)%>
 					</font>
-				</H2>
+				</H3>
 				<FORM ACTION="LoginCtl" METHOD="post" class="form-horizontal">
 					<div class="form-group">
 						<label for="inputEmail"
-							class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Email :</label>
+							class="control-label col-xs-offset-2 col-xs-2">Email :</label>
 						<div class=" col-xs-3">
 							<input type="email" class="form-control" id="email" name="email"
-								placeholder="Enter Email"
-								style="background: transparent; color: #fff;"> <font
+								placeholder="Email ID">
+								 <font
 								color="red"> <%=ServletUtility.getErrorMessage("email", request)%></font>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword"
-							class="control-label col-xs-offset-3 col-xs-2"
-						style="color: #fff">Password :</label>
+							class="control-label col-xs-offset-2 col-xs-2">Password :</label>
 						<div class=" col-xs-3">
 							<input type="password" class="form-control" name="password"
-								id="password" style="background: transparent; color: #fff;"
-								placeholder="Enter Password"> <font color="red">
+								id="password" placeholder="Password"> <font color="red">
 								<%=ServletUtility.getErrorMessage("password", request)%></font>
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-xs-offset-1 col-xs-10">
-							<input name="operation" value="Sign In" type="submit"
-								style="background: transparent; color: #fff; width: 130px; height: 30px">
+						<div class="col-xs-offset-5 ">
+							<button name="operation" class="btn btn-success" value="Sign In" type="submit">
+							<span class="btn-save-label">
+						<i class="glyphicon glyphicon-ok-circle"></i>
+						</span>
+						Sign In
+							</button>
 						</div>
 					</div>
 					<div class="form-group">
-						<div class="col-xs-offset-2 col-xs-10">
-							<a href="RegisterPrintedBookCtl">Register Book and create
-								Login</a>
-						</div>
-					</div>
-					<div class="form-group">
-						<div class="col-xs-offset-1 col-xs-10"
-							style="margin-left: 155px; margin-top: -10px">
+						<div class="col-xs-offset-6 ">
 							<a href="ForgetPasswordCtl">Forget Password</a>
 						</div>
 					</div>
 				</form>
-			</center>
 		</div>
 	</div>
