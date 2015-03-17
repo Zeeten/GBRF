@@ -25,7 +25,7 @@
 	<div id="includedContent"></div>
 	<div class="container">
 <div class="row" style="margin-top: 90px">
-		<h2>My Reads and Likes List</h2>
+		<h2 class="col-xs-offset-4">My Reads and Likes List</h2>
 								<FORM  METHOD="post" action="UsersLikesListCtl" class="form-horizontal">
 						<div class="row">
 					<label for="inputBookId" class="control-label  col-xs-1">Book ID :</label>

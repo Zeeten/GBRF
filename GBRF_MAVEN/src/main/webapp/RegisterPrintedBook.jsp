@@ -49,14 +49,12 @@ $(function() {
 <body >
 	<div id="includedContent"></div>
 		<div class="container">
-		<div class="row" style="margin-top: 90px">
+		<div class="row" style="margin-top: 65px">
 
 <%
 		
 				if(session.getAttribute("session")==null){
 					%>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	</nav>
 
 			<img alt="" src="img/logo.png" class="col-xs-offset-1" style="height: 100px;width: 250px">
 		<a class="btn btn-info  col-xs-offset-4"  href="LoginCtl">
@@ -78,7 +76,7 @@ Forget Password
 <hr>
 </div>
 <%} %>
-		<h2 class="col-xs-offset-2">Register Printed Book</h2>
+		<h2 class="col-xs-offset-4">Register Printed Book</h2>
 <h3 class="col-xs-offset-3"><font color="red" > <%=ServletUtility.getErrorMessage(request)%></font></h3>
 			<FORM ACTION="RegisterPrintedBookCtl" METHOD="post" class="form-horizontal">
 

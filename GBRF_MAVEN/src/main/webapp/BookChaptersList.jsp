@@ -23,9 +23,10 @@
 
 
 	<div class="container">
+	<center>
 		<div class="row" style="margin-top: 90px">
 
-				<h1 class="col-xs-offset-4">Book Chapters List</h1>
+				<h1 >Book Chapters List</h1>
 				<FORM METHOD="post" action="BookChaptersCtl" class="form-horizontal">
 					<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
 						scope="request"></jsp:useBean>
@@ -36,12 +37,12 @@
 					<div class="row">
 
 						<label for="inputname"
-							class="control-label col-xs-2">Book Name:</label>
+							class="control-label col-xs-offset-1 col-xs-2" >Book Name:</label>
 						<div class="col-xs-2">
 							<%=HTMLUtility.getList("bookName", bean.getBookName(),
 					bookList)%>
 						</div>
-						<button name="operation" value="Search" type="submit"
+						<button name="operation" value="Search" type="submit" style="margin-left: -610px"
 							class="btn btn-info">
 							<span class="btn-save-label"> <i
 								class="glyphicon glyphicon-search"></i>
@@ -51,7 +52,7 @@
 
 					<br>
 					<div class="table-responsive">
-						<table class="table table-bordered table-hover" style="width: 60%">
+						<table class="table table-bordered table-hover" style="width: 70%">
 							<tr>
 								<th>#</th>
 								<th>Chapter Name</th>
@@ -180,7 +181,7 @@
 								}
 							%>
 						</table>
-						<table width="100%">
+						<table width="70%">
 							<tr>
 								<td><input type="submit" name="operation" value="Previous"
 									class="btn btn-info"></td>
@@ -195,6 +196,7 @@
 				</FORM>
 
 		</div>
+		</center>
 	</div>
 
 

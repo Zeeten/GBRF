@@ -27,10 +27,9 @@
 	href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	</nav>
+
 	<div class="container">
-		<div class="row" style="margin-top: 90px">
+		<div class="row" style="margin-top: 40px">
 			<img alt="" src="img/logo.png" class="col-xs-offset-1"
 				style="height: 100px; width: 250px"> <a
 				class="btn btn-info  col-xs-offset-4" href="LoginCtl"> <i
@@ -41,7 +40,7 @@
 			<div class="col-xs-offset-4">
 				<hr>
 			</div>
-				<h2 class="col-xs-offset-2">Forget Password</h2>
+				<h2 class="col-xs-offset-4">Forget Password</h2>
 				<H2>
 					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
 					</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>

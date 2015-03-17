@@ -23,7 +23,7 @@
 	<div id="includedContent"></div>
 		<div class="container">
 			<div class="row" style="margin-top: 90px">
-					<h2>Release And Buy Award List</h2>
+					<h2 class="col-xs-offset-4">Release And Buy Award List</h2>
 					<FORM METHOD="post" action="ReleaseAndBuyAwardListCtl"
 						class="form-horizontal">
 						<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
@@ -34,7 +34,7 @@
 						%>
 						<div class="row">
 
-							<label for="inputname" class="control-label col-xs-2">Book Name:</label>
+							<label for="inputname" class="control-label col-xs-2" style="margin-left: -80px">Book Name:</label>
 							<div class="col-xs-2">
 								<%=HTMLUtility.getList("bookName", bean.getBookName(),
 					bookList)%>

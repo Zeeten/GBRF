@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="row" style="margin-top: 90px">
 		
-					<h2 >Read Like Award Part I List</h2>
+					<h2 class="col-xs-offset-4">Read Like Award Part I List</h2>
 						<FORM  METHOD="post" action="ReadLikeAwardPartOneCtl"class="form-horizontal">
 							<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
 			scope="request"></jsp:useBean>
@@ -34,7 +34,7 @@
 		%>
 						<div class="row">
 			
-				<label for="inputname" class="control-label col-xs-2">Book Name:</label>
+				<label for="inputname" class="control-label col-xs-2" style="margin-left: -80px">Book Name:</label>
 					<div class="control-label col-xs-2" >
 					<%=HTMLUtility.getList("bookName",
 					bean.getBookName(), bookList)%>

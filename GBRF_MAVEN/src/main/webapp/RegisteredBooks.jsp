@@ -23,7 +23,7 @@
 	<div class="container">
 		<div class="row" style="margin-top: 90px">
 
-					<h2 >Registered Books</h2>
+					<h2 class="col-xs-offset-4">Registered Books</h2>
 						<FORM  METHOD="post" action="RegisteredBooksCtl" class="form-horizontal">
 						<div class="row">
 					<label for="inputBookId" class="control-label  col-xs-1">Book ID :</label>
