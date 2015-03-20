@@ -61,7 +61,7 @@ public class InviteCtl extends HttpServlet {
 				Date date = new Date();
 				String date1=sdf.format(date);
 				Date currentDate = sdf.parse(date1);
-				Date targetDate = sdf.parse("16-03-2015 05:10");
+				Date targetDate = sdf.parse("30-03-2015 05:10");
 				System.out.println("currentDate"+currentDate);
 				System.out.println("targetDate"+targetDate);
 				System.out.println(currentDate.compareTo(targetDate)>=0);

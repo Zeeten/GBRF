@@ -54,7 +54,14 @@ public class RegisterPrintedBookModel {
 			pstmt.setLong(1, pk);
 			pstmt.setString(2, bean.getBookName());
 			pstmt.setString(3, bean.getBookId());
-			pstmt.setDate(4, new java.sql.Date(bean.getDate().getTime()));
+			
+			java.util.Date dt = bean.getDate();
+
+			java.text.SimpleDateFormat sdf = 
+			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+			String date = sdf.format(dt);
+			pstmt.setString(4, date);
 			pstmt.setString(5, bean.getMobileno());
 			pstmt.setString(6, bean.getEmail());
 
@@ -88,12 +95,10 @@ public class RegisterPrintedBookModel {
 	public List search(RegisterPrintedBookBean bean, int pageNo, int pageSize)
 			throws ApplicationException {
 		
-		StringBuffer sql = new StringBuffer("SELECT * FROM registerprintedbook  WHERE 1=1");
+		StringBuffer sql = new StringBuffer("SELECT * FROM registerprintedbookview  WHERE 1=1");
 
 		if (bean != null) {
-			if (bean.getId() > 0) {
-				sql.append(" AND id = " + bean.getId());
-			}
+
 			if (bean.getEmail() != null && bean.getEmail().length() > 0) {
 				sql.append(" AND EMAIL_ID like '" + bean.getEmail()
 						+ "%'");
@@ -128,16 +133,13 @@ System.out.println(sql);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				 bean = new RegisterPrintedBookBean();
-				bean.setId(rs.getInt(1));
-				bean.setBookName(rs.getString(2));
-				bean.setBookId(rs.getString(3));
-				bean.setDate(rs.getDate(4));
-				bean.setMobileno(rs.getString(5));
-				bean.setEmail(rs.getString(6));
-	
-				bean.setPassword(rs.getString(7));
-				bean.setRlPartI(rs.getBoolean(8));
-				bean.setRlPartII(rs.getBoolean(9));
+				bean.setBookName(rs.getString(1));
+				bean.setBookId(rs.getString(2));
+				bean.setDate(rs.getDate(3));
+				bean.setEmail(rs.getString(4));
+
+				bean.setRlPartI(rs.getBoolean(5));
+				bean.setRlPartII(rs.getBoolean(6));
 				list.add(bean);
 			}
 			rs.close();
@@ -159,20 +161,17 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_I=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_ADD(DATE_FORMAT(DATE_OF_PURCHASE,'%y-%d-%m'), INTERVAL 10 DAY))>15");
+					.prepareStatement("SELECT * FROM registerprintedbookview where EMAIL_ID=? and RL_PART_I=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_FORMAT(DATE_OF_PURCHASE,'%y-%m-%d'))>15");
 			pstmt.setString(1, email);
 			pstmt.setBoolean(2, false);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				RegisterPrintedBookBean bean = new RegisterPrintedBookBean();
-				bean.setId(rs.getInt(1));
-				bean.setBookName(rs.getString(2));
-				bean.setBookId(rs.getString(3));
-				bean.setDate(rs.getDate(4));
-				bean.setMobileno(rs.getString(5));
-				bean.setEmail(rs.getString(6));
-	
-				bean.setPassword(rs.getString(7));
+				bean.setBookName(rs.getString(1));
+				bean.setBookId(rs.getString(2));
+				bean.setDate(rs.getDate(3));
+				bean.setEmail(rs.getString(4));
+
 				list.add(bean);
 			}
 			rs.close();
@@ -190,18 +189,16 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_II=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_ADD(DATE_FORMAT(DATE_OF_PURCHASE,'%y-%d-%m'), INTERVAL 10 DAY))>15");
+					.prepareStatement("SELECT * FROM registerprintedbook where EMAIL_ID=? and RL_PART_II=? and DATEDIFF(DATE_FORMAT(DATE(NOW()),'%y-%m-%d'),DATE_FORMAT(DATE_OF_PURCHASE,'%y-%m-%d'))>15");
 			pstmt.setString(1, email);
 			pstmt.setBoolean(2, false);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				RegisterPrintedBookBean bean = new RegisterPrintedBookBean();
-				bean.setId(rs.getInt(1));
-				bean.setBookName(rs.getString(2));
-				bean.setBookId(rs.getString(3));
-				bean.setDate(rs.getDate(4));
-				bean.setMobileno(rs.getString(5));
-				bean.setEmail(rs.getString(6));
+				bean.setBookName(rs.getString(1));
+				bean.setBookId(rs.getString(2));
+				bean.setDate(rs.getDate(3));
+				bean.setEmail(rs.getString(4));
 	
 				bean.setPassword(rs.getString(7));
 				list.add(bean);
@@ -221,7 +218,7 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook WHERE BOOK_ID=?");
+					.prepareStatement("SELECT * FROM registerprintedbookview WHERE BOOK_ID=?");
 			pstmt.setString(1, bookId);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -265,19 +262,15 @@ System.out.println(sql);
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = conn
-					.prepareStatement("SELECT * FROM registerprintedbook WHERE BOOK_ID=?");
+					.prepareStatement("SELECT * FROM registerprintedbookview WHERE BOOK_ID=?");
 			pstmt.setString(1, bookId);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
 				 bean = new RegisterPrintedBookBean();
-				bean.setId(rs.getLong(1));
-				bean.setBookName(rs.getString(2));
-				bean.setBookId(rs.getString(3));
-				bean.setDate(rs.getDate(4));
-				bean.setMobileno(rs.getString(5));
-				bean.setEmail(rs.getString(6));
-	
-				bean.setPassword(rs.getString(7));
+					bean.setBookName(rs.getString(1));
+					bean.setBookId(rs.getString(2));
+					bean.setDate(rs.getDate(3));
+					bean.setEmail(rs.getString(4));
 			}
 			rs.close();
 		} catch (Exception e) {

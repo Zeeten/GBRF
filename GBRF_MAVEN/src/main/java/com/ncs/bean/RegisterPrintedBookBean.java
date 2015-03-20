@@ -1,5 +1,6 @@
 package com.ncs.bean;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 public class RegisterPrintedBookBean extends BaseBean {
@@ -18,6 +19,14 @@ public class RegisterPrintedBookBean extends BaseBean {
 
 	public void setRlPartI(Boolean rlPartI) {
 		this.rlPartI = rlPartI;
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public Boolean getRlPartII() {
@@ -50,13 +59,7 @@ public class RegisterPrintedBookBean extends BaseBean {
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	
+
 	public String getMobileno() {
 		return mobileno;
 	}

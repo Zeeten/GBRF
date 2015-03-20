@@ -41,9 +41,9 @@
 	<div id="includedContent"></div>
 	<div class="container">
 		<div class="row" style="margin-top: 90px">
-			<img alt="" src="img/logo.png" class="col-xs-offset-1"
+			<img alt="" src="img/logo.png" class="col-md-offset-1"
 				style="height: 100px; width: 250px"> 
-			<div class="col-xs-offset-4">
+			<div class="col-md-offset-4">
 				<hr>
 			</div>
 			<center>
@@ -64,9 +64,9 @@
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like3", request)%></font>
 					<div class="table-responsive" style="width: 60%">
 				<div class="form-group">
-							<label for="inputBook" class="control-label col-xs-1">Book
+							<label for="inputBook" class="control-label col-md-1">Book
 								</label>
-							<div class="col-xs-4">
+							<div class="col-md-4">
 								<%=HTMLUtility.getList("bookNo", bean.getBookName(),
 					likelist)%>
 						<font color="red"> <%=ServletUtility.getErrorMessage("bookNo", request)%></font>
@@ -255,7 +255,7 @@
 
 				</div>
 				<div class="form-group">
-					<div class="col-xs-offset-1 col-xs-10">
+						<div class="col-md-offset-1 col-md-10">
 							<button name="operation" class="btn icon-btn-save btn-success"
 								value="Save" type="submit">
 								<span class="btn-save-label"> <i

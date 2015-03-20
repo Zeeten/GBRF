@@ -17,17 +17,22 @@ public class ReadLikeAwardPartOneModel {
 	
 	public List search(ReadLikeAwardPartOneBean bean, int pageNo, int pageSize)
 			throws ApplicationException {
-		StringBuffer sql = new StringBuffer("SELECT * FROM read_like_award_part_i  WHERE 1=1");
+		StringBuffer sql = new StringBuffer("SELECT * FROM read_like_award_part_i_for_like1  WHERE 1=1");
 
 		if (bean != null) {
-			if (bean.getId() > 0) {
-				sql.append(" AND id = " + bean.getId());
-			}
-			if (bean.getBookName() != null && bean.getBookName().length() > 0) {
+		
+		/*	if (bean.getBookName() != null && bean.getBookName().length() > 0) {
 				sql.append(" AND BOOK_NAME like '" + bean.getBookName()
 						+ "%'");
+			}*/
+			if (bean.getEmail() != null && bean.getEmail().length() > 0) {
+				sql.append(" AND EMAIL like '" + bean.getEmail()
+						+ "%'");
 			}
-		
+			if (bean.getBookNo() != null && bean.getBookNo().length() > 0) {
+				sql.append(" AND BOOK_NO like '" + bean.getBookNo()
+						+ "%'");
+			}
 
 		}
 
@@ -47,16 +52,19 @@ public class ReadLikeAwardPartOneModel {
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				bean = new ReadLikeAwardPartOneBean();
-				bean.setId(rs.getInt(1));
-				bean.setBookId(rs.getLong(2));
-				bean.setBookNo(rs.getString(3));
+				//bean.setId(rs.getInt(1));
+				bean.setFirstName(rs.getString(1));
+				bean.setLastName(rs.getString(2));
+				bean.setEmail(rs.getString(3));
+				bean.setBookNo(rs.getString(4));
+				bean.setSubmitDate(rs.getTimestamp(5));
+			/*	bean.setBookId(rs.getLong(2));
 				bean.setBookName(rs.getString(4));
 				bean.setAmount(rs.getInt(5));
 				bean.setAwardDate(rs.getTimestamp(6));
-				bean.setSubmitDate(rs.getTimestamp(7));
-				bean.setFirstName(rs.getString(8));
-				bean.setLastName(rs.getString(9));
-				bean.setEmail(rs.getString(10));
+			*/
+			
+			
 				list.add(bean);
 			}
 			rs.close();

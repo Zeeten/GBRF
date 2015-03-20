@@ -23,27 +23,30 @@
 
 	
 		<div class="container">
-		<center>
+	
 			<div class="row" style="margin-top: 90px">
 
-					<h1 >Book List</h1>
-						<FORM  METHOD="post" action="BookListCtl"class="form-horizontal">
-						<div class="row">
+					<h1 class="col-md-offset-3">Book List</h1>
+						<FORM  METHOD="post" action="BookListCtl" class="form-inline">
+						  <div class="form-group">
 			
-				<label for="inputname" class="control-label col-xs-offset-1 col-xs-2">Book Name:</label>
-					<div class="col-xs-2">
+				<label for="inputname" class="control-label col-md-5">Book Name:</label>
+					<div class="col-md-2">
 						<input type="text" class="form-control" name="bookName" id="bookName"
 							placeholder="Book Name">
 				</div>
-		 <button name="operation" value="Search" type="submit" class="btn btn-info" style="margin-left: -610px">
+					</div>
+					 <div class="form-group">
+		 <button name="operation" value="Search" type="submit" class="btn btn-info">
 							<span class="btn-save-label">
 						<i class="glyphicon glyphicon-search"></i>
 						</span>
 						Search
 						</button>
 							</div>
+						
 
-		<br>
+		<br><br>
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover" style="width: 70%">
 							<tr>
@@ -96,7 +99,6 @@
 		</FORM>
 	
 			</div>
-			</center>
 		</div>
 
 </body>

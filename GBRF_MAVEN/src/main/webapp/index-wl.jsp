@@ -57,7 +57,7 @@
 
 		function test() {
 			var today = new Date(); // date and time right now
-			var goLive = new Date("March 14, 2015 05:34:00 pm"); // target date
+			var goLive = new Date("March 30, 2015 05:34:00 pm"); // target date
 			var diffMs = (goLive - today); // milliseconds between now & target date
 			var diffDays = roundDown(diffMs / 86400000); // days
 			var diffHrs = roundDown((diffMs % 86400000) / 3600000); // hours
@@ -157,7 +157,7 @@
             
 					<div class="text">
 						<p5>LAUNCH DATE</p5>
-						<p2>15</p2>
+						<p2>30</p2>
 						<p3>March</p3>
 						<div class="arwright"></div>
 					</div>

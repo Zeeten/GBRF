@@ -24,12 +24,12 @@
 <body>
 	<div id="includedContent"></div>
 	<div style="margin-top: 100px">
-		<img alt="" src="img/logo.png" class="col-xs-offset-1"
+		<img alt="" src="img/logo.png" class="col-md-offset-1"
 			style="height: 100px; width: 250px">
-		<div class="col-xs-offset-4">
+		<div class="col-md-offset-4">
 			<hr>
 		</div>
-		<h1 class="col-xs-offset-4">Welcome to GBRF</h1>
+		<h1 class="col-md-offset-4">Welcome to GBRF</h1>
 
 	</div>
 </html>

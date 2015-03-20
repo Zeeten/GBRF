@@ -22,32 +22,38 @@
 <body>
 	<div id="includedContent"></div>
 		<div class="container">
-			<div class="row" style="margin-top: 90px">
-					<h2 class="col-xs-offset-4">Release And Buy Award List</h2>
+
+	<%-- 		<div class="row" >
+<div class="col-md-4"></div>
+				<h2 class="col-md-8">Release And Buy Award List</h2>
+				</div>
+
 					<FORM METHOD="post" action="ReleaseAndBuyAwardListCtl"
-						class="form-horizontal">
+						class="form-inline">
 						<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
 							scope="request"></jsp:useBean>
 
 						<%
 							List bookList = (List) request.getAttribute("bookList");
 						%>
-						<div class="row">
+						<div class="form-group">
 
-							<label for="inputname" class="control-label col-xs-2" style="margin-left: -80px">Book Name:</label>
-							<div class="col-xs-2">
+							<label for="inputname" class="control-label col-md-4" >Book Name</label>
+							<div class="col-md-2">
 								<%=HTMLUtility.getList("bookName", bean.getBookName(),
 					bookList)%>
 							</div>
+							</div>
+							<div class="form-group">
 	<button name="operation" value="Search" type="submit" class="btn btn-info">
 							<span class="btn-save-label">
 						<i class="glyphicon glyphicon-search"></i>
 						</span>
 						Search
 						</button>
-						</div>
-
-						<br>
+					
+</div>
+						<br><br>
 
 						<div class="table-responsive">
 							<table class="table table-bordered table-hover">
@@ -108,9 +114,73 @@
 			</table>
 				<input type="hidden" name="pageNo" value="<%=pageNo%>"><input
 				type="hidden" name="pageSize" value="<%=pageSize%>">
+				
 						</div>
+						</FORM> --%>
+							<%
+		
+				if(session.getAttribute("session")==null){
+					%>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<div class="container">
+	<div class="navbar-header" style="margin-top: 5px;margin-bottom: 5px">
+				<!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+					        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+
+            <span class="sr-only">Toggle navigation</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+        </button>
+					
+					<img src="img/gbrflogo.png" style="height: 50px;" >
+		
 			</div>
+
+			<div id="navbarCollapse" class="collapse navbar-collapse navbar-ex1-collapse">
+			
+			<ul class="nav navbar-nav">
+			  <li><a href="LoginCtl"> HOME</a></li>
+			  <li><a href="RegisterPrintedBookCtl"> 
+ Register Printed Book</a></li>
+   	<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">Read and Like Part -I Award List<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+	
+										<li class="dropdown-submenu">
+							<a tabindex="-1" href="#">Read and Like Award
+									Part -I</a>
+							 <ul class="dropdown-menu">
+							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
+							<li><a href="#">Best Second Chapter User List</a></li>
+							<li><a href="#">Best Third Chapter User List</a></li>
+							 </ul>
+							</li>
+										
+						</ul></li>
+ 	  <li><a href="ReleaseAndBuyAwardListCtl"> Release and Buy Award List</a></li>
+			  </ul>
+			</div>
+	</div>
+	</nav>
+
+<% } %>
+<div class="row" style="margin-top: 90px">
+	<img alt="" src="img/logo.png" class="col-md-offset-1"
+			style="height: 100px; width: 250px">
+		<span class=" col-md-offset-1 " style="font-size: 25pt">Release And Buy Award List</span>
+						</div>
+		<div class="col-md-offset-4">
+			<hr>
+			</div>
+
+		<h1 class="col-md-offset-5">Coming Soon..</h1>
 		</div>
+
 
 </body>
 </html>

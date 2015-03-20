@@ -67,6 +67,18 @@ if(session.getAttribute("session")!=null){
 	
 			<div class="navbar-header" style="margin-top: 5px;margin-bottom: 5px">
 				<!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+					        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+
+            <span class="sr-only">Toggle navigation</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+        </button>
+					
 					<img src="img/gbrflogo.png" style="height: 50px;" >
 		
 			</div>
@@ -76,7 +88,7 @@ if(session.getAttribute("session")!=null){
 				</strong>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div id="navbarCollapse" class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
 					<li><a href="WelcomeCtl.do"> HOME</a></li>
 				<%
@@ -103,8 +115,18 @@ if(session.getAttribute("session")!=null){
 									Part -I</a></li>
 							<li><a href="UsersLikesListTwoCtl">Read and Like Award
 									Part -II</a></li> -->
-										<li><a href="ReadLikeAwardPartOneCtl">Read and Like Award
-									Part -I</a></li>
+									<!-- 	<li><a href="ReadLikeAwardPartOneCtl">Read and Like Award
+									Part -I</a></li> -->
+									
+										<li class="dropdown-submenu">
+							<a tabindex="-1" href="#">Read and Like Award
+									Part -I</a>
+							 <ul class="dropdown-menu">
+							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
+							<li><a href="#">Best Second Chapter User List</a></li>
+							<li><a href="#">Best Third Chapter User List</a></li>
+							 </ul>
+							</li>
 										
 						</ul></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -156,8 +178,18 @@ if(session.getAttribute("session")!=null){
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Awards<b class="caret"></b></a>
 						<ul class="dropdown-menu">
-										<li><a href="ReadLikeAwardPartOneCtl">Read and Like Award
-									Part -I</a></li>
+									<!-- 	<li><a href="ReadLikeAwardPartOneCtl">Read and Like Award
+									Part -I</a></li> -->
+									
+												<li class="dropdown-submenu">
+							<a tabindex="-1" href="#">Read and Like Award
+									Part -I</a>
+							 <ul class="dropdown-menu">
+							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
+							<li><a href="#">Best Second Chapter User List</a></li>
+							<li><a href="#">Best Third Chapter User List</a></li>
+							 </ul>
+							</li>
 						</ul></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown">Award Scheme<b

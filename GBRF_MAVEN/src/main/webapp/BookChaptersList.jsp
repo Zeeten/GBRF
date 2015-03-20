@@ -37,8 +37,8 @@
 					<div class="row">
 
 						<label for="inputname"
-							class="control-label col-xs-offset-1 col-xs-2" >Book Name:</label>
-						<div class="col-xs-2">
+							class="control-label col-md-offset-1 col-md-2" >Book Name:</label>
+						<div class="col-md-2">
 							<%=HTMLUtility.getList("bookName", bean.getBookName(),
 					bookList)%>
 						</div>

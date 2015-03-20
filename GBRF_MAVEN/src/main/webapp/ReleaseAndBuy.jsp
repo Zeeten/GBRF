@@ -23,9 +23,9 @@
 	<div id="includedContent"></div>
 	<div class="container">
 <div class="row" style="margin-top: 90px">
-			<img alt="" src="img/logo.png" class="col-xs-offset-1"
+			<img alt="" src="img/logo.png" class="col-md-offset-1"
 				style="height: 100px; width: 250px"> 
-			<div class="col-xs-offset-4">
+			<div class="col-md-offset-4">
 				<hr>
 			</div>
 <center>

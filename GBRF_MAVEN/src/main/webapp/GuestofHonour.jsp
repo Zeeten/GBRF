@@ -22,27 +22,29 @@
 <body >
 	<div class="container">
 			<center>
-		<div class="row" style="background-image: url('img/card3.jpg');height: 645px;width: 650px"  >
+		<div class="row" style="background-image: url('img/cardimg.jpg');height: 670px;width: 560px"  >
 		
-				<h1 style="margin-top: 70px">Guest Of Honour</h1>
+				<h1 style="margin-top: 117px">Guests Of Honour</h1>
 				<H2>
 					<font color="red"> <%=ServletUtility.getErrorMessage(request)%>
 					</font> <font color="green"> <%=ServletUtility.getSuccessMessage(request)%>
 					</font>
 				</H2>
 					<div class="table-responsive">
-						<table class="table table-bordered" style="width: 58%">
+						<table class="table table-bordered" style="width: 64%; margin-left: -6PX">
 							<tr >
-								<th style="text-align: center;">#</th>
+								<th style="text-align: center;width: 20px">ID</th>
 								<th style="text-align: center;">Name</th>
-								<th style="text-align: center;">Date</th>
+								<th style="text-align: center;width: 160px">Date & Time</th>
 							</tr>
 			</table>
 						
 					</div>
 							
-							<marquee  style="height: 400px" direction="up" behavior=scroll scrollamount="3" >
+							<marquee  style="height: 285px" direction="up" behavior=scroll scrollamount="3" >
 							<%
+							for(int i=0; i<=50;i++)
+							{
 								int index = 0;
 								List guestlist = (List) request.getAttribute("dtoList");
 								Iterator it = guestlist.iterator();
@@ -52,16 +54,16 @@
 							%>
 				
 						<div class="row" style="height: 30px" >
-				<font size="2px">
+				<font size="1px">
 						<label for="input"
 							class="control-label col-xs-offset-1  col-xs-1"
-							style=";margin-left: 162px" ><%=index%></label>
+							style=";margin-left: 100px" ><%=index%></label>
+								<label for="input"
+							class="control-label  col-xs-4"
+							style="margin-left: -5px"><%=bean.getName()%></label>
 								<label for="input"
 							class="control-label  col-xs-3"
-							><%=bean.getName()%></label>
-								<label for="input"
-							class="control-label  col-xs-3"
-							style="margin-left: -10px">	<%=bean.getDate()%></label>
+							style="margin-left: -30px">	<%=bean.getDate()%></label>
 							</font>
 								</div>
 							
@@ -70,7 +72,10 @@
 							
 							<%
 								}
+							}
 							%>
+							
+					
 								</marquee>
 				
 		</div>
@@ -90,13 +95,12 @@
 							<input name="operation" value="Save" type="submit" class="btn btn-success">
 					</div>
 						<br>
+		
 					<div class="form-group">
 
-      <div class="col-xs-offset-5 col-xs-10">
-       <a
-        href="http://kissmatinternational.com/kip/index.php?route=checkout/checkout" target="_blank"><input
-        value="RELEASE AND BUY BOOK" class="btn btn-info"
-        style="width: 250px"></a>
+      <div class="col-xs-offset-5 col-xs-10" style="margin-left: 518px">
+       <a class="btn btn-info"
+        href="http://kissmatinternational.com/kip/index.php?route=checkout/checkout" target="_blank">RELEASE AND BUY BOOK</a>
 						</div>
 					</div>
 				</form>

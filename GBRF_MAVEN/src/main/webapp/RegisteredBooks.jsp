@@ -22,28 +22,34 @@
 	<div id="includedContent"></div>
 	<div class="container">
 		<div class="row" style="margin-top: 90px">
-
-					<h2 class="col-xs-offset-4">Registered Books</h2>
-						<FORM  METHOD="post" action="RegisteredBooksCtl" class="form-horizontal">
-						<div class="row">
-					<label for="inputBookId" class="control-label  col-xs-1">Book ID :</label>
-					<div class="col-xs-2">
+<div class="row" >
+<div class="col-md-4"></div>
+				<h2 class="col-md-8">Registered Books</h2>
+				</div>
+						<FORM  METHOD="post" action="RegisteredBooksCtl" class="form-inline">
+						  <div class="form-group">
+					<label for="inputBookId" class="control-label  col-md-4">Book ID</label>
+					<div class="col-md-2">
 						<input type="text" class="form-control" name="bookId" id="bookId"
 							placeholder="Book ID">
 					</div>
-					
-				<label for="inputemailId" class="control-label col-xs-1">Email ID :</label>
-					<div class="col-xs-2">
+					</div>
+					<div class="form-group">
+				<label for="inputemailId" class="control-label col-md-4">Email ID</label>
+					<div class="col-md-2">
 						<input type="text" class="form-control" name="emailId" id="emailId"
 							placeholder="Email ID">
 					</div>
-		
-				<label for="inputbookName" class="control-label col-xs-2" style="margin-left: -80px" >Book Name:</label>
-					<div class="col-xs-2">
+		</div>
+		<div class="form-group">
+				<label for="inputbookName" class="control-label col-md-5"  >Book Name</label>
+					<div class="col-md-2">
 						<input type="text" class="form-control" name="bookName" id="bookName"
 							placeholder="Book Name">
 				</div>
-						<button name="operation" value="Search" type="submit" class="btn btn-info">
+				</div>
+				<div class="form-group">
+						<button name="operation" value="Search" type="submit" class="col-md-offset-1 btn btn-info">
 							<span class="btn-save-label">
 						<i class="glyphicon glyphicon-search"></i>
 						</span>
@@ -51,6 +57,7 @@
 						</button>
 							</div>
 				
+		<br>
 		<br>
 	<div class="table-responsive">
 						<table class="table table-bordered table-hover" >
@@ -109,7 +116,7 @@
 				}
 			%>
 		</table>
-						</table>
+				
 									<table width="100%">
 				<tr>
 					<td><input type="submit" name="operation"

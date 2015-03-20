@@ -69,7 +69,9 @@ public class ReadLikeAwardPartOneCtl extends HttpServlet {
 
 		ReadLikeAwardPartOneBean bean=new ReadLikeAwardPartOneBean();
 		BooksModel bookmodel = new BooksModel();
-		bean.setBookName(request.getParameter("bookName"));
+		bean.setBookNo(request.getParameter("bookId"));
+
+		bean.setEmail(request.getParameter("emailId"));
 		List dtoList = null;
 		try {
 			List bookList = bookmodel.list();
