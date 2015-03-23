@@ -23,13 +23,15 @@
 
 <body>
 	<div id="includedContent"></div>
-	<div style="margin-top: 100px">
-		<img alt="" src="img/logo.png" class="col-md-offset-1"
+	<div class="container">
+	<div style="margin-top: 90px">
+		<img alt="" src="img/logo.png" 
 			style="height: 100px; width: 250px">
-		<div class="col-md-offset-4">
+		<div class="col-md-offset-3" style="margin-top: -20px">
 			<hr>
 		</div>
 		<h1 class="col-md-offset-4">Welcome to GBRF</h1>
 
+	</div>
 	</div>
 </html>

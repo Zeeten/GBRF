@@ -36,7 +36,7 @@ public class ReadLikeAwardPartOneCtl extends HttpServlet {
 			ReadLikeAwardPartOneBean bean=new ReadLikeAwardPartOneBean();
 			List list = bookmodel.list();
 			request.setAttribute("bookList", list);
-			dtoList = model.search(bean, pageNo, pageSize);
+			dtoList = model.searchChapterOne(bean, pageNo, pageSize);
 			request.setAttribute("dtoList", dtoList);
 			if (dtoList == null || dtoList.size() == 0) {
 				ServletUtility.setErrorMessage("No record found ", request);
@@ -89,7 +89,7 @@ public class ReadLikeAwardPartOneCtl extends HttpServlet {
 
 			}
 
-			dtoList = model.search(bean, pageNo, pageSize);
+			dtoList = model.searchChapterOne(bean, pageNo, pageSize);
 			request.setAttribute("dtoList", dtoList);
 			if (dtoList == null || dtoList.size() == 0) {
 				ServletUtility.setErrorMessage("No record found ", request);

@@ -1,6 +1,6 @@
 package com.ncs.bean;
 
-import java.sql.Timestamp;
+
 import java.util.Date;
 
 public class RegisterPrintedBookBean extends BaseBean {

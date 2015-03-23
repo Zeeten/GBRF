@@ -21,9 +21,9 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="js/bootstrap.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
@@ -36,13 +36,7 @@
 
 	<script>
 $(function() {
-    $('.date-picker').datepicker( {
-        changeMonth: true,
-        changeYear: true,
-        showButtonPanel: true,
-        dateFormat: 'dd/mm/yy',
-      
-    });
+    $('.date-picker').datepicker( );
 });
 </script>
 </head>
@@ -88,9 +82,9 @@ $(function() {
 							<a tabindex="-1" href="#">Read and Like Award
 									Part -I</a>
 							 <ul class="dropdown-menu">
-							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
-							<li><a href="#">Best Second Chapter User List</a></li>
-							<li><a href="#">Best Third Chapter User List</a></li>
+								<li><a href="PartOneBestChapterFirstListCtl">Best First Chapter User List</a></li>
+							<li><a href="PartOneBestChapterSecondListCtl">Best Second Chapter User List</a></li>
+							<li><a href="PartOneBestChapterThirdListCtl">Best Third Chapter User List</a></li>
 							 </ul>
 							</li>
 										
@@ -100,49 +94,24 @@ $(function() {
 			</div>
 	</div>
 	</nav>
-	<div class="container">
+
+
+<% } %>
 	<div class="row" style="margin-top: 90px">
-	<div class="col-md-offset-1 col-md-4">
-			<img alt="" src="img/logo.png"
-				style="height: 100px; width: 250px">
-				</div>
-</div>
-<div class="row" >
-<div class="col-md-4"></div>
-<div class="col-md-8" >
+		<img alt="" src="img/logo.png"  style="height: 100px;width: 250px">
+		<span class=" col-md-offset-2 " style="font-size: 25pt;">Register Printed Book</span>
+
+					<div class=" col-md-offset-3 " style="margin-top: -40px" >
 <hr>
 </div>
-</div>
-
-<% }else{ %>
-<div class="row" style="margin-top: 65px">
-	<div class="col-md-offset-1 col-md-4">
-		<img alt="" src="img/logo.png" class="col-md-offset-1" style="height: 100px;width: 250px">
-		</div>
-		</div>
-<div class="row" >
-<div class="col-md-4"></div>
-<div class="col-md-8" >
-<hr>
-</div>
-</div>
-
-<%} %>
-<div class="row" >
-<div class="col-md-4"></div>
-				<h2 class="col-md-8">Register Printed Book</h2>
 				</div>
-				
-										<div class="row" >
-<div class="col-md-4"></div>
-				<h3 class="col-md-8"><font color="red" > <%=ServletUtility.getErrorMessage(request)%>
+				<h3 class=" col-md-offset-4 "><font color="red" > <%=ServletUtility.getErrorMessage(request)%>
 			</font></h3>
-				</div>
-
+	
 			<FORM ACTION="RegisterPrintedBookCtl" METHOD="post" class="form-horizontal">
 
 			<div class="form-group">
-					<label for="inputBook" class="control-label col-md-offset-2 col-md-2">Book</label>
+					<label for="inputBook" class="control-label col-md-offset-3 col-md-2">Book</label>
 					<div class="col-md-3">
 						<select class="form-control" id="bookName" name="bookName">
 							<option value="">--Select--</option>
@@ -162,7 +131,7 @@ $(function() {
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputBookId" class="control-label col-md-offset-2 col-md-2">Book ID</label>
+					<label for="inputBookId" class="control-label col-md-offset-3 col-md-2">Book ID</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="bookId" id="bookId"
 							placeholder="Book ID"> <font color="red"> <%=ServletUtility.getErrorMessage("bookId", request)%></font>
@@ -170,7 +139,7 @@ $(function() {
 				</div>
 				
 					<div class="form-group">
-					<label for="inputDateOfPurchase" class="control-label col-md-offset-2 col-md-2">Date of Purchase</label>
+					<label for="inputDateOfPurchase" class="control-label col-md-offset-3 col-md-2">Date of Purchase</label>
 					<div class="col-md-3">
 						<input type="text"  name="dateofpurchase" id="dateofpurchase"
 							 class="form-control date-picker"
@@ -183,36 +152,36 @@ $(function() {
 				if(session.getAttribute("session")==null){
 					%>
 						<div class="form-group">
-					<label for="inputfirstName" class="control-label col-md-offset-2 col-md-2"
+					<label for="inputfirstName" class="control-label col-md-offset-3 col-md-2"
 					>First Name</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="firstName" id="firstName"
-							placeholder="First Name"> <font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font>
+							placeholder="First Name" > <font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font>
 					</div>
 				</div>	
 						<div class="form-group">
-					<label for="inputlastName" class="control-label col-md-offset-2 col-md-2">Last Name</label>
+					<label for="inputlastName" class="control-label col-md-offset-3 col-md-2">Last Name</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="lastName" id="lastName"
 							placeholder="Last Name"> <font color="red"> <%=ServletUtility.getErrorMessage("lastName", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputMobileNo" class="control-label col-md-offset-2 col-md-2">Mobile No</label>
+					<label for="inputMobileNo" class="control-label col-md-offset-3 col-md-2">Mobile No</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="mobileNo" id="mobileNo"
 							placeholder="Mobile No"> <font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font>
 					</div>
 				</div>
 						<div class="form-group">
-					<label for="inputemail" class="control-label col-md-offset-2 col-md-2">Login ID</label>
+					<label for="inputemail" class="control-label col-md-offset-3 col-md-2">Login ID</label>
 					<div class="col-md-3">
 						<input type="email" class="form-control" name="email" id="email"
 							placeholder="Login ID"> <font color="red"> <%=ServletUtility.getErrorMessage("email", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputpassword" class="control-label col-md-offset-2 col-md-2">Password</label>
+					<label for="inputpassword" class="control-label col-md-offset-3 col-md-2">Password</label>
 					<div class="col-md-3">
 						<input type="password" class="form-control" name="password" id="password"
 							placeholder="Password"> <font color="red"> <%=ServletUtility.getErrorMessage("password", request)%></font>
@@ -221,28 +190,40 @@ $(function() {
 				<%
 				}
 				%>
+		
+					<%
+		
+				if(session.getAttribute("session")!=null){
+					%>
 				<div class="form-group">
-					<div class="col-md-offset-5 ">
+					<div class="col-md-offset-5 " >
+						<button name="operation" style="margin-left: 20px" class="btn icon-btn-save btn-success" value="Register" type="submit">
+						<span class="btn-save-label">
+						<i class="glyphicon glyphicon-floppy-disk"></i>
+						</span>
+						save</button>
+					<input name="operation" class="btn btn-info" value="My Registered Books" type="submit">
+							</div>
+				</div>					<%
+				}else{
+				%>
+				<div class="form-group">
+				<div class="col-md-offset-6 ">
 						<button name="operation" class="btn icon-btn-save btn-success" value="Register" type="submit">
 						<span class="btn-save-label">
 						<i class="glyphicon glyphicon-floppy-disk"></i>
 						</span>
 						save</button>
-					<%
-		
-				if(session.getAttribute("session")!=null){
-					%>
-					<input name="operation" class="btn btn-info" value="My Registered Books" type="submit">
-											<%
-				}
-				%>
 					</div>
 				</div>
+				
+				<%} %>
+				
 
 				
 			</FORM>
 			</div>
-					</div>
+
 	
 
 </body>

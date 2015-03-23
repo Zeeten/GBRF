@@ -38,7 +38,7 @@
 						  <div class="form-group">
 			
 				<label for="inputname" class="control-label col-md-4">Book Name</label>
-					<div class="col-md-2">
+					<div class="col-md-7">
 					<%=HTMLUtility.getList("bookName",
 					bean.getBookName(), bookList)%>
 				</div>

@@ -3,9 +3,9 @@
 <head>
 <title>Administrator Page</title>
 <!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
 <!-- Optional theme -->
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
@@ -122,9 +122,9 @@ if(session.getAttribute("session")!=null){
 							<a tabindex="-1" href="#">Read and Like Award
 									Part -I</a>
 							 <ul class="dropdown-menu">
-							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
-							<li><a href="#">Best Second Chapter User List</a></li>
-							<li><a href="#">Best Third Chapter User List</a></li>
+							<li><a href="PartOneBestChapterFirstListCtl">Best First Chapter User List</a></li>
+							<li><a href="PartOneBestChapterSecondListCtl">Best Second Chapter User List</a></li>
+							<li><a href="PartOneBestChapterThirdListCtl">Best Third Chapter User List</a></li>
 							 </ul>
 							</li>
 										
@@ -185,9 +185,9 @@ if(session.getAttribute("session")!=null){
 							<a tabindex="-1" href="#">Read and Like Award
 									Part -I</a>
 							 <ul class="dropdown-menu">
-							<li><a href="ReadLikeAwardPartOneCtl">Best First Chapter User List</a></li>
-							<li><a href="#">Best Second Chapter User List</a></li>
-							<li><a href="#">Best Third Chapter User List</a></li>
+							<li><a href="PartOneBestChapterFirstListCtl">Best First Chapter User List</a></li>
+							<li><a href="PartOneBestChapterSecondListCtl">Best Second Chapter User List</a></li>
+							<li><a href="PartOneBestChapterThirdListCtl">Best Third Chapter User List</a></li>
 							 </ul>
 							</li>
 						</ul></li>

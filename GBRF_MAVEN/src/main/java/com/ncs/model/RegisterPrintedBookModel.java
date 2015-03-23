@@ -55,13 +55,12 @@ public class RegisterPrintedBookModel {
 			pstmt.setString(2, bean.getBookName());
 			pstmt.setString(3, bean.getBookId());
 			
-			java.util.Date dt = bean.getDate();
+			//java.util.Date dt = bean.getDate();
 
-			java.text.SimpleDateFormat sdf = 
-			     new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-
-			String date = sdf.format(dt);
-			pstmt.setString(4, date);
+			//String date = sdf.format(dt);
+			//System.out.println("date"+date);
+			System.out.println("ddd"+bean.getDate());
+			pstmt.setDate(4,  new java.sql.Date(bean.getDate().getTime()));
 			pstmt.setString(5, bean.getMobileno());
 			pstmt.setString(6, bean.getEmail());
 

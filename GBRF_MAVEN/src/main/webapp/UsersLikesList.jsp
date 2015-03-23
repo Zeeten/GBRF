@@ -29,7 +29,7 @@
 <div class="col-md-4"></div>
 				<h2 class="col-md-8">My Reads and Likes List</h2>
 				</div>
-								<FORM  METHOD="post" action="UsersLikesListCtl" class="form-inline">
+								<FORM  METHOD="post" class="form-inline">
                      <div class="form-group">
 					<label for="inputBookId" class="control-label  col-md-4">Book ID</label>
 					<div class="col-md-2">

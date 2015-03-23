@@ -42,7 +42,7 @@
 							<%=HTMLUtility.getList("bookName", bean.getBookName(),
 					bookList)%>
 						</div>
-						<button name="operation" value="Search" type="submit" style="margin-left: -610px"
+						<button name="operation" value="Search" type="submit" style="margin-left: -580px"
 							class="btn btn-info">
 							<span class="btn-save-label"> <i
 								class="glyphicon glyphicon-search"></i>

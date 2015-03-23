@@ -41,13 +41,14 @@
 	<div id="includedContent"></div>
 	<div class="container">
 		<div class="row" style="margin-top: 90px">
-			<img alt="" src="img/logo.png" class="col-md-offset-1"
-				style="height: 100px; width: 250px"> 
-			<div class="col-md-offset-4">
-				<hr>
+		<img alt="" src="img/logo.png"  style="height: 100px;width: 250px">
+		<span class=" col-md-offset-2 " style="font-size: 25pt;">Read and Like-Part I</span>
+
+					<div class=" col-md-offset-3 " style="margin-top: -40px" >
+<hr>
+</div>
 			</div>
 			<center>
-					<H2 >Read and Like-Part I</H2>
 					<span style="color: green">Select best three chapters from 1 to
 				9 for part I Award</span>
 				<form name="matrixForm" ACTION="UsersLikesCtl" METHOD="post"
@@ -64,7 +65,7 @@
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like3", request)%></font>
 					<div class="table-responsive" style="width: 60%">
 				<div class="form-group">
-							<label for="inputBook" class="control-label col-md-1">Book
+							<label for="inputBook" class="control-label col-md-offset-3 col-md-1">Book
 								</label>
 							<div class="col-md-4">
 								<%=HTMLUtility.getList("bookNo", bean.getBookName(),
@@ -267,7 +268,7 @@
 
 		</form>
 			</center>
-		</div>
+	
 		</div>
 </body>
 

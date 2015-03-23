@@ -26,7 +26,7 @@
 <div class="col-md-4"></div>
 				<h2 class="col-md-8">Registered Books</h2>
 				</div>
-						<FORM  METHOD="post" action="RegisteredBooksCtl" class="form-inline">
+						<FORM  METHOD="post"  class="form-inline">
 						  <div class="form-group">
 					<label for="inputBookId" class="control-label  col-md-4">Book ID</label>
 					<div class="col-md-2">

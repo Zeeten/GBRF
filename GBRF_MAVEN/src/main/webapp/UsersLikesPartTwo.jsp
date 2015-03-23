@@ -42,13 +42,14 @@ $(document).ready(function() {
 	<div id="includedContent"></div>
 	<div class="container">
 		<div class="row" style="margin-top: 90px">
-			<img alt="" src="img/logo.png" class="col-md-offset-1"
-				style="height: 100px; width: 250px"> 
-			<div class="col-md-offset-4">
-				<hr>
+		<img alt="" src="img/logo.png"  style="height: 100px;width: 250px">
+		<span class=" col-md-offset-2 " style="font-size: 25pt;">Read and Like-Part II</span>
+
+					<div class=" col-md-offset-3 " style="margin-top: -40px" >
+<hr>
+</div>
 			</div>
 			<center>
-					<H2 >Read and Like-Part II</H2>
 					<span style="color: green">Select best three chapters from 10 to 19 for part II Award</span>
 		<form name="matrixForm" ACTION="UsersLikesPartTwoCtl"  METHOD="post"  class="matrix" class="form-horizontal">
 					<jsp:useBean id="bean" class="com.ncs.bean.LikesBean" scope="request"/>
@@ -60,9 +61,9 @@ $(document).ready(function() {
 		<font color="red"><%=ServletUtility.getErrorMessage("like1", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like2", request)%></font>
 		&emsp; <font color="red"><%=ServletUtility.getErrorMessage("like3", request)%></font>
-				<div class="table-responsive" style="width: 60%">
+				<div class=" table-responsive" style="width: 60%">
 				<div class="form-group">
-					<label for="inputBook" class="control-label col-md-1">Book</label>
+					<label for="inputBook" class="control-label col-md-offset-3 col-md-1">Book</label>
 					<div class="col-md-4">
 					<%=HTMLUtility.getList("bookNo", bean.getBookName(), likelist)%> 
 						<font color="red"> <%=ServletUtility.getErrorMessage("bookNo", request)%></font>
@@ -263,7 +264,6 @@ $(document).ready(function() {
 	
 		</form>
 				</center>
-		</div>
 		</div>
 </body>
 </html>

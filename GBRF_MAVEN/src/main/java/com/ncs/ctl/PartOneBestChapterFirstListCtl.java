@@ -5,26 +5,23 @@ import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
-
-import com.ncs.bean.RegisterPrintedBookBean;
-import com.ncs.bean.UserBean;
-import com.ncs.model.RegisterPrintedBookModel;
+import com.ncs.bean.ReadLikeAwardPartOneBean;
+import com.ncs.model.BooksModel;
+import com.ncs.model.ReadLikeAwardPartOneModel;
 import com.ncs.util.DataUtility;
 import com.ncs.util.PropertyReader;
 import com.ncs.util.ServletUtility;
 
-public class RegisteredBooksCtl extends HttpServlet {
+public class PartOneBestChapterFirstListCtl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static Logger log = Logger.getLogger(RegisteredBooksCtl.class);
-	protected void doGet(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(true);
+   
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		int pageNo = DataUtility.getInt(request.getParameter("pageNo"));
 		int pageSize = DataUtility.getInt(request.getParameter("pageSize"));
 
@@ -32,17 +29,11 @@ public class RegisteredBooksCtl extends HttpServlet {
 
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader
 				.getValue("page.size")) : pageSize;
-		RegisterPrintedBookModel model = new RegisterPrintedBookModel();
+		ReadLikeAwardPartOneModel model = new ReadLikeAwardPartOneModel();
 		List dtoList = null;
 		try {
-			String uri = request.getRequestURI();
-			RegisterPrintedBookBean bean=new RegisterPrintedBookBean();
-			if (uri.endsWith("MyRegisteredBooksCtl")) {
-
-				String email = (session.getAttribute("email")).toString();
-				bean.setEmail(email);
-			}
-			dtoList = model.search(bean, pageNo, pageSize);
+			ReadLikeAwardPartOneBean bean=new ReadLikeAwardPartOneBean();
+			dtoList = model.searchChapterOne(bean, pageNo, pageSize);
 			request.setAttribute("dtoList", dtoList);
 			if (dtoList == null || dtoList.size() == 0) {
 				ServletUtility.setErrorMessage("No record found ", request);
@@ -51,35 +42,35 @@ public class RegisteredBooksCtl extends HttpServlet {
 			ServletUtility.setPageNo(pageNo, request);
 			ServletUtility.setPageSize(pageSize, request);
 			RequestDispatcher rd = request
-					.getRequestDispatcher("RegisteredBooks.jsp");
+					.getRequestDispatcher("PartOneBestChapterFirstList.jsp");
 			rd.forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
-	
-	protected void doPost(HttpServletRequest request,
-			HttpServletResponse response) throws ServletException, IOException {
-		HttpSession session = request.getSession(true);
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		List list = null;
 		int pageNo = DataUtility.getInt(request.getParameter("pageNo"));
 		int pageSize = DataUtility.getInt(request.getParameter("pageSize"));
+
 		pageNo = (pageNo == 0) ? 1 : pageNo;
 
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader
 				.getValue("page.size")) : pageSize;
 		
 		String op = DataUtility.getString(request.getParameter("operation"));
-		RegisterPrintedBookModel model = new RegisterPrintedBookModel();
+		ReadLikeAwardPartOneModel model = new ReadLikeAwardPartOneModel();
+
+		ReadLikeAwardPartOneBean bean=new ReadLikeAwardPartOneBean();
+		bean.setBookNo(request.getParameter("bookId"));
+
+		bean.setEmail(request.getParameter("emailId"));
 		List dtoList = null;
 		try {
-			String uri = request.getRequestURI();
 
-			RegisterPrintedBookBean bean=new RegisterPrintedBookBean();
-			bean.setBookId(request.getParameter("bookId"));
-			bean.setBookName(request.getParameter("bookName"));
-			bean.setEmail(request.getParameter("emailId"));
 			if ("Search".equalsIgnoreCase(op) || "Next".equalsIgnoreCase(op)
 					|| "Previous".equalsIgnoreCase(op)) {
 
@@ -92,13 +83,9 @@ public class RegisteredBooksCtl extends HttpServlet {
 				}
 
 			}
-			if (uri.endsWith("MyRegisteredBooksCtl")) {
 
-				String email = (session.getAttribute("email")).toString();
-				bean.setEmail(email);
-			}
-			dtoList = model.search(bean, pageNo, pageSize);
-		request.setAttribute("dtoList", dtoList);
+			dtoList = model.searchChapterOne(bean, pageNo, pageSize);
+			request.setAttribute("dtoList", dtoList);
 			if (dtoList == null || dtoList.size() == 0) {
 				ServletUtility.setErrorMessage("No record found ", request);
 			}
@@ -106,13 +93,11 @@ public class RegisteredBooksCtl extends HttpServlet {
 			ServletUtility.setPageNo(pageNo, request);
 			ServletUtility.setPageSize(pageSize, request);
 			RequestDispatcher rd = request
-					.getRequestDispatcher("RegisteredBooks.jsp");
-		rd.forward(request, response);
+					.getRequestDispatcher("PartOneBestChapterFirstList.jsp");
+			rd.forward(request, response);
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
 	}
-
-	}
-
 }

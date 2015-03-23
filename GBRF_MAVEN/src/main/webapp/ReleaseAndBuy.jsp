@@ -23,15 +23,15 @@
 	<div id="includedContent"></div>
 	<div class="container">
 <div class="row" style="margin-top: 90px">
-			<img alt="" src="img/logo.png" class="col-md-offset-1"
-				style="height: 100px; width: 250px"> 
-			<div class="col-md-offset-4">
-				<hr>
+		<img alt="" src="img/logo.png"  style="height: 100px;width: 250px">
+		<span class=" col-md-offset-2 " style="font-size: 25pt;">Release And Buy List</span>
+
+					<div class=" col-md-offset-3 " style="margin-top: -30px" >
+<hr>
+</div>
 			</div>
-<center>
-		<h2>Release And Buy List</h2>
 			
-		<div class="table-responsive">
+		<div class="col-md-offset-4 table-responsive">
 		<table class="table table-bordered table-hover" style="width: 60%">
 			<tr>
 				<th>Top 10</th>
@@ -52,8 +52,6 @@
 				}
 			%>
 		</table>
-		</div>
-				</center>
 		</div>
 		</div>
 

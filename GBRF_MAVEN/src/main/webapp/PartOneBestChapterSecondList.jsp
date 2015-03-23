@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Read Like Award Part One</title>
+<title>Best Second Chapter User Like List</title>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(function() {
@@ -28,7 +28,7 @@
 
 		<div class="container">
 			<div class="row" style="margin-top: 90px">
-		
+	
 	<%
 		
 				if(session.getAttribute("session")==null){
@@ -83,10 +83,10 @@
 <% } %>
 	<div class="row" >
 <div class="col-md-3"></div>
-				<h2 class="col-md-8">Best First Chapter User Like Award Part-I List  </h2>
+				<h2 class="col-md-8">Best Second Chapter User Like Award Part-I List  </h2>
 				</div>
 				<br>
-						<FORM  METHOD="post" action="ReadLikeAwardPartOneCtl" class="form-inline">
+						<FORM  METHOD="post" action="PartOneBestChapterSecondListCtl" class="form-inline">
 							<jsp:useBean id="bean" class="com.ncs.bean.BooksBean"
 			scope="request"></jsp:useBean>
 
@@ -123,7 +123,7 @@
 						<input type="text" class="form-control" name="emailId" id="emailId"
 							placeholder="Email ID">
 					</div>
-							</div>
+		</div>
 
 				<div class="form-group">
 						<button name="operation" value="Search" type="submit" class="col-md-offset-1 btn btn-info">

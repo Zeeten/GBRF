@@ -51,7 +51,7 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 	}
 
 	protected boolean validate(HttpServletRequest request) {
-
+		HttpSession session = request.getSession(true);
 		boolean pass = true;
 		String dateofpurchase = request.getParameter("dateofpurchase");
 		if (DataValidator.isNull(request.getParameter("bookName"))) {
@@ -75,12 +75,34 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 					PropertyReader.getValue("error.date", "Date Of Purchase"));
 			pass = false;
 		}
-/*		if (DataValidator.isNull(request.getParameter("mobileNo"))) {
+		if(session.getAttribute("session")==null){
+		if (DataValidator.isNull(request.getParameter("mobileNo"))) {
 			request.setAttribute("mobileNo",
 					PropertyReader.getValue("error.require", "Mobile No"));
 			pass = false;
 		}
-*/
+		if (DataValidator.isNull(request.getParameter("firstName"))) {
+			request.setAttribute("firstName",
+					PropertyReader.getValue("error.require", "First Name"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("lastName"))) {
+			request.setAttribute("lastName",
+					PropertyReader.getValue("error.require", "Last Name"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("email"))) {
+			request.setAttribute("email",
+					PropertyReader.getValue("error.require", "Email Id"));
+			pass = false;
+		}
+		if (DataValidator.isNull(request.getParameter("password"))) {
+			request.setAttribute("password",
+					PropertyReader.getValue("error.require", "Password"));
+			pass = false;
+		}
+		}
+
 		return pass;
 	}
 

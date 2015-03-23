@@ -100,7 +100,7 @@
 
       <div class="col-xs-offset-5 col-xs-10" style="margin-left: 518px">
        <a class="btn btn-info"
-        href="http://kissmatinternational.com/kip/index.php?route=checkout/checkout" target="_blank">RELEASE AND BUY BOOK</a>
+        href="http://kissmatinternational.com/kip/?route=common/home" target="_blank">RELEASE AND BUY BOOK</a>
 						</div>
 					</div>
 				</form>
