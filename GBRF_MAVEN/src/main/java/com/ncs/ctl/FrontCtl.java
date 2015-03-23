@@ -24,14 +24,16 @@ public class FrontCtl implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) res;
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession();
 
 		if (session.getAttribute("session") == null) {
 			ServletUtility
 					.setErrorMessage(
 							"Oops! Your session has been expired. Please Login to access application.",
 							request);
-			ServletUtility.forward("login.jsp", request, response);
+			response.sendRedirect("login.jsp");
+		//	ServletUtility.forward("login.jsp", request, response);
+			chain.doFilter(req, res);
 		} else {
 			chain.doFilter(req, res);
 		}

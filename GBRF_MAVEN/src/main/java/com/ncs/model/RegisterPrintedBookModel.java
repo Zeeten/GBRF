@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import com.ncs.bean.RegisterPrintedBookBean;
 import com.ncs.exception.ApplicationException;
 import com.ncs.exception.DuplicateRecordException;
+import com.ncs.exception.RecordNotFoundException;
 import com.ncs.util.JDBCDataSource;
 
 public class RegisterPrintedBookModel {
@@ -36,13 +37,16 @@ public class RegisterPrintedBookModel {
 		return pk + 1;
 	}
 	public long add(RegisterPrintedBookBean bean) throws ApplicationException,
-	DuplicateRecordException{
+	DuplicateRecordException,RecordNotFoundException{
 		Connection conn = null;
 		long pk = 0;
-
+		if (findByBookNo(bean.getBookId())){
 				if (findByBookId(bean.getBookId())) {
 					throw new DuplicateRecordException("Book is already exist.");
 				}
+		}else{
+			throw new RecordNotFoundException("Book ID is not exist.");
+		}
 		try {
 
 			conn = JDBCDataSource.getConnection();
@@ -219,6 +223,29 @@ System.out.println(sql);
 			PreparedStatement pstmt = conn
 					.prepareStatement("SELECT * FROM registerprintedbookview WHERE BOOK_ID=?");
 			pstmt.setString(1, bookId);
+			ResultSet rs = pstmt.executeQuery();
+			if (rs.next()) {
+				flag = true;
+			}
+			rs.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new ApplicationException(
+					"Exception : Exception in getting n");
+		} finally {
+			JDBCDataSource.closeConnection(conn);
+		}
+		return flag;
+	}
+	
+	public boolean findByBookNo(String bookNo) throws ApplicationException {
+		Connection conn = null;
+		boolean flag = false;
+		try {
+			conn = JDBCDataSource.getConnection();
+			PreparedStatement pstmt = conn
+					.prepareStatement("SELECT * FROM printed_book WHERE BOOK_NO=?");
+			pstmt.setString(1, bookNo);
 			ResultSet rs = pstmt.executeQuery();
 			if (rs.next()) {
 				flag = true;

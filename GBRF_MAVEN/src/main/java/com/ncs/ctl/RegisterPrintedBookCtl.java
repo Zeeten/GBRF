@@ -24,6 +24,7 @@ import com.ncs.bean.RegisterPrintedBookBean;
 import com.ncs.bean.UserBean;
 import com.ncs.exception.ApplicationException;
 import com.ncs.exception.DuplicateRecordException;
+import com.ncs.exception.RecordNotFoundException;
 import com.ncs.model.BooksModel;
 import com.ncs.model.RegisterPrintedBookModel;
 import com.ncs.model.UserModel;
@@ -218,6 +219,10 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 					ServletUtility.setErrorMessage(
 							"Book Id already exists", request);
 					doGet(request, response);
+			}catch (RecordNotFoundException e) {
+				ServletUtility.setErrorMessage(
+						"Book ID is not exist", request);
+				doGet(request, response);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
