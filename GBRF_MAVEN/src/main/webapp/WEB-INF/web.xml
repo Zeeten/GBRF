@@ -220,6 +220,9 @@ id="WebApp_ID" version="3.0">
 <servlet-name>PartOneBestChapterThirdListCtl</servlet-name>
 <url-pattern>/PartOneBestChapterThirdListCtl</url-pattern>
 </servlet-mapping>
+<listener>
+<listener-class>com.ncs.job.ReadAndLikePartOneLikeOneListener</listener-class>
+</listener>
 <filter>
 <filter-name>FrontCtl</filter-name>
 <filter-class>com.ncs.ctl.FrontCtl</filter-class>

@@ -39,13 +39,14 @@ public class RegisterPrintedBookModel {
 	public long add(RegisterPrintedBookBean bean) throws ApplicationException,
 	DuplicateRecordException,RecordNotFoundException{
 		Connection conn = null;
+	
 		long pk = 0;
 		if (findByBookNo(bean.getBookId())){
 				if (findByBookId(bean.getBookId())) {
 					throw new DuplicateRecordException("Book is already exist.");
 				}
 		}else{
-			throw new RecordNotFoundException("Book ID is not exist.");
+			throw new RecordNotFoundException("Book ID does not exist.");
 		}
 		try {
 
@@ -71,6 +72,7 @@ public class RegisterPrintedBookModel {
 			pstmt.setString(7, bean.getPassword());
 			pstmt.setBoolean(8, false);
 			pstmt.setBoolean(9, false);
+	
 			pstmt.executeUpdate();
 			conn.commit(); // End transaction
 			pstmt.close();
@@ -90,7 +92,21 @@ public class RegisterPrintedBookModel {
 		return pk;
 	}
 
+	public boolean find(RegisterPrintedBookBean bean) throws ApplicationException,
+	DuplicateRecordException,RecordNotFoundException{
+		boolean flag = false;
+		if (findByBookNo(bean.getBookId())){
+			if (findByBookId(bean.getBookId())) {
+				flag= true;
+				throw new DuplicateRecordException("Book is already exist.");
+			}
+	}else{
+		flag= true;
+		throw new RecordNotFoundException("Book ID does not exist.");
+	}
+		return flag;
 	
+	}
 	public List search(RegisterPrintedBookBean bean) throws ApplicationException {
 		return search(bean, 0, 0);
 	}
@@ -237,7 +253,7 @@ System.out.println(sql);
 		}
 		return flag;
 	}
-	
+
 	public boolean findByBookNo(String bookNo) throws ApplicationException {
 		Connection conn = null;
 		boolean flag = false;

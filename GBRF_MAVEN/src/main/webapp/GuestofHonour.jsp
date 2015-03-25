@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.ncs.bean.GuestOfHonourBean"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.List"%>
@@ -51,6 +53,11 @@
 								while (it.hasNext()) {
 									index++;
 									GuestOfHonourBean bean = (GuestOfHonourBean) it.next();
+									SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy:HH:mm:ss");
+									String date=	DATE_FORMAT.format(bean.getDate());
+									//String dateTime=bean.getDate().toString();
+									// Date date = DATE_FORMAT.parse(dateTime);
+									 // System.out.println(date);
 							%>
 				
 						<div class="row" style="height: 30px" >
@@ -63,7 +70,7 @@
 							style="margin-left: -5px"><%=bean.getName()%></label>
 								<label for="input"
 							class="control-label  col-xs-3"
-							style="margin-left: -30px">	<%=bean.getDate()%></label>
+							style="margin-left: -30px">	<%=date%></label>
 							</font>
 								</div>
 							
@@ -100,7 +107,7 @@
 
       <div class="col-xs-offset-5 col-xs-10" style="margin-left: 518px">
        <a class="btn btn-info"
-        href="http://kissmatinternational.com/kip/?route=common/home" target="_blank">RELEASE AND BUY BOOK</a>
+         href="http://kissmatinternational.com/KIP_TEST/api/rest/purchaseBook/67" >RELEASE AND BUY BOOK</a>
 						</div>
 					</div>
 				</form>

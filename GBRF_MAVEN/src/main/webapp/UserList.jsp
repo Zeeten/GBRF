@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="com.ncs.bean.UserBean"%>
 <%@page import="com.ncs.bean.RegisterPrintedBookBean"%>
@@ -55,7 +56,7 @@
 					<div class="table-responsive"  style="width: 70%">
 						<table class="table table-bordered table-hover">
 							<tr>
-								<th>#</th>
+								<th>Id</th>
 								<th>First Name</th>
 								<th>Last Name</th>
 								<th>Email ID</th>
@@ -82,13 +83,15 @@
 									UserBean bean = (UserBean) it
 											
 											.next();
+									SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy:HH:mm:ss");
+									String date=	DATE_FORMAT.format(bean.getDate());
 							%>
 							<tr>
 								<td><%=index++%></td>
 								<td><%=bean.getName()%></td>
 								<td><%=bean.getSurname()%></td>
 								<td><%=bean.getEmail()%></td>
-								<td><%=bean.getDate()%></td>
+								<td><%=date%></td>
 							</tr>
 							<%
 								}

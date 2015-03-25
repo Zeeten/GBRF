@@ -32,7 +32,7 @@
 				<FORM ACTION="ForgetPasswordCtl" METHOD="post"
 					class="form-horizontal">
 						<label for="inputEmail"
-							class="control-label col-md-offset-2 col-md-2">Email </label>
+							class="control-label col-md-offset-2 col-md-2">Email *</label>
 						<div class=" col-md-3">
 							<input type="email" class="form-control" id="email" name="email"
 								placeholder="Email ID" > <font

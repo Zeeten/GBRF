@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="com.ncs.bean.LikesBean"%>
 <%@page import="java.util.Iterator"%>
@@ -65,7 +66,7 @@
 		<div class="table-responsive">
 		<table class="table table-bordered table-hover" >
 			<tr>
-				<th>#</th>
+				<th>Id</th>
 				<th>Email Id</th>
 				<th>Book Name</th>
 				<th>Book No</th>
@@ -94,6 +95,8 @@
 				Iterator it = list.iterator();
 				while (it.hasNext()) {
 					LikesBean bean = (LikesBean) it.next();
+					SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy:HH:mm:ss");
+					String date=	DATE_FORMAT.format(bean.getDate());
 			%>
 			<tr>
 				<td><%=index++%></td>
@@ -106,7 +109,7 @@
 				<td><%=bean.getLike4()%></td>
 				<td><%=bean.getLike5()%></td>
 				<td><%=bean.getLike6()%></td>
-				<td><%=bean.getDate()%></td>
+				<td><%=date%></td>
 			</tr>
 			<%
 				}

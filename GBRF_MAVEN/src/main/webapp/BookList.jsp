@@ -50,7 +50,7 @@
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover" style="width: 70%">
 							<tr>
-								<th>#</th>
+								<th>Id</th>
 								<th>Book Name</th>
 								<th>No Of Chgapters</th>
 							</tr>

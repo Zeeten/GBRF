@@ -90,6 +90,7 @@ public class UserModel {
 		return flag;
 	}
 
+
 	public UserBean authenticate(String email, String password)
 			throws Exception {
 		Connection conn = null;

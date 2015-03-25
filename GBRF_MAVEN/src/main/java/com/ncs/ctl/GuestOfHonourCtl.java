@@ -19,7 +19,7 @@ public class GuestOfHonourCtl extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		GuestOfHonourModel model = new GuestOfHonourModel();
+GuestOfHonourModel model = new GuestOfHonourModel();
 		List dtoList = null;
 		try {
 			dtoList = model.list();
@@ -29,6 +29,7 @@ public class GuestOfHonourCtl extends HttpServlet {
 		request.setAttribute("dtoList", dtoList);
 		ServletUtility.forward("GuestofHonour.jsp", request, response);
 	}
+
 	
 	protected boolean validate(HttpServletRequest request) {
 
@@ -53,7 +54,7 @@ public class GuestOfHonourCtl extends HttpServlet {
 				String name = request.getParameter("name");
 				GuestOfHonourModel model = new GuestOfHonourModel();
 				GuestOfHonourBean bean = new GuestOfHonourBean();
-					bean.setName(name);
+					bean.setName(name.toUpperCase());
 					model.add(bean);
 				doGet(request, response); 
 			} catch (Exception e) {

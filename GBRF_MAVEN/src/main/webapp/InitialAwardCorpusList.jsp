@@ -32,7 +32,7 @@
 		<div class="col-md-offset-3 table-responsive">
 		<table class="table table-bordered table-hover" style="width: 70%" >
 			<tr>
-				<th>#</th>
+				<th>Id</th>
 				<th>Amount</th>
 				<th>No Of Awards</th>
 				<th>Total Amount</th>

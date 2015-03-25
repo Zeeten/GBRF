@@ -111,7 +111,7 @@ $(function() {
 			<FORM ACTION="RegisterPrintedBookCtl" METHOD="post" class="form-horizontal">
 
 			<div class="form-group">
-					<label for="inputBook" class="control-label col-md-offset-3 col-md-2">Book</label>
+					<label for="inputBook" class="control-label col-md-offset-3 col-md-2">Book *</label>
 					<div class="col-md-3">
 						<select class="form-control" id="bookName" name="bookName">
 							<option value="">--Select--</option>
@@ -131,7 +131,7 @@ $(function() {
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="inputBookId" class="control-label col-md-offset-3 col-md-2">Book ID</label>
+					<label for="inputBookId" class="control-label col-md-offset-3 col-md-2">Book ID *</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="bookId" id="bookId"
 							placeholder="Book ID"> <font color="red"> <%=ServletUtility.getErrorMessage("bookId", request)%></font>
@@ -139,7 +139,7 @@ $(function() {
 				</div>
 				
 					<div class="form-group">
-					<label for="inputDateOfPurchase" class="control-label col-md-offset-3 col-md-2">Date of Purchase</label>
+					<label for="inputDateOfPurchase" class="control-label col-md-offset-3 col-md-2">Date of Purchase *</label>
 					<div class="col-md-3">
 						<input type="text"  name="dateofpurchase" id="dateofpurchase"
 							 class="form-control date-picker"
@@ -153,35 +153,35 @@ $(function() {
 					%>
 						<div class="form-group">
 					<label for="inputfirstName" class="control-label col-md-offset-3 col-md-2"
-					>First Name</label>
+					>First Name *</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="firstName" id="firstName"
 							placeholder="First Name" > <font color="red"> <%=ServletUtility.getErrorMessage("firstName", request)%></font>
 					</div>
 				</div>	
 						<div class="form-group">
-					<label for="inputlastName" class="control-label col-md-offset-3 col-md-2">Last Name</label>
+					<label for="inputlastName" class="control-label col-md-offset-3 col-md-2">Last Name *</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="lastName" id="lastName"
 							placeholder="Last Name"> <font color="red"> <%=ServletUtility.getErrorMessage("lastName", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputMobileNo" class="control-label col-md-offset-3 col-md-2">Mobile No</label>
+					<label for="inputMobileNo" class="control-label col-md-offset-3 col-md-2">Mobile No *</label>
 					<div class="col-md-3">
 						<input type="text" class="form-control" name="mobileNo" id="mobileNo"
 							placeholder="Mobile No"> <font color="red"> <%=ServletUtility.getErrorMessage("mobileNo", request)%></font>
 					</div>
 				</div>
 						<div class="form-group">
-					<label for="inputemail" class="control-label col-md-offset-3 col-md-2">Login ID</label>
+					<label for="inputemail" class="control-label col-md-offset-3 col-md-2">Login ID *</label>
 					<div class="col-md-3">
 						<input type="email" class="form-control" name="email" id="email"
 							placeholder="Login ID"> <font color="red"> <%=ServletUtility.getErrorMessage("email", request)%></font>
 					</div>
 				</div>
 					<div class="form-group">
-					<label for="inputpassword" class="control-label col-md-offset-3 col-md-2">Password</label>
+					<label for="inputpassword" class="control-label col-md-offset-3 col-md-2">Password *</label>
 					<div class="col-md-3">
 						<input type="password" class="form-control" name="password" id="password"
 							placeholder="Password"> <font color="red"> <%=ServletUtility.getErrorMessage("password", request)%></font>

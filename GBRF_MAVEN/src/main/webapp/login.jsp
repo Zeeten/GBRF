@@ -36,7 +36,7 @@
 					<div class="col-md-1">
 					</div>
 						<label for="inputEmail"
-							class="control-label col-md-3">Email</label>
+							class="control-label col-md-3">Email *</label>
 								<div class="col-md-3">
 							<input type="email" class="form-control" id="email" name="email"
 								placeholder="Email ID">
@@ -48,7 +48,7 @@
 					<div class="col-md-1">
 					</div>
 						<label for="inputPassword"
-							class="control-label col-md-3">Password</label>
+							class="control-label col-md-3">Password *</label>
 							<div class="col-md-3">
 							<input type="password" class="form-control" name="password"
 								id="password" placeholder="Password"> <font color="red">

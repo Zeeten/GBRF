@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.ncs.util.ServletUtility"%>
 <%@page import="com.ncs.bean.RegisterPrintedBookBean"%>
 <%@page import="java.util.Iterator"%>
@@ -62,7 +63,7 @@
 	<div class="table-responsive">
 						<table class="table table-bordered table-hover" >
 			<tr>
-								<th>#</th>
+								<th>Id</th>
 				<th>Book Id</th>
 				<th>Book Name</th>
 				<th>Email ID</th>
@@ -92,6 +93,8 @@
 				while (it.hasNext()) {
 									RegisterPrintedBookBean bean = (RegisterPrintedBookBean) it
 											.next();
+									SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
+									String date=	DATE_FORMAT.format(bean.getDate());
 									if(bean.getRlPartI() ){
 										rlPartI="Complete";
 									}else{
@@ -110,7 +113,7 @@
 				<td><%=bean.getEmail()%></td>
 								<td><%=rlPartI%></td>
 								<td><%=rlPartII%></td>
-				<td><%=bean.getDate()%></td>
+								<td><%=date%></td>
 			</tr>
 			<%
 				}

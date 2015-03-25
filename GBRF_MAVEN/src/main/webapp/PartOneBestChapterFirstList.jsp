@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="com.ncs.util.HTMLUtility"%>
 <%@page import="com.ncs.bean.ReadLikeAwardPartOneBean"%>
 <%@page import="java.util.Iterator"%>
@@ -139,7 +140,7 @@
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover text-center" >
 							<tr >
-								<th>#</th>
+								<th>Id</th>
 								<th>First Name</th>
 								<th>Last Name</th>
 								<th>Email</th>
@@ -167,6 +168,8 @@
 									ReadLikeAwardPartOneBean partOnebean = (ReadLikeAwardPartOneBean) it
 											
 											.next();
+									SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy:HH:mm:ss");
+									String date=	DATE_FORMAT.format(partOnebean.getSubmitDate());
 							%>
 							<tr>
 								<td><%=index++%></td>
@@ -174,7 +177,7 @@
 								<td><%=partOnebean.getLastName()%></td>
 								<td><%=partOnebean.getEmail()%></td>
 								<td><%=partOnebean.getBookNo()%></td>
-								<td><%=partOnebean.getSubmitDate()%></td>
+								<td><%=date%></td>
 							</tr>
 							<%
 								}

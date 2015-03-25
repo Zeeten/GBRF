@@ -125,6 +125,7 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 						.getParameter("bookName")));
 				bean.setBookId(DataUtility.getString(request
 						.getParameter("bookId")));
+				String bookId = request.getParameter("bookId");
 		
 				bean.setDate(DataUtility.getDate(request.getParameter("dateofpurchase")));
 			if(session.getAttribute("session")!=null){
@@ -139,6 +140,8 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 				String email = request.getParameter("email");
 				String mobileNo = request.getParameter("mobileNo");
 				String password = request.getParameter("password");
+				model.find(bean);
+			       
 				URL url = new URL("http://kissmatinternational.com/KIP_TEST/api/rest/registeruser");
 		        Map<String,Object> params = new LinkedHashMap<>();
 		        params.put("firstname", firstname);
@@ -176,6 +179,8 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 		       // System.out.println(response1.substring(11, 15));
 		        JSONObject jsonObj = new JSONObject(response1.toString());
 		        System.out.println(jsonObj.getString("success"));
+		
+		      
 		        if(jsonObj.getString("success").equals("true")){
 				bean.setEmail(DataUtility.getString(request
 						.getParameter("email")));
@@ -196,8 +201,10 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 		        	userBean.setMobileNo(DataUtility.getString(request
 							.getParameter("mobileNo")));
 		        	userModel.add(userBean);
-					ServletUtility.redirect("LoginCtl", request, response);
-					}else{
+		        	ServletUtility.setSuccessMessage("Registration successfully.", request);
+					ServletUtility.forward("login.jsp", request, response);
+		        }
+		        else{
 		        	 JSONObject jsonObj1 = new JSONObject(jsonObj.getString("error"));
 		        	if(jsonObj1.getString("warning").equals("Warning: E-Mail Address is already registered!")){
 		        		ServletUtility.setErrorMessage(
@@ -207,10 +214,11 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 		        	}
 		        	
 					}
+			        }
 		        	
 			}
-
-				} 
+			
+				
 	
 				catch (ApplicationException e) {
 					ServletUtility.handleException(e, request, response);
