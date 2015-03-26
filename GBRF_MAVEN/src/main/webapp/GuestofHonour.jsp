@@ -94,7 +94,7 @@
                      <div class="row">
 						<label for="inputName"
 							class="control-label col-xs-offset-3 col-xs-2">Enter Name :</label>
-						<div class=" col-xs-3">
+						<div class=" col-xs-2">
 							<input type="text" class="form-control" id="name" name="name"
 								placeholder="Enter Name"> <font
 								color="red"> <%=ServletUtility.getErrorMessage("name", request)%></font>
@@ -105,7 +105,7 @@
 		
 					<div class="form-group">
 
-      <div class="col-xs-offset-5 col-xs-10" style="margin-left: 518px">
+      <div class="col-xs-offset-5 col-xs-10" style="margin-left: 462px">
        <a class="btn btn-info"
          href="http://kissmatinternational.com/KIP_TEST/api/rest/purchaseBook/67" >RELEASE AND BUY BOOK</a>
 						</div>

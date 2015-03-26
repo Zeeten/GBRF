@@ -97,7 +97,7 @@ input[type="submit"] {
 #login-form input[type="password"] {
   border: 1px solid #dcdcdc;
   padding: 12px 10px;
-  width: 63%;
+  width: 60%;
   margin-top: 4px;
   float: left;
 }
@@ -116,11 +116,11 @@ input[type="submit"] {
   border-radius: 3px;
   color: #fff;
   float: right;
-  margin-right: -52px;
+  margin-right: -43px;
   font-size: 12px;
   font-weight: bold;
-  margin-top: -41px;
-  padding: 13px 11px;
+  margin-top: -43px;
+  padding: 12px 11px;
 }
 
 #login-form input[type="submit"]:hover {

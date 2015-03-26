@@ -208,7 +208,7 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 		        	 JSONObject jsonObj1 = new JSONObject(jsonObj.getString("error"));
 		        	if(jsonObj1.getString("warning").equals("Warning: E-Mail Address is already registered!")){
 		        		ServletUtility.setErrorMessage(
-								"E-Mail Address is already registered!", request);
+								"Email address is already registered!", request);
 		        		doGet(request, response);
 		        		
 		        	}
@@ -229,7 +229,7 @@ public class RegisterPrintedBookCtl extends HttpServlet {
 					doGet(request, response);
 			}catch (RecordNotFoundException e) {
 				ServletUtility.setErrorMessage(
-						"Book ID is not exist", request);
+						"Book ID does not exist", request);
 				doGet(request, response);
 				} catch (Exception e) {
 					e.printStackTrace();

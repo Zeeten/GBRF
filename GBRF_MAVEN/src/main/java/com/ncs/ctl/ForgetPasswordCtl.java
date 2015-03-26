@@ -87,7 +87,7 @@ public class ForgetPasswordCtl extends HttpServlet {
 				        JSONObject jsonObj = new JSONObject(response1.toString());
 				        if(response1.substring(17, 24).equals("message")){
 					        ServletUtility.setSuccessMessage(
-									"New password has been sent to your email id", request);
+									"New password has been sent to your Email Id", request);
 							ServletUtility.forward("login.jsp", request, response);
 				        }
 			        else {
