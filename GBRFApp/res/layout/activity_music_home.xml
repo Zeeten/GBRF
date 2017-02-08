@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backinner"
+    android:orientation="vertical"
+    tools:context="com.gbrf.MusicHomeActivity" >
+
+    <ProgressBar
+        android:id="@+id/logout_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="8dp"
+         android:layout_centerInParent="true"
+        android:visibility="gone" />
+    
+    <ScrollView
+        android:id="@+id/registration_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_music1"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                   android:layout_marginTop="10dp"
+                android:background="@drawable/titlebg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/yadooke" />
+
+                <TextView
+                    android:id="@+id/music1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imageview"
+                    android:paddingTop="10dip"
+                    android:text="YAADON KE CHINAR"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/music1song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/music1"
+                    android:layout_toRightOf="@+id/imageview"
+                    android:text="Seema Anil Segal Anthologies of &apos;Maikash Kashmiri&apos;"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_music2"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/titlebg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/idharbhiimageview"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/idharbhi" />
+
+                <TextView
+                    android:id="@+id/music2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/idharbhiimageview"
+                    android:paddingTop="10dip"
+                    android:text="IDHAR BHI UDHAR BHI"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/music2song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/music2"
+                    android:layout_toRightOf="@+id/idharbhiimageview"
+                    android:text="Kashif Nizami &amp; Shabaab Nizami Anthologies of &apos;Maikash Kashmiri&apos;"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_music3"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/titlebg"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:id="@+id/bahareimageview"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/bahare" />
+
+                <TextView
+                    android:id="@+id/music3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/bahareimageview"
+                    android:paddingTop="10dip"
+                    android:text="BAHAR-E-GHAZAL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/music3song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/music3"
+                    android:layout_toRightOf="@+id/bahareimageview"
+                    android:text="Kashif Nizami &amp; Shabaab Nizami Anthologies of &apos;Maikash Kashmiri&apos;"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

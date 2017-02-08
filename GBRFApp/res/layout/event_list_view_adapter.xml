@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+  <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/titlebg"
+                android:orientation="vertical" >
+ 
+    <ImageView
+        android:id="@+id/image"
+         android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="5dp" />
+
+ 
+    <TextView
+        android:id="@+id/bookname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/image"
+            android:textSize="@dimen/title"
+            android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/releaselabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_toRightOf="@+id/image"
+        android:layout_below="@+id/bookname"
+      android:textColor="#FFFFFF"
+        android:text="@string/releasedate"
+         android:textSize="@dimen/release" />
+ 
+    <TextView
+        android:id="@+id/releasedate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     android:textSize="@dimen/release"
+       android:textColor="#FFFFFF"
+     android:layout_below="@+id/bookname"
+          android:layout_toRightOf="@+id/releaselabel" />
+ 
+ 
+ 
+</RelativeLayout>
+
+</RelativeLayout>

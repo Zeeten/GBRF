@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pdt_detail_root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/backinner" >
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical" >
+            
+            
+            <AutoCompleteTextView
+                android:id="@+id/EnterName"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Name"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+
+            <AutoCompleteTextView
+                android:id="@+id/EnterEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Email"
+                android:visibility="gone"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+
+            <AutoCompleteTextView
+                android:id="@+id/EnterMobile"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Mobile"
+                android:visibility="gone"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+             <AutoCompleteTextView
+                android:id="@+id/EnterAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Address"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+              <AutoCompleteTextView
+                android:id="@+id/EnterCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Country"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+                   <AutoCompleteTextView
+                android:id="@+id/EnterState"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="State"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+                                 <AutoCompleteTextView
+                android:id="@+id/EnterCity"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="City"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+                                                     <AutoCompleteTextView
+                android:id="@+id/EnterZipcode"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="PinCode"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/access_code"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/accessCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="4YRUXLSRO20O8NIH"
+                android:visibility="gone" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/merchant_id"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/merchantId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="2"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Order Id"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/orderId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/currency"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="INR"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/amount"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:text="1.00"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/redirect_url"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/redirectUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textUri"
+                android:text="http://122.182.6.216/merchant/ccavResponseHandler.jsp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/cancel_url"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/cancelUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textUri"
+                android:text="http://122.182.6.216/merchant/ccavResponseHandler.jsp"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="@string/rsa_url"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/rsaUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textUri"
+                android:text="http://122.182.6.216/merchant/GetRSA.jsp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/titlebg"
+                android:divider="?android:dividerHorizontal"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/bookname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_author"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_heading"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:divider="?android:dividerHorizontal" >
+
+                <TextView
+                    android:id="@+id/authorlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Author: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/authorinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Col. Sanjeev Kaul"
+                    android:layout_toRightOf="@+id/authorlabel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/publisherlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/authorlabel"
+                    android:layout_marginTop="5dp"
+                    android:text="Publisher: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/publisherinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/authorlabel"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/publisherlabel"
+                     android:text="Kissmat International Publications"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                </RelativeLayout>
+                
+                   <RelativeLayout
+                android:id="@+id/relative_layout_isbn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_author"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:divider="?android:dividerHorizontal" >
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="ISBN: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:text="978-93-5156-111-8"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                
+                
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_book"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_isbn"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:divider="?android:dividerHorizontal" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Page: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/product_detail_img"
+                    android:layout_toRightOf="@+id/textView3"
+                    android:text="550"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                 <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                     android:layout_below="@+id/textView3"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Format: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView3"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/product_detail_img"
+                    android:layout_toRightOf="@+id/textView5"
+                    android:text="Epub"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                     <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                     android:layout_below="@+id/textView5"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Price: ₹"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                            android:layout_below="@+id/textView5"
+                    android:layout_marginTop="5dp"
+                    android:layout_toLeftOf="@+id/product_detail_img"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                       <Button
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView7"
+            android:layout_toLeftOf="@+id/product_detail_img"
+             android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/iconbgblue"
+                android:text="@string/pay_button"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF" />
+
+                <ImageView
+                    android:id="@+id/product_detail_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="2dp" />
+            </RelativeLayout>
+                <RelativeLayout
+        android:id="@+id/book_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/relative_layout_book"
+        android:layout_gravity="center_horizontal"
+           android:layout_marginTop="5dp"
+        android:background="@drawable/storebg" >
+                    <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="Description: Following the phenomenal success of his first non-fiction book, what Young India want.Following the phenome Creative Politics Creative Youth Creative India"
+                    android:textColor="#FFFFFF"
+                    android:textSize="19dp" />
+                </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

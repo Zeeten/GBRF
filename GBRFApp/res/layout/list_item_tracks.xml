@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- Album id / Hidden by default -->
+
+    <TextView
+        android:id="@+id/album_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Song id / Hidden by default -->
+
+    <TextView
+        android:id="@+id/song_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <!-- Song Name -->
+
+    <TextView
+        android:id="@+id/album_name"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dip"
+        android:paddingLeft="5dip"
+        android:paddingTop="15dip"
+        android:textColor="#FFFFFF"
+        android:textSize="16dip" />
+    
+    
+                <Button
+                    android:id="@+id/downloadsong"
+                    android:layout_width="80dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dip"
+                            android:layout_marginLeft="1dp"
+                    android:layout_toRightOf="@+id/album_name"
+                    android:background="@drawable/literarydownload"
+                    android:text="Download"
+                    android:textColor="#FFFFFF"
+                    android:textSize="11dp" />
+
+</RelativeLayout>

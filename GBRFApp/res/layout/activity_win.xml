@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+       android:focusableInTouchMode="true"
+    android:background="@drawable/backinner"
+    tools:context="com.gbrf.WinActivity" >
+       <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like Chapters and Win Awards"
+                android:id="@+id/likechapter"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView">
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+                           <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now release your book on Global Book Release Forum through 100s and 1000s of Guests of Honour.Now release your book on Global Book Release Forum through 100s and 1000s of Guests of HonourNow release your book on Global Book Release Forum through 100s and 1000s of Guests of Honour"
+                android:id="@+id/releaseinfo"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                 android:gravity="left"
+               android:layout_gravity="center_horizontal"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp" />
+            </LinearLayout>
+        </ScrollView>
+       <AutoCompleteTextView
+                android:id="@+id/EnterBookID"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:hint="Enter Your Book ID"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                       android:textCursorDrawable="@drawable/white_cursor"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+                 <Button
+                android:id="@+id/StartLike"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                 android:textAllCaps="false"
+                android:background="@drawable/loginblue2"
+                android:text="Start Like"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+</LinearLayout>

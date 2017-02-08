@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+      android:id="@+id/container"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_screen1"
+    android:orientation="vertical" >
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/FirstTimeWorld"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal" 
+                    android:text="FOR THE FIRST TIME IN THE WORLD" />
+
+                <TextView
+                    android:id="@+id/UniqueInvitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="A Unique Invitation!"
+                     android:layout_marginTop="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+         />
+
+                <TextView
+                    android:id="@+id/CordiallyInvited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="You are cordially invited as"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/GuestHonour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="A Guest of Honour"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/ReleaseBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingBottom="25dp"
+                    android:text="to release the books"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20dp" />
+
+                <com.gbrf.TouchHighlightImageButton
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal" />
+
+           <!--      <TextView
+                    android:id="@+id/By"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:text="By"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#FFFFFF" />
+
+                  <ImageView
+            android:id="@+id/KissmatInternational"
+        android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="4dp"
+                android:src="@drawable/kissmatlogo" 
+                    android:paddingTop="5dp" /> -->
+             
+            </LinearLayout>
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/expanded_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+    </RelativeLayout>

@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+      android:id="@+id/otp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backinner"
+    tools:context="com.gbrf.OtpActivity" >
+
+    <ProgressBar
+        android:id="@+id/otp_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+          <AutoCompleteTextView
+                android:id="@+id/EnterOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input_bg"
+                android:ems="10"
+                android:maxLength="4"
+                android:hint="Enter OTP"
+                android:inputType="phone"
+                android:paddingLeft="10dp"
+                android:textColor="#FFFFFF"
+                android:textCursorDrawable="@drawable/white_cursor"
+                android:textColorHint="#FFFFFF"
+                android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/otpverify"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/loginblue2"
+            android:text="VERIFY"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+        <TextView
+                android:id="@+id/resendotp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:autoLink="all"
+                android:text="RESEND OTP CODE"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

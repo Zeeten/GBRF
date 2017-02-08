@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_screen1">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" 
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FOR THE FIRST TIME"
+                android:id="@+id/FirstTime"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="IN THE PUBLISHING WORLD"
+                android:id="@+id/PublicationWorld"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The book is being released in"
+                android:id="@+id/ParaLine1"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ParaLine2"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ParaLine3"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time zones within 24hrs around"
+                android:id="@+id/ParaLine4"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="the world by not one but"
+                android:id="@+id/ParaLine5"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="thousands &amp; thousands of"
+                android:id="@+id/ParaLine6"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guests of Honour"
+                android:id="@+id/ParaLine7"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kindly e-grace the occasion"
+                android:id="@+id/Para2Line1"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="and be part of this"
+                android:id="@+id/Para2Line2"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="inspirational moment, leave"
+                android:id="@+id/Para2Line3"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="a signature of your"
+                android:id="@+id/Para2Line4"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="participation and be"
+                android:id="@+id/Para2Line5"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="our partner in"
+                android:id="@+id/Para2Line6"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Creating History!"
+                android:id="@+id/Para2Line7"
+                android:textColor="#FFFFFF"
+                android:textSize="27dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center_horizontal" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

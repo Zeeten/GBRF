@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_screen1"
+    tools:context="com.gbrf.AwardDetailFragment" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RELEASE BUY &amp; WIN AWARDS"
+                android:id="@+id/releaseheading"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center_horizontal" />
+              <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Award Details:"
+                android:id="@+id/releasedetail"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp" />
+               <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now release your book on Global Book Release Forum through 100s and 1000s of Guests of Honour.Now release your book on Global Book Release Forum through 100s and 1000s of Guests of HonourNow release your book on Global Book Release Forum through 100s and 1000s of Guests of Honour"
+                android:id="@+id/releaseinfo"
+                android:textColor="#FFFFFF"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                 android:gravity="left"
+               android:layout_gravity="center_horizontal"
+                android:textSize="16dp"
+                android:layout_marginTop="20dp" />
+            
+            </LinearLayout>
+            </ScrollView>
+
+</RelativeLayout>

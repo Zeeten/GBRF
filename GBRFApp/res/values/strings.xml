@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">GBRF</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_logout">Logout</string>
+    <string name="logo_discription">Welcome</string>
+    <string name="title_activity_invitation">Invitation</string>
+    <string name="title_activity_landing_page">LandingPageActivity</string>
+    <string name="timerVal">00:00:00</string>
+    <string name="name">Name</string>
+    <string name="mobileno">Mobile No</string>
+    <string name="email">Email</string>
+    <string name="title_activity_certain">CertainActivity</string>
+    <string name="btn_skip_intro">Please Click to Release &amp; Create History</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="title_activity_release_book">ReleaseBookActivity</string>
+    <string name="title_activity_gps">GPSActivity</string>
+    <string name="drawer_open">Slider Menu Opened</string>
+    <string name="drawer_close">Slider Menu Closed</string>
+    <string name="title_activity_home_fragment">HomeFragment</string>
+    <string name="bookname">"BookName : "</string>
+    <string name="authername">"by "</string>
+    <string name="releasedate">"Release On "</string>
+    <string name="price">"Price : ₹ "</string>
+    <string name="txt_image_slider">Image Slideshow</string>
+    <string name="product_name">Product Name</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="time_out">Time Out</string>
+    <string name="error_occured">Error Occurred</string>
+    <string name="access_code">Access Code</string>
+    <string name="pay_button">Buy Now</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="rsa_url">RSA Key Url</string>
+    <string name="forgettxt"><u>Forgot Password?</u></string>
+    <string name="signuptxt"><u>Create an account</u></string>
+    <string name="termcondition"><u><i>Terms &amp; Conditions</i></u></string>
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Book List</item>
+        <item>My Book</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_home</item>
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_book_detail">Book</string>
+    <string name="title_activity_single_item_view">Book Detail</string>
+    <string name="title_activity_screen_slide_page_fragment">ScreenSlidePageFragment</string>
+    <string name="title_activity_invite">InviteActivity</string>
+    <string name="title_activity_login">Global Book Release Forum</string>
+    <string name="title_activity_signup">Global Book Release Forum</string>
+    <string name="title_activity_award_detail">AwardDetailActivity</string>
+    <string name="title_activity_award_detail_fragment">AwardDetailFragment</string>
+    <string name="title_activity_guest_of_honour">GuestOfHonourActivity</string>
+    <string name="title_activity_forgot_password">Global Book Release Forum</string>
+    <string name="title_activity_book_store">BookStoreActivity</string>
+    <string name="title_activity_book_fragment">BookFragment</string>
+    <string name="title_activity_add_cart">AddCartActivity</string>
+    <string name="title_activity_add_cart_fragment">AddCartFragment</string>
+    <string name="title_activity_download_book">DownloadBookActivity</string>
+    <string name="title_activity_download_fragment">DownloadFragment</string>
+    <string name="title_activity_award">AwardActivity</string>
+    <string name="title_activity_term_condition">TermConditionActivity</string>
+    <string name="title_activity_music_home">MusicHomeActivity</string>
+    <string name="title_activity_literary_music">LiteraryMusicActivity</string>
+    <string name="title_activity_after_release">AfterReleaseActivity</string>
+    <string name="title_activity_video_view">VideoViewActivity</string>
+    <string name="title_activity_checkout">CheckoutActivity</string>
+    <string name="title_activity_idhar_bhi_music">IdharBhiMusicActivity</string>
+    <string name="title_activity_bahar_ghazal">BaharGhazalActivity</string>
+    <string name="title_activity_ghagal_list_view">GhagalListView</string>
+    <string name="title_activity_capture_guest_of_honour">CaptureGuestOfHonourActivity</string>
+    <string name="title_activity_order_history">OrderHistoryActivity</string>
+    <string name="title_activity_order_list_view">OrderListView</string>
+    <string name="title_activity_web_view_book">WebViewBookActivity</string>
+    <string name="title_activity_win">WinActivity</string>
+    <string name="title_activity_capter_list">CapterListActivity</string>
+    <string name="title_activity_chapter_list_view_adapter">ChapterListViewAdapter</string>
+    <string name="title_activity_otp">Verify Your Number</string>
+    <string name="APP_ID">888751001205538</string>
+    <string name="title_activity_event">EventActivity</string>
+    <string name="title_activity_event_list_view_adapter">EventListViewAdapter</string>
+    <string name="title_activity_event_fragment">EventFragment</string>
+
+</resources>

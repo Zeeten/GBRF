@@ -1,0 +1,456 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg_screen1" tools:context=".MainActivity">
+
+<ProgressBar
+        android:id="@+id/gbrf_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="8dp"
+         android:layout_centerInParent="true"
+        android:visibility="gone" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layout1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+              android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/layout2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:divider="?android:dividerHorizontal"
+                android:id="@+id/relative_layout_gbrf"
+                android:clickable="true">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:text="Global Book Release Forum (GBRF)"
+                    android:textColor="#FFFFFF"
+                     android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="10dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/imageView3"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:paddingRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:text="Now release your book on Global Book Release Forum through 100s and 1000s of 'Guests of Honour' in over 100 countries across the globe."
+                    android:textColor="#FFFFFF"
+                     android:gravity="right"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                        android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/textView2"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/imageView3"
+                    android:layout_toStartOf="@+id/imageView3"
+                    android:layout_marginBottom="10dp" />
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/imageView3"
+                    android:background="@drawable/gbrf_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                           android:paddingLeft="2dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_gbrf"
+                android:layout_gravity="center_horizontal"
+                 android:id="@+id/relative_layout_global_book_resource"
+          
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/global_book_resource_heading"
+                    android:text="Book Store"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/global_book_resource_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                  android:text="A one stop shop for all your digital books, academic books, practice tests, lectures and lessons."
+                    android:textColor="#ffffffff"
+                     android:id="@+id/global_book_resource_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/global_book_resource_image"
+                    android:layout_below="@+id/global_book_resource_heading"
+                    android:layout_toRightOf="@+id/global_book_resource_image"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/global_book_resource_image"
+                    android:background="@drawable/global_book_resource_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+            
+                <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:divider="?android:dividerHorizontal"
+                android:id="@+id/relative_layout_awards"
+                android:clickable="true">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/awards_heading"
+                    android:text="Awards"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                     android:gravity="right"
+                    android:paddingLeft="10dp"
+                      android:paddingRight="20dp"
+                    android:layout_alignParentTop="true"
+                  android:layout_toLeftOf="@+id/awards_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Participate in Academic awards to win exciting Rewards and Awards"
+                    android:id="@+id/awards_text"
+                     android:gravity="right"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/awards_heading"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/awards_image"
+                    android:layout_toStartOf="@+id/awards_image"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/awards_image"
+                    android:background="@drawable/awards_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+
+                
+           <!--  <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_security_skills"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/relative_layout_awards"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/awards_heading"
+                    android:text="Awards"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/awards_text"
+                    android:layout_alignStart="@+id/awards_text"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Participate in Academic awards to win exciting Rewards and Awards"
+                    android:textColor="#ffffffff"
+                    android:id="@+id/awards_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="10dp"
+                    android:layout_toEndOf="@+id/awards_image"
+                    android:layout_below="@+id/awards_heading"
+                    android:layout_toRightOf="@+id/awards_image"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/awards_image"
+                    android:background="@drawable/awards_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" /> 
+
+            </RelativeLayout> -->
+
+<!--             <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:divider="?android:dividerHorizontal"
+                android:id="@+id/relative_layout_literary_music"
+                android:clickable="true">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/literary_music_heading"
+                    android:text="Literary Music"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:layout_alignParentTop="true"
+                     android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:layout_toLeftOf="@+id/literary_music_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                     android:paddingRight="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/literary_music_text"
+                     android:gravity="right"
+                    android:text="Start downloading Literary Music from our music library."
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:paddingRight="20dp"
+                     android:paddingLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/literary_music_heading"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/literary_music_image"
+                    android:layout_toStartOf="@+id/literary_music_image"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/literary_music_image"
+                    android:background="@drawable/literary_music_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/relative_layout_literary_music"
+                android:layout_gravity="center_horizontal"
+               android:id="@+id/relative_layout_authors_agora"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/authors_agora_heading"
+                    android:text="Authors' Agora"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingRight="20dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignLeft="@+id/authors_agora_text"
+                    android:layout_alignStart="@+id/authors_agora_text"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="An exclusive space for Authors to share views, self-publish, train and carry forward their legacy..."
+                    android:textColor="#ffffffff"
+                     android:id="@+id/authors_agora_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/imageView5"
+                    android:layout_below="@+id/authors_agora_heading"
+                    android:layout_toRightOf="@+id/imageView5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/imageView5"
+                    android:background="@drawable/authors_agora_image"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+  <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:divider="?android:dividerHorizontal"
+                android:id="@+id/relative_layout_tbh"
+                android:clickable="true">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:text="The Publishing House"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:layout_alignParentTop="true"
+                     android:gravity="right"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_toLeftOf="@+id/imageView4"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                     android:paddingRight="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:gravity="right"
+                    android:text="Under one roof publishing community for publishers to publish their digital books"
+                    android:textColor="#FFFFFF"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:paddingRight="20dp"
+                     android:paddingLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/textView5"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/imageView4"
+                    android:layout_toStartOf="@+id/imageView4"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/imageView4"
+                    android:background="@drawable/the_publishing_home_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingLeft="2dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout> -->
+        
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
